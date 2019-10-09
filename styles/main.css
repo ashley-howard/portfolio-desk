@@ -57,6 +57,10 @@ table {
   background-color: #ffcb95;
   width: 100vw;
   height: 100vh;
+  background: #9b7854;
+  background: -webkit-gradient(linear, left top, right top, from(#9b7854), color-stop(34%, #f1ba81));
+  background: linear-gradient(90deg, #9b7854 0%, #f1ba81 34%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b7854", endColorstr="#f1ba81", GradientType=1);
 }
 
 .bg::before {
@@ -64,6 +68,12 @@ table {
   background-color: #f1ba81;
   width: 10vw;
   height: 100vh;
+  -webkit-box-shadow: -20px -13px 20px #0000005c;
+          box-shadow: -20px -13px 20px #0000005c;
+  background: #9b7854;
+  background: -webkit-gradient(linear, left top, right top, from(#9b7854), color-stop(34%, #f1ba81));
+  background: linear-gradient(90deg, #9b7854 0%, #f1ba81 34%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b7854", endColorstr="#f1ba81", GradientType=1);
 }
 
 .bg::after {
@@ -73,27 +83,86 @@ table {
   height: 120px;
   -webkit-clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
+  -webkit-box-shadow: inset -1px 12px 17px 0px #0000004d;
+          box-shadow: inset -1px 12px 17px 0px #0000004d;
+  background: #7c4d31;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #7c4d31), to(#5e3c28));
+  background: linear-gradient(0deg, #7c4d31 70%, #5e3c28 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c4d31", endColorstr="#5e3c28", GradientType=1);
 }
 
 .pc {
   position: absolute;
-  background-color: black;
+  background: black;
+  background: -webkit-gradient(linear, left top, right top, color-stop(70%, black), to(#2e2e2e));
+  background: linear-gradient(90deg, black 70%, #2e2e2e 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#2e2e2e", GradientType=1);
   width: 400px;
   height: 230px;
   left: 28vw;
   bottom: 140px;
   z-index: 1;
+  -webkit-box-shadow: 10px -7px 4px 0px #00000038;
+          box-shadow: 10px -7px 4px 0px #00000038;
+  border-radius: 4px;
+}
+
+.pc::after {
+  background-color: white;
+  border-radius: 100%;
+  width: 8px;
+  height: 8px;
+  left: 198px;
+  bottom: 0px;
+  -webkit-box-shadow: inset -3px -3px 9px 0px #c40d0d;
+          box-shadow: inset -3px -3px 9px 0px #c40d0d;
 }
 
 .pc--screen {
+  position: absolute;
   background-color: white;
   width: 380px;
   height: 210px;
   -webkit-transform: translate(10px, 10px);
           transform: translate(10px, 10px);
+  -webkit-box-shadow: 0 0 6px 0px white;
+          box-shadow: 0 0 6px 0px white;
 }
 
-.bg::before, .bg::after, .pc--screen {
+.pc--stand {
+  position: absolute;
+  background: inherit;
+  width: 30px;
+  height: 70px;
+  -webkit-transform: translate(187px, 229px);
+          transform: translate(187px, 229px);
+  -webkit-box-shadow: 10px -7px 4px 0px #00000038;
+          box-shadow: 10px -7px 4px 0px #00000038;
+}
+
+.pc--stand::after {
+  background: inherit;
+  width: 138px;
+  height: 100px;
+  bottom: -59px;
+  left: -56px;
+  border-radius: 4px 4px 2px 2px;
+  -webkit-clip-path: ellipse(45% 22% at 50% 44%);
+          clip-path: ellipse(45% 22% at 50% 44%);
+}
+
+.pc--stand::before {
+  background: black;
+  width: 138px;
+  height: 87px;
+  bottom: -59px;
+  left: -56px;
+  border-radius: 4px 4px 2px 2px;
+  -webkit-clip-path: ellipse(45% 22% at 50% 44%);
+  clip-path: ellipse(45% 24% at 50% 41%);
+}
+
+.bg::before, .bg::after, .pc::after, .pc--stand::after, .pc--stand::before {
   content: "";
   position: absolute;
 }
