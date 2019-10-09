@@ -162,6 +162,37 @@ table {
   clip-path: ellipse(45% 24% at 50% 41%);
 }
 
+.photos__item {
+  position: absolute;
+  background: white;
+  width: 50px;
+  height: 50px;
+}
+
+.photos__item .image {
+  position: absolute;
+  background: #85bad9;
+  width: 42px;
+  height: 37px;
+  left: 4px;
+  top: 3px;
+}
+
+.photos .photo-1 {
+  right: 380px;
+  top: 30px;
+}
+
+.photos .photo-2 {
+  right: 470px;
+  top: 40px;
+}
+
+.photos .photo-3 {
+  right: 290px;
+  top: 54px;
+}
+
 .bg::before, .bg::after, .pc::after, .pc--stand::after, .pc--stand::before {
   content: "";
   position: absolute;

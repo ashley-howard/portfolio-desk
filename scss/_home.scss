@@ -52,6 +52,8 @@ $shadow: 10px -7px 4px 0px #00000038;
     }
 }
 
+//------ /BACKGROUND ----- //
+
 //------ PC ----- //
 .pc {
     position: absolute;
@@ -124,3 +126,41 @@ $shadow: 10px -7px 4px 0px #00000038;
         }
     }
 }
+
+//------ /PC ----- //
+
+//------ PHOTOS ----- //
+.photos {
+    &__item {
+        position: absolute;
+        background: white;
+        width: 50px;
+        height: 50px;
+
+        .image {
+            position: absolute;
+            background: #85bad9;
+            width: 42px;
+            height: 37px;
+            left: 4px;
+            top: 3px;
+        }
+    }
+
+    .photo-1 {
+        right: 380px;
+        top: 30px;
+    }
+
+    .photo-2 {
+        right: 470px;
+        top: 40px;
+    }
+
+    .photo-3 {
+        right: 290px;
+        top: 54px;
+    }
+}
+
+//------ /PHOTOS----- //
