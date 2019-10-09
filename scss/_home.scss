@@ -1,0 +1,46 @@
+//------ BACKGROUND ----- //
+// back wall 
+.bg {
+    position: absolute;
+    background-color: #ffcb95;
+    width: 100vw;
+    height: 100vh;
+}
+
+// right wall 
+.bg::before {
+    @extend %pseudo;
+    right: 0;
+    background-color: #f1ba81;
+    width: 10vw;
+    height: 100vh;
+}
+
+// desk 
+.bg::after {
+    @extend %pseudo;
+    bottom: 0;
+    background-color: #7c4d31;
+    width: 100vw;
+    height: 120px;
+    clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
+}
+
+//------ PC ----- //
+.pc {
+    position: absolute;
+    background-color: black;
+    width: 400px;
+    height: 230px;
+    left: 28vw;
+    bottom: 140px;
+    z-index: 1;
+
+    &--screen {
+        @extend %pseudo;
+        background-color: white;
+        width: 380px;
+        height: 210px;
+        transform: translate(10px, 10px);
+    }
+}
