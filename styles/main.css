@@ -139,6 +139,18 @@ table {
           box-shadow: 0 0 6px 0px white;
 }
 
+.pc--keyboard {
+  position: absolute;
+  background: url("../img/keyboard.jpg");
+  background-size: contain;
+  width: 198px;
+  height: 67px;
+  bottom: -130px;
+  right: 100px;
+  -webkit-box-shadow: 6px -4px 8px #00000094;
+          box-shadow: 6px -4px 8px #00000094;
+}
+
 .pc--stand {
   position: absolute;
   background: inherit;
@@ -235,6 +247,15 @@ table {
 .photos .photo-3 {
   right: 290px;
   top: 54px;
+}
+
+.hub {
+  position: absolute;
+  background: green;
+  width: 200px;
+  height: 100px;
+  top: calc(100vh - 140px);
+  left: 140px;
 }
 
 .bg::before, .desk--bottom, .pc::after, .pc--stand::after, .pc--stand::before {

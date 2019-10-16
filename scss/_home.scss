@@ -100,6 +100,17 @@ $shadow: 10px -7px 4px 0px #00000038;
         box-shadow: 0 0 6px 0px white;
     }
 
+    &--keyboard {
+        position: absolute;
+        background: url('../img/keyboard.jpg');
+        background-size: contain;
+        width: 198px;
+        height: 67px;
+        bottom: -130px;
+        right: 100px;
+        box-shadow: 6px -4px 8px #00000094;
+    }
+
     &--stand {
         position: absolute;
         background: inherit;
@@ -212,3 +223,15 @@ $calendar-h: 360px;
 }
 
 //------ /PHOTOS----- //
+
+//------ HUB----- //
+.hub {
+    position: absolute;
+    background: green;
+    width: 200px;
+    height: 100px;
+    top: calc(100vh - 140px);
+    left: 140px;
+}
+
+//------ /HUB----- //
