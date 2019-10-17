@@ -11,28 +11,28 @@ $shadow: 10px -7px 4px 0px #00000038;
 // back wall 
 .bg {
     position: absolute;
-    background-color: #ffcb95;
+    // background-color: #ffcb95;
     width: 100vw;
     height: 96vh;
-    background: rgb(155, 120, 84);
-    background: -moz-linear-gradient(90deg, rgba(155, 120, 84, 1) 0%, rgba(241, 186, 129, 1) 34%);
-    background: -webkit-linear-gradient(90deg, rgba(155, 120, 84, 1) 0%, rgba(241, 186, 129, 1) 34%);
-    background: linear-gradient(90deg, rgba(155, 120, 84, 1) 0%, rgba(241, 186, 129, 1) 34%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b7854", endColorstr="#f1ba81", GradientType=1);
+    background: rgb(93, 87, 80);
+    background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 34%);
+    background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 34%);
+    background: linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 34%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#b4b4b4", GradientType=1);
 
     // right wall 
     &::before {
         @extend %pseudo;
         right: 0;
-        background-color: #f1ba81;
+        // background-color: #f1ba81;
         width: 8.1vw;
         height: 100vh;
-        box-shadow: -20px -13px 20px #0000005c;
-        background: rgb(155, 120, 84);
-        background: -moz-linear-gradient(90deg, rgba(155, 120, 84, 1) 0%, rgba(241, 186, 129, 1) 34%);
-        background: -webkit-linear-gradient(90deg, rgba(155, 120, 84, 1) 0%, rgba(241, 186, 129, 1) 34%);
-        background: linear-gradient(90deg, rgba(155, 120, 84, 1) 0%, rgba(241, 186, 129, 1) 34%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b7854", endColorstr="#f1ba81", GradientType=1);
+        box-shadow: -20px -13px 20px #2c2c2c5c;
+        background: rgb(93, 87, 80);
+        background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 0.5161414907759979) 0%, rgba(180, 180, 180, 1) 34%);
+        background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 0.5161414907759979) 0%, rgba(180, 180, 180, 1) 34%);
+        background: linear-gradient(90deg, rgba(93, 87, 80, 0.5161414907759979) 0%, rgba(180, 180, 180, 1) 34%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#b4b4b4", GradientType=1);
     }
 }
 
@@ -41,18 +41,18 @@ $shadow: 10px -7px 4px 0px #00000038;
     bottom: 0;
     background: #7c4d31;
     width: 102vw;
-    height: 105px;
+    height: 130px;
     clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
     box-shadow: inset -20px -2px 20px 15px #0000002e;
-    background: rgb(124, 77, 49);
-    background: -moz-linear-gradient(0deg, rgba(124, 77, 49, 1) 70%, rgba(94, 60, 40, 1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(124, 77, 49, 1) 70%, rgba(94, 60, 40, 1) 100%);
-    background: linear-gradient(0deg, rgba(124, 77, 49, 1) 70%, rgba(94, 60, 40, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c4d31", endColorstr="#5e3c28", GradientType=1);
+    background: rgb(34, 31, 31);
+    background: -moz-linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgba(110, 110, 110, 0.6169818269104517) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgba(110, 110, 110, 0.6169818269104517) 100%);
+    background: linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgba(110, 110, 110, 0.6169818269104517) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#221f1f", endColorstr="#6e6e6e", GradientType=1);
 
     &--bottom {
         @extend %pseudo;
-        background: #53342b;
+        // background: #53342b;
         width: 100%;
         height: 20px;
         bottom: 0;
@@ -74,22 +74,22 @@ $shadow: 10px -7px 4px 0px #00000038;
     width: 400px;
     height: 230px;
     left: 28vw;
-    bottom: 140px;
+    bottom: 129px;
     z-index: 1;
     box-shadow: $shadow;
     border-radius: 4px;
 
     // circle logo
-    &::after {
-        @extend %pseudo;
-        background-color: white;
-        border-radius: 100%;
-        width: 8px;
-        height: 8px;
-        left: 198px;
-        bottom: 0px;
-        box-shadow: inset -3px -3px 9px 0px #c40d0d;
-    }
+    // &::after {
+    //     @extend %pseudo;
+    //     background-color: white;
+    //     border-radius: 100%;
+    //     width: 8px;
+    //     height: 8px;
+    //     left: 198px;
+    //     bottom: 0px;
+    //     box-shadow: inset -3px -3px 9px 0px #c40d0d;
+    // }
 
     &--screen {
         position: absolute;
@@ -100,16 +100,16 @@ $shadow: 10px -7px 4px 0px #00000038;
         box-shadow: 0 0 6px 0px white;
     }
 
-    &--keyboard {
-        position: absolute;
-        background: url('../img/keyboard.jpg');
-        background-size: contain;
-        width: 198px;
-        height: 67px;
-        bottom: -130px;
-        right: 100px;
-        box-shadow: 6px -4px 8px #00000094;
-    }
+    // &--keyboard {
+    //     position: absolute;
+    //     background: url('../img/keyboard.jpg');
+    //     background-size: contain;
+    //     width: 214px;
+    //     height: 73px;
+    //     bottom: -149px;
+    //     right: 95px;
+    //     box-shadow: 6px -4px 8px #00000094;
+    // }
 
     &--stand {
         position: absolute;

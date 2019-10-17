@@ -54,26 +54,24 @@ table {
 
 .bg {
   position: absolute;
-  background-color: #ffcb95;
   width: 100vw;
   height: 96vh;
-  background: #9b7854;
-  background: -webkit-gradient(linear, left top, right top, from(#9b7854), color-stop(34%, #f1ba81));
-  background: linear-gradient(90deg, #9b7854 0%, #f1ba81 34%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b7854", endColorstr="#f1ba81", GradientType=1);
+  background: #5d5750;
+  background: -webkit-gradient(linear, left top, right top, from(#5d5750), color-stop(34%, #b4b4b4));
+  background: linear-gradient(90deg, #5d5750 0%, #b4b4b4 34%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#b4b4b4", GradientType=1);
 }
 
 .bg::before {
   right: 0;
-  background-color: #f1ba81;
   width: 8.1vw;
   height: 100vh;
-  -webkit-box-shadow: -20px -13px 20px #0000005c;
-          box-shadow: -20px -13px 20px #0000005c;
-  background: #9b7854;
-  background: -webkit-gradient(linear, left top, right top, from(#9b7854), color-stop(34%, #f1ba81));
-  background: linear-gradient(90deg, #9b7854 0%, #f1ba81 34%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b7854", endColorstr="#f1ba81", GradientType=1);
+  -webkit-box-shadow: -20px -13px 20px #2c2c2c5c;
+          box-shadow: -20px -13px 20px #2c2c2c5c;
+  background: #5d5750;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(93, 87, 80, 0.516141)), color-stop(34%, #b4b4b4));
+  background: linear-gradient(90deg, rgba(93, 87, 80, 0.516141) 0%, #b4b4b4 34%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#b4b4b4", GradientType=1);
 }
 
 .desk {
@@ -81,19 +79,18 @@ table {
   bottom: 0;
   background: #7c4d31;
   width: 102vw;
-  height: 105px;
+  height: 130px;
   -webkit-clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
           clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
   -webkit-box-shadow: inset -20px -2px 20px 15px #0000002e;
           box-shadow: inset -20px -2px 20px 15px #0000002e;
-  background: #7c4d31;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #7c4d31), to(#5e3c28));
-  background: linear-gradient(0deg, #7c4d31 70%, #5e3c28 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7c4d31", endColorstr="#5e3c28", GradientType=1);
+  background: #221f1f;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(70%, #221f1f), to(rgba(110, 110, 110, 0.616982)));
+  background: linear-gradient(0deg, #221f1f 70%, rgba(110, 110, 110, 0.616982) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#221f1f", endColorstr="#6e6e6e", GradientType=1);
 }
 
 .desk--bottom {
-  background: #53342b;
   width: 100%;
   height: 20px;
   bottom: 0;
@@ -110,22 +107,11 @@ table {
   width: 400px;
   height: 230px;
   left: 28vw;
-  bottom: 140px;
+  bottom: 129px;
   z-index: 1;
   -webkit-box-shadow: 10px -7px 4px 0px #00000038;
           box-shadow: 10px -7px 4px 0px #00000038;
   border-radius: 4px;
-}
-
-.pc::after {
-  background-color: white;
-  border-radius: 100%;
-  width: 8px;
-  height: 8px;
-  left: 198px;
-  bottom: 0px;
-  -webkit-box-shadow: inset -3px -3px 9px 0px #c40d0d;
-          box-shadow: inset -3px -3px 9px 0px #c40d0d;
 }
 
 .pc--screen {
@@ -137,18 +123,6 @@ table {
           transform: translate(10px, 10px);
   -webkit-box-shadow: 0 0 6px 0px white;
           box-shadow: 0 0 6px 0px white;
-}
-
-.pc--keyboard {
-  position: absolute;
-  background: url("../img/keyboard.jpg");
-  background-size: contain;
-  width: 198px;
-  height: 67px;
-  bottom: -130px;
-  right: 100px;
-  -webkit-box-shadow: 6px -4px 8px #00000094;
-          box-shadow: 6px -4px 8px #00000094;
 }
 
 .pc--stand {
@@ -258,7 +232,7 @@ table {
   left: 140px;
 }
 
-.bg::before, .desk--bottom, .pc::after, .pc--stand::after, .pc--stand::before {
+.bg::before, .desk--bottom, .pc--stand::after, .pc--stand::before {
   content: "";
   position: absolute;
 }
