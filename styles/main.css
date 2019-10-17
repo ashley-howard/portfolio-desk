@@ -195,15 +195,14 @@ table {
 .photos__item {
   position: absolute;
   background: white;
-  width: 50px;
-  height: 50px;
+  width: 68px;
+  height: 75px;
 }
 
 .photos__item .image {
   position: absolute;
-  background: #85bad9;
-  width: 42px;
-  height: 37px;
+  width: 60px;
+  height: 60px;
   left: 4px;
   top: 3px;
 }
@@ -213,14 +212,41 @@ table {
   top: 30px;
 }
 
+.photos .photo-1 .image {
+  background: url("/img/eiffel.jpg");
+  background-size: cover;
+}
+
+.photos .photo-1::after {
+  content: "Paris";
+}
+
 .photos .photo-2 {
   right: 470px;
   top: 40px;
 }
 
+.photos .photo-2 .image {
+  background: url("/img/alley.jpg");
+  background-size: cover;
+}
+
+.photos .photo-2::after {
+  content: "Morocco";
+}
+
 .photos .photo-3 {
   right: 290px;
   top: 54px;
+}
+
+.photos .photo-3 .image {
+  background: url("/img/sea.jpg");
+  background-size: cover;
+}
+
+.photos .photo-3::after {
+  content: "Magic";
 }
 
 .hub {
@@ -235,5 +261,15 @@ table {
 .bg::before, .desk--bottom, .pc--stand::after, .pc--stand::before {
   content: "";
   position: absolute;
+}
+
+.photos .photo-1::after, .photos .photo-2::after, .photos .photo-3::after {
+  position: absolute;
+  bottom: -1px;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 0.8em;
+  text-align: center;
+  width: 100%;
+  color: #82aeff;
 }
 /*# sourceMappingURL=main.css.map */

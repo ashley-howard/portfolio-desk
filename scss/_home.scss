@@ -1,5 +1,7 @@
 $shadow: 10px -7px 4px 0px #00000038;
 
+
+
 // BG NIGHT
 // background: rgb(255,203,149);
 // background: -moz-radial-gradient(circle, rgba(255,203,149,1) 0%, rgba(0,0,0,1) 100%);
@@ -193,14 +195,14 @@ $calendar-h: 360px;
     &__item {
         position: absolute;
         background: white;
-        width: 50px;
-        height: 50px;
+        width: 68px;
+        height: 75px;
 
         .image {
             position: absolute;
-            background: #85bad9;
-            width: 42px;
-            height: 37px;
+            // background: #85bad9;
+            width: 60px;
+            height: 60px;
             left: 4px;
             top: 3px;
         }
@@ -209,16 +211,46 @@ $calendar-h: 360px;
     .photo-1 {
         right: 380px;
         top: 30px;
+
+        .image {
+            background: url('/img/eiffel.jpg');
+            background-size: cover;
+        }
+
+        &::after {
+            @extend %polaroid-text;
+            content: "Paris";
+        }
     }
 
     .photo-2 {
         right: 470px;
         top: 40px;
+
+        .image {
+            background: url('/img/alley.jpg');
+            background-size: cover;
+        }
+
+        &::after {
+            @extend %polaroid-text;
+            content: "Morocco";
+        }
     }
 
     .photo-3 {
         right: 290px;
         top: 54px;
+
+        .image {
+            background: url('/img/sea.jpg');
+            background-size: cover;
+        }
+
+        &::after {
+            @extend %polaroid-text;
+            content: "Magic";
+        }
     }
 }
 

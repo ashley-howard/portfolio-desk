@@ -5,4 +5,13 @@
   content: "";
   position: absolute;
 }
-// create background gradient 
+
+%polaroid-text {
+  position: absolute;
+  bottom: -1px;
+  font-family: 'Gochi Hand', cursive;
+  font-size: 0.8em;
+  text-align: center;
+  width: 100%;
+  color: #82aeff;
+}
