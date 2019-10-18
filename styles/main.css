@@ -261,7 +261,7 @@ table {
 }
 
 .photos .photo-1 .image {
-  background: url("/img/eiffel.jpg");
+  background: url("../img/eiffel.jpg");
   background-size: cover;
 }
 
@@ -277,7 +277,7 @@ table {
 }
 
 .photos .photo-2 .image {
-  background: url("/img/me.gif");
+  background: url("../img/me.gif");
   background-size: cover;
 }
 
@@ -293,7 +293,7 @@ table {
 }
 
 .photos .photo-3 .image {
-  background: url("/img/sea.jpg");
+  background: url("../img/sea.jpg");
   background-size: cover;
 }
 
