@@ -204,8 +204,8 @@ table {
   -webkit-transform: skew(1deg, 0deg);
           transform: skew(1deg, 0deg);
   background: white;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, white), to(#a6a6a6));
-  background: linear-gradient(0deg, white 80%, #a6a6a6 100%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, white), to(rgba(166, 166, 166, 0.420903)));
+  background: linear-gradient(0deg, white 90%, rgba(166, 166, 166, 0.420903) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#a6a6a6", GradientType=1);
 }
 
@@ -213,8 +213,32 @@ table {
   position: absolute;
   right: 0;
   padding: 10px;
-  font-size: 10px;
+  font-size: 16px;
   font-weight: 500;
+  top: 18px;
+  color: #535353;
+}
+
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto auto;
+  padding: 60px 5px 5px 5px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid rgba(237, 237, 237, 0.8);
+  border-right: 1px solid rgba(237, 237, 237, 0.8);
+  font-size: 10px;
+  text-align: center;
+  padding: 3px;
+  margin: 3px;
+}
+
+.gray {
+  color: #c4c4c4;
 }
 
 .photos {
