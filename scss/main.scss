@@ -1,6 +1,10 @@
 @import 'reset';
 @import 'home';
 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
 %pseudo {
   content: "";
   position: absolute;
@@ -13,5 +17,5 @@
   font-size: 0.8em;
   text-align: center;
   width: 100%;
-  color: #82aeff;
+  // color: #82aeff;
 }
