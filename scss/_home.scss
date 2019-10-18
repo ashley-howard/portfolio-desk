@@ -95,11 +95,12 @@ $shadow: 10px -7px 4px 0px #00000038;
 
     &--screen {
         position: absolute;
-        background-color: white;
+        background-color: #1e1e1e;
         width: 380px;
         height: 210px;
         transform: translate(10px, 10px);
-        box-shadow: 0 0 6px 0px white;
+        // box-shadow: 0 0 6px 0px white;
+        box-shadow: 0 0 6px 0px #ffffff63;
     }
 
     &--button {
@@ -126,38 +127,36 @@ $shadow: 10px -7px 4px 0px #00000038;
     //     box-shadow: 6px -4px 8px #00000094;
     // }
 
-    &--stand {
+    &--stand-top {
         position: absolute;
         background: inherit;
         width: 30px;
         height: 70px;
         transform: translate(187px, 229px);
         box-shadow: $shadow;
+        border-radius: 0 0 5px 5px;
 
-        // bottom part
-        &::after {
-            @extend %pseudo;
-            background: inherit;
-            width: 138px;
-            height: 100px;
-            bottom: -59px;
-            left: -56px;
-            border-radius: 4px 4px 2px 2px;
-            clip-path: ellipse(45% 22% at 50% 44%);
-        }
+        // // bottom part 2
+        // &::after {
+        //     @extend %pseudo;
+        //     background: #221f1f;
+        //     width: 138px;
+        //     height: 100px;
+        //     clip-path: ellipse(45% 14% at 51% 58%);
+        //     top: 22px;
+        //     left: -56px;
+        // }
+    }
 
-        // bottom part 2
-        &::before {
-            @extend %pseudo;
-            background: black;
-            width: 138px;
-            height: 87px;
-            bottom: -59px;
-            left: -56px;
-            border-radius: 4px 4px 2px 2px;
-            -webkit-clip-path: ellipse(45% 22% at 50% 44%);
-            clip-path: ellipse(45% 24% at 50% 41%);
-        }
+    &--stand-bottom {
+        position: absolute;
+        background: inherit;
+        width: 138px;
+        height: 100px;
+        bottom: -125px;
+        left: 133px;
+        // border-radius: 4px 4px 2px 2px;
+        clip-path: ellipse(45% 22% at 50% 44%);
     }
 }
 
@@ -282,13 +281,13 @@ $calendar-h: 360px;
         transform: rotate(-10deg);
 
         .image {
-            background: url('/img/alley.jpg');
+            background: url('/img/me.gif');
             background-size: cover;
         }
 
         &::after {
             @extend %polaroid-text;
-            content: "Morocco";
+            content: "About me";
         }
     }
 
