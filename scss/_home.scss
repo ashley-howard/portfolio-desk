@@ -107,13 +107,12 @@ $shadow: 10px -7px 4px 0px #00000038;
         position: absolute;
         background-color: #ff5b5b;
         width: 13px;
-        height: 4px;
-        bottom: -5px;
+        height: 2px;
+        bottom: -4px;
         border-radius: 0 0 5px 5px;
-        right: 45px;
-        -webkit-box-shadow: 0 0 6px #ff0303c7;
-        box-shadow: 0 0 6px #ff0303c7;
-        border: 1px solid #00000040;
+        right: 35px;
+        box-shadow: 0 0 4px 1px #ff00008a;
+        border: 1px solid #1111111f;
     }
 
     // &--keyboard {
@@ -172,7 +171,7 @@ $calendar-h: 360px;
     width: $calendar-w;
     height: 180px;
     left: 150px;
-    top: calc(100vh - 520px);
+    top: calc(100vh - 600px);
     box-shadow: 1px 9px 11px 0px #323232;
     border-radius: 2px 2px 7px 0;
 
@@ -316,20 +315,69 @@ $calendar-h: 360px;
     background: #cecece;
     width: 160px;
     height: 100px;
-    top: calc(100vh - 140px);
+    top: calc(100vh - 150px);
     left: 140px;
     border-radius: 10px;
     box-shadow: 4px -3px 14px 0px #202020;
 
+    &--speakers {
+        position: absolute;
+        background: #848484;
+        width: 8px;
+        height: 5px;
+        left: 75px;
+        top: 3px;
+        border-radius: 5px;
+        box-shadow: inset 0px 1px 0px #2e2e2e;
+
+        &::before {
+            @extend %pseudo;
+            background: #848484;
+            width: 6px;
+            height: 3px;
+            border-radius: 5px;
+            left: -30px;
+            top: 1px;
+        }
+
+        &::after {
+            @extend %pseudo;
+            background: #848484;
+            width: 6px;
+            height: 3px;
+            border-radius: 5px;
+            right: -32px;
+            top: 1px;
+        }
+    }
+
     &--screen {
         position: absolute;
         background: white;
-        width: 145px;
-        height: 85px;
-        left: 7px;
-        top: 7px;
+        width: 138px;
+        height: 76px;
+        left: 10px;
+        top: 11px;
         border-radius: 5px;
+        border: 1px solid #979797;
+        box-shadow: inset 1px -2px 20px 20px #d3d3d380;
     }
+
+    &::after {
+        @extend %pseudo;
+        background: #666666;
+        width: 100px;
+        height: 10px;
+        bottom: -10px;
+        left: 30px;
+        border-radius: 0 0 40px 40px;
+        box-shadow: inset 2px 5px 0px #0d0c0c6b;
+    }
+}
+
+.fa-sun {
+    color: #fad318;
+    font-size: 2.5em;
 }
 
 //------ /HUB----- //
@@ -340,8 +388,8 @@ $calendar-h: 360px;
     width: 61px;
     height: 70px;
     background: #fefefe;
-    top: calc(100vh - 110px);
-    right: 28%;
+    top: calc(100vh - 116px);
+    right: 29%;
     border-radius: 5px 5px 26px 26px;
     box-shadow: inset 2px 0px 20px 0px #323232;
 
@@ -390,10 +438,17 @@ $calendar-h: 360px;
         position: absolute;
         width: 61px;
         height: 70px;
-        top: calc(100vh - 110px);
-        right: 28%;
+        top: calc(100vh - 116px);
+        right: 29%;
         border-radius: 5px 5px 26px 26px;
         box-shadow: 20px -7px 10px 2px #0000007a;
+
+        // &::after {
+        //     @extend %pseudo;
+        //     width: 61px;
+        //     height: 70px;
+        //     background: green;
+        // }
     }
 }
 
