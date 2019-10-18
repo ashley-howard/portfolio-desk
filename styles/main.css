@@ -323,11 +323,77 @@ table {
   border-radius: 5px;
 }
 
+.mug {
+  position: absolute;
+  width: 61px;
+  height: 70px;
+  background: #fefefe;
+  top: calc(100vh - 110px);
+  right: 28%;
+  border-radius: 5px 5px 26px 26px;
+  -webkit-box-shadow: inset 2px 0px 20px 0px #323232;
+          box-shadow: inset 2px 0px 20px 0px #323232;
+}
+
+.mug::before {
+  width: 61px;
+  height: 50px;
+  background: #d1d1d1;
+  -webkit-clip-path: ellipse(50% 21% at 50% 50%);
+          clip-path: ellipse(50% 21% at 50% 50%);
+  top: -22px;
+}
+
+.mug::after {
+  width: 61px;
+  height: 50px;
+  background: #5b3229;
+  -webkit-clip-path: ellipse(44% 17% at 50% 54%);
+          clip-path: ellipse(44% 17% at 50% 54%);
+  top: -22px;
+  -webkit-box-shadow: inset 6px 20px 12px #151515;
+          box-shadow: inset 6px 20px 12px #151515;
+}
+
+.mug--handle {
+  position: absolute;
+  width: 23px;
+  height: 42px;
+  background: white;
+  right: -23px;
+  z-index: 0;
+  border-radius: 0 100px 100px 0;
+  top: 7px;
+  -webkit-box-shadow: inset 2px -1px 2px 0px #3f3f3f;
+          box-shadow: inset 2px -1px 2px 0px #3f3f3f;
+}
+
+.mug--handle::after {
+  width: 18px;
+  height: 28px;
+  background: #201f1f;
+  border-radius: 39px 197px 207px 51px;
+  top: 6px;
+  -webkit-box-shadow: 0px 0px 11px 2px #050202;
+          box-shadow: 0px 0px 11px 2px #050202;
+}
+
+.mug--shadow {
+  position: absolute;
+  width: 61px;
+  height: 70px;
+  top: calc(100vh - 110px);
+  right: 28%;
+  border-radius: 5px 5px 26px 26px;
+  -webkit-box-shadow: 20px -7px 10px 2px #0000007a;
+          box-shadow: 20px -7px 10px 2px #0000007a;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-.bg::before, .desk--bottom {
+.bg::before, .desk--bottom, .mug::before, .mug::after, .mug--handle::after {
   content: "";
   position: absolute;
 }
