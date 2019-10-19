@@ -134,6 +134,7 @@ $shadow: 10px -7px 4px 0px #00000038;
         transform: translate(187px, 229px);
         box-shadow: $shadow;
         border-radius: 0 0 5px 5px;
+        border-bottom: 2px solid #2222225c;
 
         // // bottom part 2
         // &::after {
@@ -155,7 +156,7 @@ $shadow: 10px -7px 4px 0px #00000038;
         bottom: -125px;
         left: 133px;
         // border-radius: 4px 4px 2px 2px;
-        clip-path: ellipse(45% 22% at 50% 44%);
+        clip-path: ellipse(45% 15% at 50% 44%)
     }
 }
 
@@ -184,6 +185,17 @@ $calendar-h: 360px;
             background: url('../img/waves.jpg');
             background-size: cover;
             border-radius: 2px 2px 7px 0;
+
+            &::after {
+                @extend %pseudo;
+                background: #e6ab28;
+                width: 7px;
+                height: 7px;
+                left: 85px;
+                top: 3px;
+                border-radius: 15px;
+                box-shadow: inset 0 0px 3px 0px #0000008a;
+            }
         }
 
         &--bottom {
@@ -315,10 +327,11 @@ $calendar-h: 360px;
     background: #cecece;
     width: 160px;
     height: 100px;
-    top: calc(100vh - 150px);
+    top: calc(100vh - 165px);
     left: 140px;
     border-radius: 10px;
     box-shadow: 4px -3px 14px 0px #202020;
+    z-index: 2;
 
     &--speakers {
         position: absolute;
@@ -388,10 +401,12 @@ $calendar-h: 360px;
     width: 61px;
     height: 70px;
     background: #fefefe;
-    top: calc(100vh - 116px);
+    top: calc(100vh - 125px);
     right: 29%;
     border-radius: 5px 5px 26px 26px;
     box-shadow: inset 2px 0px 20px 0px #323232;
+    z-index: 2;
+    border-bottom: 1px solid #3c3c3c;
 
     &::before {
         @extend %pseudo;
@@ -406,10 +421,10 @@ $calendar-h: 360px;
         @extend %pseudo;
         width: 61px;
         height: 50px;
-        background: #5b3229;
+        background: #201515;
         clip-path: ellipse(44% 17% at 50% 54%);
         top: -22px;
-        box-shadow: inset 6px 20px 12px #151515;
+        box-shadow: inset 6px 20px 12px #8f3c3c;
     }
 
     &--handle {
@@ -438,7 +453,7 @@ $calendar-h: 360px;
         position: absolute;
         width: 61px;
         height: 70px;
-        top: calc(100vh - 116px);
+        top: calc(100vh - 125px);
         right: 29%;
         border-radius: 5px 5px 26px 26px;
         box-shadow: 20px -7px 10px 2px #0000007a;
@@ -452,4 +467,273 @@ $calendar-h: 360px;
     }
 }
 
+// .steam-group {
+//     position: absolute;
+//     right: 29%;
+//     bottom: 135px;
+// }
+
+// .steam {
+//     position: absolute;
+//     height: 150px;
+//     width: 150px;
+//     border-radius: 50%;
+//     background-color: #fff;
+//     margin-top: -75px;
+//     margin-left: 75px;
+//     z-index: 0;
+//     opacity: 0;
+// }
+
+// #steam-one {
+//     -webkit-animation: steam-one 4s ease-out infinite;
+//     animation: steam-one 4s ease-out infinite;
+// }
+
+// #steam-three {
+//     -webkit-animation: steam-one 4s ease-out 1s infinite;
+//     animation: steam-one 4s ease-out 1s infinite;
+// }
+
+// @-webkit-keyframes steam-one {
+//     0% {
+//         transform: translateY(0) translateX(0) scale(0.25);
+//         opacity: 0.2;
+//     }
+
+//     100% {
+//         transform: translateY(-200px) translateX(-20px) scale(1);
+//         opacity: 0;
+//     }
+// }
+
+// @keyframes steam-one {
+//     0% {
+//         transform: translateY(0) translateX(0) scale(0.25);
+//         opacity: 0.2;
+//     }
+
+//     100% {
+//         transform: translateY(-200px) translateX(-20px) scale(1);
+//         opacity: 0;
+//     }
+// }
+
+// #steam-two {
+//     -webkit-animation: steam-two 4s ease-out 0.5s infinite;
+//     animation: steam-two 4s ease-out 0.5s infinite;
+// }
+
+// #steam-four {
+//     -webkit-animation: steam-two 4s ease-out 1.5s infinite;
+//     animation: steam-two 4s ease-out 1.5s infinite;
+// }
+
+// @-webkit-keyframes steam-two {
+//     0% {
+//         transform: translateY(0) translateX(0) scale(0.25);
+//         opacity: 0.2;
+//     }
+
+//     100% {
+//         transform: translateY(-200px) translateX(20px) scale(1);
+//         opacity: 0;
+//     }
+// }
+
+// @keyframes steam-two {
+//     0% {
+//         transform: translateY(0) translateX(0) scale(0.25);
+//         opacity: 0.2;
+//     }
+
+//     100% {
+//         transform: translateY(-200px) translateX(20px) scale(1);
+//         opacity: 0;
+//     }
+// }
+
 //------ /Coffee Mug ----- //
+
+
+//------ Headphones ----- //
+.hook {
+    position: absolute;
+    background: #848484;
+    width: 19px;
+    height: 15px;
+    right: 49px;
+    top: 85px;
+    border-radius: 0 17px 0 0;
+    box-shadow: 1px -3px 6px #383636;
+    z-index: 1;
+
+    &::before {
+        @extend %pseudo;
+        background: inherit;
+        width: 15px;
+        height: 37px;
+        border-radius: 100%;
+        top: -11px;
+        left: -5px;
+        box-shadow: inset -3px -1px 8px #434242;
+        z-index: 2;
+    }
+
+    &::after {
+        @extend %pseudo;
+        background: #6a6a6a;
+        width: 5px;
+        height: 14px;
+        border-radius: 100%;
+        left: -6px;
+        top: 0px;
+        box-shadow: 1px 0px 1px #706262;
+        z-index: 2;
+    }
+}
+
+// .headphones {
+//     position: absolute;
+//     width: 61px;
+//     height: 100px;
+//     right: 26px;
+//     top: 56px;
+//     background: radial-gradient(ellipse at bottom, rgba(255, 0, 0, 0) 40%, rgba(255, 0, 0, 0) 49%, #202020 50%, #000000 100%);
+//     border-radius: 100%;
+//     box-shadow: inset 20px -2px 20px 11px #171717;
+
+//     &::after {
+//         @extend %pseudo;
+//         width: 35px;
+//         height: 100px;
+//         border: solid 2px #fff;
+//         border-color: #383838 transparent transparent transparent;
+//         border-radius: 359%/100px 100px 0 0;
+//         top: 1px;
+//         left: -29px;
+//         transform: rotate(45deg);
+//     }
+
+//     &--l {
+//         position: absolute;
+//         width: 50px;
+//         height: 50px;
+//         background: #242424;
+//         border-radius: 100%;
+//         bottom: -11px;
+//         left: -18px;
+//         box-shadow: inset 0 0 10px 5px #171717;
+//     }
+
+//     &--r {
+//         position: absolute;
+//         width: 50px;
+//         height: 50px;
+//         background: #242424;
+//         border-radius: 100%;
+//         bottom: -15px;
+//         right: -12px;
+//         -webkit-box-shadow: inset 0 0 10px 5px #171717;
+//         box-shadow: inset 0 0 10px 5px #171717;
+//     }
+// }
+
+//------ /Headphones ----- //
+
+.headphones-all {
+    position: absolute;
+    right: 0;
+    bottom: 380px;
+}
+
+.headphones {
+    position: absolute;
+    width: 62px;
+    height: 84px;
+    background: #2a2a2a;
+    top: 68px;
+    border-radius: 40% 40% 0 0;
+    right: 29px;
+    transform: rotate(6deg);
+    box-shadow: inset 2px 6px 11px 3px #131313;
+
+    &::before {
+        @extend %pseudo;
+        width: 22px;
+        height: 100px;
+        border: solid 11px #fff;
+        border-color: #343434 transparent transparent transparent;
+        top: 7px;
+        left: -3px;
+        transform: rotate(10deg);
+        border-radius: 100%;
+    }
+
+    &::after {
+        @extend %pseudo;
+        width: 27px;
+        height: 79px;
+        background: #918c8c;
+        border-radius: 100%;
+        right: 17px;
+        top: 18px;
+        box-shadow: inset 6px 10px 7px 0px #535353;
+    }
+
+    &--l {
+        position: absolute;
+        width: 51px;
+        height: 48px;
+        background: #242424;
+        border-radius: 100%;
+        bottom: -30px;
+        left: -11px;
+        box-shadow: inset 0 0 10px 5px #171717;
+        z-index: 1;
+
+        &::after {
+            @extend %pseudo;
+            width: 26px;
+            height: 26px;
+            background: #131313;
+            border-radius: 100%;
+            top: 10px;
+            left: 10px;
+            box-shadow: inset 1px -2px 6px #242424;
+            border: 2px solid #242424;
+        }
+    }
+
+    &--r {
+        position: absolute;
+        width: 54px;
+        height: 48px;
+        background: #242424;
+        border-radius: 100%;
+        bottom: -34px;
+        right: -8px;
+        box-shadow: inset 0 0 10px 5px #171717;
+        z-index: 1;
+
+        &::before {
+            @extend %pseudo;
+            width: 17px;
+            height: 25px;
+            background: #2a2a2a;
+            right: 10px;
+            transform: rotate(5deg);
+        }
+
+        &::after {
+            @extend %pseudo;
+            width: 35px;
+            height: 33px;
+            background: #191919;
+            border-radius: 100%;
+            right: 8px;
+            bottom: 4px;
+            box-shadow: inset -1px 0px 20px #353535;
+        }
+    }
+}
