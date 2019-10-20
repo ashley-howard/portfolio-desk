@@ -218,7 +218,7 @@ $calendar-h: 360px;
     }
 }
 
-.month {
+#month {
     position: absolute;
     right: 0;
     padding: 10px;
@@ -231,7 +231,7 @@ $calendar-h: 360px;
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto auto auto auto;
-    padding: 60px 5px 5px 5px;
+    padding: 60px 5px 5px 3px;
 }
 
 .grid-item {
@@ -246,6 +246,18 @@ $calendar-h: 360px;
 
 .gray {
     color: #c4c4c4;
+}
+
+.checked-day {
+    &::after {
+        position: absolute;
+        content: 'x';
+        margin-left: -10px;
+        color: #eb0707;
+        font-size: 2.2em;
+        margin-top: -3px;
+        font-family: 'Gochi Hand', cursive;
+    }
 }
 
 //------ /CALENDAR ----- //
