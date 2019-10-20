@@ -1,24 +1,24 @@
 var monthText = document.getElementById('month');
 var calendarDate = document.getElementById('calendar-day');
 
-const date = new Date; 
+const date = new Date;
 const month = date.toLocaleString('default', { month: 'long' });
 const day = date.getDate();
 
 monthText.innerHTML = month;
 
-var i;
-for (i = 0; i < (day - 1); i++) {
-    calendarDate.children[i].classList.add("checked-day");
+function daysInThisMonth() {
+    // var now = new Date();
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 }
 
-if (month === 'January' || 'March' || 'May' || 'July' || 'August' || 'October' || 'December') {
-    console.log('31 days');
-    // update dom with correct days
-}
-else if (month === 'April' || 'June' || 'September' || 'November'){
-    console.log ('30 days');
-}
-else {
-    console.log('28 days');
+var i;
+for (i = 0; i < (daysInThisMonth()); i++) {
+    var element = document.createElement("div");
+    element.setAttribute('class', 'grid-item');
+    element.innerHTML = i + 1;
+    if (day - 1 > i) {
+        element.classList.add("checked-day");
+    }
+    calendarDate.appendChild(element);
 }
