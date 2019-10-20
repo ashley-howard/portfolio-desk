@@ -1,5 +1,5 @@
 var monthText = document.getElementById('month');
-var calendarDate = document.getElementById('calendar-day');
+var calendarDays = document.getElementById('calendar-days');
 
 const date = new Date;
 const month = date.toLocaleString('default', { month: 'long' });
@@ -12,13 +12,14 @@ function daysInThisMonth() {
     return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 }
 
-var i;
-for (i = 0; i < (daysInThisMonth()); i++) {
+for (var i = 0; i < (daysInThisMonth()); i++) {
     var element = document.createElement("div");
     element.setAttribute('class', 'grid-item');
     element.innerHTML = i + 1;
     if (day - 1 > i) {
         element.classList.add("checked-day");
     }
-    calendarDate.appendChild(element);
+    calendarDays.appendChild(element);
 }
+
+// replace calendar image every month
