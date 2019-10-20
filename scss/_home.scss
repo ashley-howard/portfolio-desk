@@ -13,27 +13,24 @@ $shadow: 10px -7px 4px 0px #00000038;
 // back wall 
 .bg {
     position: absolute;
-    // background-color: #ffcb95;
     width: 100vw;
     height: 96vh;
     background: rgb(93, 87, 80);
-    background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 34%);
-    background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 34%);
-    background: linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 34%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#b4b4b4", GradientType=1);
+    background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    background: linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#5d5750", GradientType=1);
 
     // right wall 
     &::before {
         @extend %pseudo;
         right: 0;
-        // background-color: #f1ba81;
         width: 8.1vw;
         height: 100vh;
-        box-shadow: -20px -13px 20px #2c2c2c5c;
         background: rgb(93, 87, 80);
-        background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 0.5161414907759979) 0%, rgba(180, 180, 180, 1) 34%);
-        background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 0.5161414907759979) 0%, rgba(180, 180, 180, 1) 34%);
-        background: linear-gradient(90deg, rgba(93, 87, 80, 0.5161414907759979) 0%, rgba(180, 180, 180, 1) 34%);
+        background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%);
+        background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%);
+        background: linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#b4b4b4", GradientType=1);
     }
 }
@@ -41,16 +38,23 @@ $shadow: 10px -7px 4px 0px #00000038;
 .desk {
     position: fixed;
     bottom: 0;
-    background: #7c4d31;
-    width: 102vw;
+    width: 105vw;
     height: 130px;
-    clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
+    // clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
     box-shadow: inset -20px -2px 20px 15px #0000002e;
     background: rgb(34, 31, 31);
-    background: -moz-linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgba(110, 110, 110, 0.6169818269104517) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgba(110, 110, 110, 0.6169818269104517) 100%);
-    background: linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgba(110, 110, 110, 0.6169818269104517) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#221f1f", endColorstr="#6e6e6e", GradientType=1);
+    background: -moz-linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgb(95, 95, 95) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgb(95, 95, 95) 100%);
+    background: linear-gradient(0deg, rgba(34, 31, 31, 1) 70%, rgb(95, 95, 95) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#221f1f", endColorstr="#5f5f5f", GradientType=1);
+    transform: skewX(50deg);
+    left: -123px;
+
+    &::before {
+        content: '';
+        position: absolute;
+
+    }
 
     &--bottom {
         @extend %pseudo;
@@ -152,11 +156,10 @@ $shadow: 10px -7px 4px 0px #00000038;
         position: absolute;
         background: inherit;
         width: 138px;
-        height: 100px;
-        bottom: -125px;
+        height: 60px;
+        bottom: -105px;
         left: 133px;
-        // border-radius: 4px 4px 2px 2px;
-        clip-path: ellipse(45% 15% at 50% 44%)
+        border-radius: 100%;
     }
 }
 
@@ -411,20 +414,21 @@ $calendar-h: 360px;
     &::before {
         @extend %pseudo;
         width: 61px;
-        height: 50px;
+        height: 21px;
         background: #d1d1d1;
-        clip-path: ellipse(50% 21% at 50% 50%);
-        top: -22px;
+        top: -7px;
+        border-radius: 100%;
     }
 
     &::after {
         @extend %pseudo;
-        width: 61px;
-        height: 50px;
+        width: 55px;
+        height: 18px;
         background: #201515;
-        clip-path: ellipse(44% 17% at 50% 54%);
-        top: -22px;
-        box-shadow: inset 6px 20px 12px #8f3c3c;
+        top: -5px;
+        box-shadow: inset 2px 5px 8px #8f3c3c;
+        border-radius: 100%;
+        left: 3px;
     }
 
     &--handle {
@@ -572,9 +576,9 @@ $calendar-h: 360px;
         @extend %pseudo;
         background: inherit;
         width: 15px;
-        height: 37px;
+        height: 31px;
         border-radius: 100%;
-        top: -11px;
+        top: -8px;
         left: -5px;
         box-shadow: inset -3px -1px 8px #434242;
         z-index: 2;
@@ -582,7 +586,6 @@ $calendar-h: 360px;
 
     &::after {
         @extend %pseudo;
-        background: #6a6a6a;
         width: 5px;
         height: 14px;
         border-radius: 100%;
@@ -683,12 +686,12 @@ $calendar-h: 360px;
 
     &--l {
         position: absolute;
-        width: 51px;
-        height: 48px;
+        width: 50px;
+        height: 46px;
         background: #242424;
         border-radius: 100%;
-        bottom: -30px;
-        left: -11px;
+        bottom: -26px;
+        left: -9px;
         box-shadow: inset 0 0 10px 5px #171717;
         z-index: 1;
 
