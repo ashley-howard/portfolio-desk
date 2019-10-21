@@ -98,14 +98,14 @@ $shadow: 10px -7px 4px 0px #00000038;
 
     @keyframes pc-screen {
         0% {
-            background-image: url(/img/pc-bg.jpg);
+            background-image: url(../img/pc-bg.jpg);
             opacity: 0;
 
         }
 
         100% {
             opacity: 1;
-            background-image: url(/img/pc-bg.jpg);
+            background-image: url(../img/pc-bg.jpg);
             box-shadow: 0 0 6px 0px #ffffff63;
         }
     }
@@ -636,6 +636,117 @@ $calendar-h: 360px;
 // }
 
 //------ /Coffee Mug ----- //
+
+//------ LAMP ----- //
+$lamp-color: #414040;
+
+.lamp {
+    position: absolute;
+    right: 33%;
+    top: calc(100vh - 330px);
+
+    &--head {
+        position: absolute;
+        background: #414040;
+        width: 60px;
+        height: 75px;
+        transform: rotate(48deg);
+        right: -82px;
+        top: -19px;
+        border-radius: 100% 100% 0 0;
+
+        &::before {
+            @extend %pseudo;
+            background: #c6c6c6;
+            width: 60px;
+            height: 28px;
+            border-radius: 100%;
+            bottom: -17px;
+            box-shadow: 1px 20px 20px 20px #b8b8b8;
+        }
+
+        &::after {
+            @extend %pseudo;
+            background: #414040;
+            width: 40px;
+            height: 35px;
+            right: 10px;
+            top: -17px;
+            border-radius: 20% 20% 0 0;
+        }
+    }
+
+    &--top-body {
+        position: absolute;
+        background: $lamp-color;
+        width: 17px;
+        height: 110px;
+        right: -121px;
+        transform: rotate(-30deg);
+        top: 26px;
+
+        &::before {
+            @extend %pseudo;
+            background: #424141;
+            width: 6px;
+            height: 13px;
+            right: 2px;
+            top: 108px;
+            transform: rotate(30deg);
+            z-index: 1;
+            border-radius: 100%;
+        }
+
+        &::after {
+            @extend %pseudo;
+            background: #898683;
+            width: 4px;
+            height: 126px;
+            right: 7px;
+            top: 0px;
+        }
+    }
+
+    &--top-bottom {
+        position: absolute;
+        background: #414040;
+        width: 17px;
+        height: 103px;
+        right: -116px;
+        transform: rotate(40deg);
+        top: 120px;
+
+        &::after {
+            @extend %pseudo;
+            background: #898683;
+            width: 4px;
+            height: 126px;
+            right: 7px;
+            top: 0px;
+        }
+    }
+
+    &--stand {
+        position: absolute;
+        background: $lamp-color;
+        width: 17px;
+        height: 41px;
+        right: -84px;
+        top: 202px;
+
+        &::after {
+            @extend %pseudo;
+            background: $lamp-color;
+            width: 81px;
+            height: 36px;
+            border-radius: 100%;
+            bottom: -34px;
+            left: -30px;
+        }
+    }
+}
+
+//------ /LAMP ----- //
 
 
 //------ Headphones ----- //
