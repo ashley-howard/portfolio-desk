@@ -1,11 +1,13 @@
 var monthText = document.getElementById('month');
 var calendarDays = document.getElementById('calendar-days');
+var taskbarTime = document.getElementById('taskbar-time');
 
 const date = new Date;
 const month = date.toLocaleString('default', { month: 'long' });
 const day = date.getDate();
 
 monthText.innerHTML = month;
+taskbarTime.innerHTML = date.getHours() + ':' + date.getMinutes();
 
 function daysInThisMonth() {
     // var now = new Date();

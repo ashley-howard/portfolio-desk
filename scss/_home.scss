@@ -86,18 +86,6 @@ $shadow: 10px -7px 4px 0px #00000038;
     box-shadow: $shadow;
     border-radius: 4px;
 
-    // circle logo
-    // &::after {
-    //     @extend %pseudo;
-    //     background-color: white;
-    //     border-radius: 100%;
-    //     width: 8px;
-    //     height: 8px;
-    //     left: 198px;
-    //     bottom: 0px;
-    //     box-shadow: inset -3px -3px 9px 0px #c40d0d;
-    // }
-
     &--screen {
         position: absolute;
         background-color: #1e1e1e;
@@ -110,15 +98,13 @@ $shadow: 10px -7px 4px 0px #00000038;
 
     @keyframes pc-screen {
         0% {
-            // background: black;
             background-image: url(/img/pc-bg.jpg);
             opacity: 0;
-            
+
         }
 
         100% {
             opacity: 1;
-            // background: #f3f3f3;
             background-image: url(/img/pc-bg.jpg);
             box-shadow: 0 0 6px 0px #ffffff63;
         }
@@ -166,18 +152,6 @@ $shadow: 10px -7px 4px 0px #00000038;
         transform: translate(187px, 229px);
         box-shadow: 7px -4px 4px 0px #00000038;
         border-radius: 0 0 5px 5px;
-        // border-bottom: 2px solid #2222225c;
-
-        // // bottom part 2
-        // &::after {
-        //     @extend %pseudo;
-        //     background: #221f1f;
-        //     width: 138px;
-        //     height: 100px;
-        //     clip-path: ellipse(45% 14% at 51% 58%);
-        //     top: 22px;
-        //     left: -56px;
-        // }
     }
 
     &--stand-bottom {
@@ -190,7 +164,59 @@ $shadow: 10px -7px 4px 0px #00000038;
         border-radius: 100%;
         box-shadow: 0px 5px #0f0f0f;
     }
+
+    .taskbar {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        height: 10px;
+        background: #00000054;
+        color: #2c2c2c;
+        font-size: 0.5em;
+    }
 }
+
+#taskbar-time {
+    position: absolute;
+    right: 3px;
+    top: 1px;
+}
+
+.folders {
+    padding: 15px;
+}
+
+.folder {
+    position: absolute;
+    height: 45px;
+    width: 68px;
+    background: #bcbcbc;
+    border-top-right-radius: 2px;
+    cursor: pointer;
+    box-shadow: inset -8px -6px 12px #9b9b9b;
+
+    &-1 {
+        &::after {
+            position: absolute;
+            content: "Projects";
+            font-size: 0.8em;
+            text-align: center;
+            bottom: -14px;
+            width: 100%;
+        }
+
+        &::before {
+            @extend %pseudo;
+            background: #a3a3a3;
+            height: 7px;
+            top: -3px;
+            width: 19px;
+            border-top-right-radius: 2px;
+        }
+    }
+}
+
 
 //------ /PC ----- //
 
