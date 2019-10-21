@@ -104,16 +104,22 @@ $shadow: 10px -7px 4px 0px #00000038;
         width: 380px;
         height: 210px;
         transform: translate(10px, 10px);
-        animation: pc-screen 5s forwards;
+        animation: pc-screen 4s forwards;
+        animation-timing-function: ease-in;
     }
 
     @keyframes pc-screen {
         0% {
-            background: black;
+            // background: black;
+            background-image: url(/img/pc-bg.jpg);
+            opacity: 0;
+            
         }
 
         100% {
-            background: #f3f3f3;
+            opacity: 1;
+            // background: #f3f3f3;
+            background-image: url(/img/pc-bg.jpg);
             box-shadow: 0 0 6px 0px #ffffff63;
         }
     }
@@ -126,7 +132,7 @@ $shadow: 10px -7px 4px 0px #00000038;
         border-radius: 0 0 5px 5px;
         right: 35px;
         border: 1px solid #1111111f;
-        animation: pc-button 1s forwards;
+        animation: pc-button 3s forwards;
     }
 
     @keyframes pc-button {
