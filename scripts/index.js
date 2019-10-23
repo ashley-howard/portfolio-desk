@@ -2,6 +2,8 @@ var monthText = document.getElementById('month');
 var calendarDays = document.getElementById('calendar-days');
 var taskbarTime = document.getElementById('taskbar-time');
 
+var screenProjects = document.getElementById('screen-projects');
+
 const date = new Date;
 const month = date.toLocaleString('default', { month: 'long' });
 const day = date.getDate();
@@ -25,3 +27,12 @@ for (var i = 0; i < (daysInThisMonth()); i++) {
 }
 
 // replace calendar image every month
+
+function openProjects(){
+    screenProjects.style.display = "block";
+    // console.log('open projects');
+}
+
+function hideScreen(){
+    screenProjects.style.display = "none";
+}

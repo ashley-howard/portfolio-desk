@@ -11,17 +11,22 @@
     <title>Document</title>
 </head>
 
-<body>
+<body unselectable="on">
     <!-- Back & side wall -->
     <div class="bg">
+
+        <!-- Window -->
+        <div class="window"></div>
+
         <div class="desk"></div>
 
         <!-- PC -->
-        <div class="pc">
+        <!-- <div class="pc">
             <div class="pc--screen">
                 <div class="folders">
-                    <div class="folder folder-1"></div>
-                    <div class="folder folder-2"></div>
+                    <div onclick="openProjects()" class="folder folder-1">
+
+                    </div>
                     <div class="taskbar">
                         <div id="taskbar-time"></div>
                     </div>
@@ -33,7 +38,10 @@
             <div class="pc--stand-top"></div>
             <div class="pc--keyboard"></div>
             <div class="pc--mouse"></div>
-        </div>
+
+        </div> -->
+
+
 
         <!-- Calendar -->
         <div class="calendar">
@@ -80,7 +88,7 @@
 
 
         <!-- Photos -->
-        <div class="photos">
+        <!-- <div class="photos">
             <div class="photos__item photo-1">
                 <div class="image"></div>
             </div>
@@ -90,20 +98,22 @@
             <div class="photos__item photo-3">
                 <div class="image"></div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Post-it note -->
-        <div class="note">
+        <!-- <div class="note">
             <ul>
                 <li>Fix bugs</li>
                 <li>Call mum</li>
                 <li>Drink coffee</li>
             </ul>
-        </div>
+        </div> -->
 
         <!-- Lamp -->
         <!-- <div class="lamp">
+            <div class="lamp--bulb"></div>
             <div class="lamp--head"></div>
+            <div class="lamp--inner"></div>
             <div class="lamp--top-body"></div>
             <div class="lamp--top-bottom"></div>
             <div class="lamp--stand"></div>
@@ -118,7 +128,6 @@
             </div>
         </div>
 
-
     </div>
 
     <!-- Desk bottom -->
@@ -129,6 +138,14 @@
             </script>
         </div>
     </div>
+
+    <!-- Large screen -->
+    <div class="large-screen">
+        <div id="screen-projects"></div>
+        <!-- <div class="screen-other"></div> -->
+        <div id="taskbar-time"></div>
+    </div>
+
     <script src="scripts/index.js"></script>
 </body>
 
