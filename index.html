@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/e3fcc7f070.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/e3fcc7f070.js" crossorigin="anonymous"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.min.css">
-    <title>Document</title>
+    <title>Ashley Howard | Home</title>
 </head>
 
 <body unselectable="on">
@@ -16,19 +16,21 @@
     <div class="bg">
 
         <!-- Window -->
-        <div class="window"></div>
+        <!-- <div class="window">
+            <div class="window--blur"></div>
+        </div> -->
 
         <div class="desk"></div>
 
         <!-- PC -->
-        <!-- <div class="pc">
+        <div class="pc">
             <div class="pc--screen">
                 <div class="folders">
                     <div onclick="openProjects()" class="folder folder-1">
 
                     </div>
                     <div class="taskbar">
-                        <div id="taskbar-time"></div>
+                        <!-- <div id="time"></div> -->
                     </div>
                 </div>
 
@@ -39,7 +41,7 @@
             <div class="pc--keyboard"></div>
             <div class="pc--mouse"></div>
 
-        </div> -->
+        </div>
 
 
 
@@ -88,7 +90,7 @@
 
 
         <!-- Photos -->
-        <!-- <div class="photos">
+        <div class="photos">
             <div class="photos__item photo-1">
                 <div class="image"></div>
             </div>
@@ -98,16 +100,16 @@
             <div class="photos__item photo-3">
                 <div class="image"></div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Post-it note -->
-        <!-- <div class="note">
+        <div class="note">
             <ul>
                 <li>Fix bugs</li>
                 <li>Call mum</li>
                 <li>Drink coffee</li>
             </ul>
-        </div> -->
+        </div>
 
         <!-- Lamp -->
         <!-- <div class="lamp">
@@ -140,11 +142,18 @@
     </div>
 
     <!-- Large screen -->
-    <div class="large-screen">
-        <div id="screen-projects"></div>
-        <!-- <div class="screen-other"></div> -->
-        <div id="taskbar-time"></div>
+    <div class="large-screen-holder">
+        <div id="large-screen">
+            <div id="screen-projects">
+                <div class="taskbar-large">
+                    <div id="time"></div>
+                </div>
+            </div>
+            <!-- <div class="screen-other"></div> -->
+
+        </div>
     </div>
+
 
     <script src="scripts/index.js"></script>
 </body>

@@ -1,15 +1,16 @@
 var monthText = document.getElementById('month');
 var calendarDays = document.getElementById('calendar-days');
-var taskbarTime = document.getElementById('taskbar-time');
+// var taskbarTime = document.getElementById('taskbar-time');
 
 var screenProjects = document.getElementById('screen-projects');
+var largeScreen = document.getElementById('large-screen');
 
 const date = new Date;
 const month = date.toLocaleString('default', { month: 'long' });
 const day = date.getDate();
 
 monthText.innerHTML = month;
-taskbarTime.innerHTML = date.getHours() + ':' + date.getMinutes();
+// taskbarTime.innerHTML = date.getHours() + ':' + date.getMinutes();
 
 function daysInThisMonth() {
     // var now = new Date();
@@ -26,13 +27,30 @@ for (var i = 0; i < (daysInThisMonth()); i++) {
     calendarDays.appendChild(element);
 }
 
+(function () {
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var today = new Date(),
+            h = checkTime(today.getHours()),
+            m = checkTime(today.getMinutes())
+        document.getElementById('time').innerHTML = h + ":" + m;
+        t = setTimeout(function () {
+            startTime()
+        }, 1000);
+    }
+    startTime();
+})();
+
 // replace calendar image every month
 
 function openProjects(){
-    screenProjects.style.display = "block";
-    // console.log('open projects');
+    largeScreen.style.display = "block";
+    console.log('open projects');
 }
 
 function hideScreen(){
-    screenProjects.style.display = "none";
+    largeScreen.style.display = "none";
 }

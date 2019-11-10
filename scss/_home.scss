@@ -43,7 +43,15 @@ $shadow: 10px -7px 4px 0px #00000038;
     top: 5vh;
     border: 6px solid #494949;
     border-radius: 1px;
-    box-shadow: inset 0 0 20px 12px #cccccc;
+    // box-shadow: inset 2px -15px 0px 5px #ebe8e3bd;
+
+    &--blur {
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        background: #ffffff;
+        opacity: 0.4;
+    }
 }
 
 .desk {
@@ -83,35 +91,35 @@ $shadow: 10px -7px 4px 0px #00000038;
 //------ PC ----- //
 .pc {
     position: absolute;
-    // background: #171717;
-    // background: rgb(0, 0, 0);
-    // background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(46, 46, 46, 1) 100%);
-    // background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(46, 46, 46, 1) 100%);
-    // background: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(46, 46, 46, 1) 100%);
-    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#2e2e2e", GradientType=1);
-    width: 87vw; // width: 400px;
-    height: 74vh; // height: 230px;
-    left: 5%; // left: 28vw;
-    top: 10%;
-    bottom: 0; // bottom: 120px;     
+    background: #171717;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(46, 46, 46, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(46, 46, 46, 1) 100%);
+    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(46, 46, 46, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000", endColorstr="#2e2e2e", GradientType=1);
+    // width: 87vw; // large
+    // height: 74vh; // large
+    // left: 5%; // large
+    // bottom: 0; // large 
+    width: 400px; // small
+    height: 230px; // small
+    left: 28vw;
+    bottom: 120px;
+    // top: 10%;
     z-index: 1;
     box-shadow: -17px 12px 4px 0px #00000017;
     border-radius: 4px;
 
-
-
-
     &--screen {
         position: absolute;
         background-color: #1e1e1e;
-        border: 15px solid #1e1e1e;
-        border-radius: 5px;
-        width: 86vw;
-
-        height: 67vh;
+        // border: 15px solid #1e1e1e;
+        // border-radius: 5px;
+        // width: 86vw;
+        // height: 67vh;
         background-size: cover;
-        // width: 380px;
-        // height: 210px;
+        width: 380px;
+        height: 210px;
         transform: translate(10px, 10px);
         animation: pc-screen 4s forwards;
         animation-timing-function: ease-in;
@@ -127,7 +135,7 @@ $shadow: 10px -7px 4px 0px #00000038;
         100% {
             opacity: 1;
             background-image: url(../img/pc-bg.jpg);
-            box-shadow: 0 0 6px 0px #ffffff63;
+            // box-shadow: 0 0 6px 0px #ffffff63;
         }
     }
 
@@ -196,13 +204,6 @@ $shadow: 10px -7px 4px 0px #00000038;
         color: #2c2c2c;
         font-size: 0.5em;
     }
-}
-
-#taskbar-time {
-    position: absolute;
-    right: 3px;
-    top: 1px;
-    font-weight: 500;
 }
 
 .folders {
@@ -1016,7 +1017,7 @@ $lamp-color: #414040;
     top: calc(100vh - 270px);
     border-radius: 1px;
     box-shadow: 8px 3px 8px #8d8d8d;
-    border-bottom: 2px solid #b8a312;
+    border-bottom: 2px solid #848484;
     transform: rotate(-2deg);
     font-size: 0.56em;
     font-family: 'Gochi Hand', cursive;
