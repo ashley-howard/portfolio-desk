@@ -4,6 +4,7 @@
     height: 100vh;
     width: 100vw;
     align-items: center;
+
 }
 
 #large-screen {
@@ -13,6 +14,7 @@
     background: url('/img/pc-bg-large.jpg');
     background-size: cover;
     animation: screen-enlarge 3s forwards;
+    // transform: translate(3%, -5%);
     // border: 15px solid #1e1e1e;
     // border-radius: 5px;
 }
@@ -41,6 +43,8 @@
     0% {
         width: 382px;
         height: 211px;
+        // transform: translate(-10%, 10%);
+        transform: translate(-36%, -14%);
         // left: 28.6vw;
         // bottom: 145px;
     }
@@ -51,6 +55,20 @@
         // left: 0;
         // bottom: 0;
         // transform: translate(3%, -5%);
+        transform: translate(0);
         box-shadow: 0 0 20px 6px #ffffff63;
     }
+}
+
+.close-screen {
+    position: absolute;
+    background: #e33b3b;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    top: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    color: white;
+    border-radius: 5px;
 }

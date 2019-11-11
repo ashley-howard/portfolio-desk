@@ -12,12 +12,19 @@ $shadow: 10px -7px 4px 0px #00000038;
 .bg {
     position: absolute;
     width: 100vw;
-    height: 96vh;
-    background: rgb(93, 87, 80);
-    background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
-    background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
-    background: linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#5d5750", GradientType=1);
+    // height: 96vh;
+    height: calc(100vh - 130px);
+    // background: rgb(93, 87, 80);
+    // background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    // background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    // background: linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#5d5750", GradientType=1);
+    background: rgb(155, 120, 86);
+    background: -moz-linear-gradient(90deg, rgba(155, 120, 86, 1) 0%, rgba(250, 201, 150, 1) 50%, rgba(71, 45, 22, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(155, 120, 86, 1) 0%, rgba(250, 201, 150, 1) 50%, rgba(71, 45, 22, 1) 100%);
+    background: linear-gradient(90deg, rgba(155, 120, 86, 1) 0%, rgba(250, 201, 150, 1) 50%, rgba(71, 45, 22, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b7856", endColorstr="#472d16", GradientType=1);
+    box-shadow: inset -20px -19px 20px 0px #00000087;
 
     // right wall 
     &::before {
@@ -25,11 +32,11 @@ $shadow: 10px -7px 4px 0px #00000038;
         right: 0;
         width: 8.1vw;
         height: 100vh;
-        background: rgb(93, 87, 80);
-        background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 100%);
-        background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 100%);
-        background: linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 100%);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#b4b4b4", GradientType=1);
+        background: rgb(71, 45, 22);
+        background: -moz-linear-gradient(90deg, rgba(71, 45, 22, 1) 0%, rgba(155, 120, 86, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(71, 45, 22, 1) 0%, rgba(155, 120, 86, 1) 100%);
+        background: linear-gradient(90deg, rgba(71, 45, 22, 1) 0%, rgba(155, 120, 86, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#472d16", endColorstr="#9b7856", GradientType=1);
     }
 }
 
@@ -62,7 +69,8 @@ $shadow: 10px -7px 4px 0px #00000038;
     // clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
     transform: skewX(50deg);
     left: -123px;
-    box-shadow: inset -20px -2px 20px 15px #0000002e;
+    // box-shadow: inset -20px -2px 20px 15px #0000002e;
+    box-shadow: inset 10px 20px 20px 15px #000000ab;
     background: rgb(34, 31, 31);
     background: -moz-linear-gradient(3deg, rgba(34, 31, 31, 1) 45%, rgba(85, 85, 85, 1) 100%);
     background: -webkit-linear-gradient(3deg, rgba(34, 31, 31, 1) 45%, rgba(85, 85, 85, 1) 100%);
@@ -104,7 +112,8 @@ $shadow: 10px -7px 4px 0px #00000038;
     width: 400px; // small
     height: 230px; // small
     left: 28vw;
-    bottom: 120px;
+    // bottom: 120px;
+    top: calc(100vh - 380px);
     // top: 10%;
     z-index: 1;
     box-shadow: -17px 12px 4px 0px #00000017;
@@ -377,7 +386,7 @@ $calendar-h: 360px;
 
         &::after {
             @extend %polaroid-text;
-            content: "Paris";
+            content: "Front-end";
         }
     }
 
@@ -393,7 +402,7 @@ $calendar-h: 360px;
 
         &::after {
             @extend %polaroid-text;
-            content: "About me";
+            content: "Ashley";
         }
     }
 
@@ -409,7 +418,7 @@ $calendar-h: 360px;
 
         &::after {
             @extend %polaroid-text;
-            content: "Magic";
+            content: "Developer";
         }
     }
 }
@@ -1044,4 +1053,24 @@ $lamp-color: #414040;
     position: absolute;
     bottom: 2px;
     font-size: 0.9em;
+}
+
+// .black-screen {
+//     position: absolute;
+//     width: 100vw;
+//     height: 100vh;
+//     background: black;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+// }
+
+.plant {
+    position: absolute;
+    background: white;
+    height: 66px;
+    width: 50px;
+    right: 350px;
+    bottom: 39px;
+    border-radius: 0 0 20px 20px;
 }
