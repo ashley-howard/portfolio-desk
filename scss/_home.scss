@@ -64,11 +64,11 @@ $shadow: 10px -7px 4px 0px #00000038;
 .desk {
     position: fixed;
     bottom: 0;
-    width: 105vw;
+    width: 92vw;
     height: 130px;
     // clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
-    transform: skewX(50deg);
-    left: -123px;
+    // transform: skewX(50deg);
+    // left: -123px;
     // box-shadow: inset -20px -2px 20px 15px #0000002e;
     box-shadow: inset 10px 20px 20px 15px #000000ab;
     background: rgb(34, 31, 31);
@@ -78,12 +78,15 @@ $shadow: 10px -7px 4px 0px #00000038;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#221f1f", endColorstr="#555555", GradientType=1);
 
 
-    &::before {
-        content: '';
-        position: absolute;
-
+    &::after {
+        @extend %pseudo;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 139px 10vw 0 10vw;
+        border-color: transparent transparent transparent #221f1f;
+        right: -20vw;
     }
-
     &--bottom {
         @extend %pseudo;
         // background: #53342b;
@@ -953,11 +956,11 @@ $lamp-color: #414040;
         @extend %pseudo;
         width: 27px;
         height: 79px;
-        background: #918c8c;
+        background: #806344;
         border-radius: 100%;
         right: 17px;
         top: 18px;
-        box-shadow: inset 6px 10px 7px 0px #535353;
+        box-shadow: inset 6px 10px 7px 0px #43311f;
     }
 
     &--l {
@@ -1025,8 +1028,8 @@ $lamp-color: #414040;
     right: 37%;
     top: calc(100vh - 270px);
     border-radius: 1px;
-    box-shadow: 8px 3px 8px #8d8d8d;
-    border-bottom: 2px solid #848484;
+    box-shadow: 8px 3px 8px #766c38;
+    border-bottom: 2px solid #93820b;
     transform: rotate(-2deg);
     font-size: 0.56em;
     font-family: 'Gochi Hand', cursive;
@@ -1067,10 +1070,95 @@ $lamp-color: #414040;
 
 .plant {
     position: absolute;
-    background: white;
-    height: 66px;
+    background: #143c11;
+    height: 57px;
     width: 50px;
     right: 350px;
-    bottom: 39px;
-    border-radius: 0 0 20px 20px;
+    bottom: -70px;
+    border-radius: 35% 34% 20px 20px;
+    box-shadow: inset -2px -20px 8px 10px #190a02;
+    border: 1px solid black;
+
+    &::before {
+        @extend %pseudo;
+        background: #202020;
+        width: 3px;
+        height: 4px;
+        top: 26px;
+        right: 9px;
+        border-radius: 100% 0 100% 0;
+        transform: rotate(-39deg);
+        box-shadow: 1px 0px 4px 4px #202020;
+    }
+
+    &::after {
+        @extend %pseudo;
+        background: #0f0f0f;
+        width: 40px;
+        height: 17px;
+        border-radius: 100%;
+        top: -5px;
+        left: 5px;
+    }
+
+    .leaf {
+        position: absolute;
+        background: #1f8019;
+        height: 70px;
+        z-index: 1;
+        border-radius: 0 110% 0 100%;
+        box-shadow: inset 1px 6px 4px 3px #162c02;
+    }
+
+    .leaf-1 {
+        top: -64px;
+        left: 16px;
+        width: 12px;
+        transform: rotate(0deg);
+    }
+
+    .leaf-2 {
+        top: -64px;
+        left: 34px;
+        width: 15px;
+        transform: rotate(29deg);
+    }
+
+    .leaf-3 {
+        top: -63px;
+        left: 4px;
+        width: 13px;
+        transform: rotate(-11deg);
+    }
+
+    .leaf-4 {
+        height: 60px;
+        top: -52px;
+        left: -4px;
+        width: 13px;
+        transform: rotate(-16deg);
+    }
+
+    .leaf-5 {
+        top: -65px;
+        left: 18px;
+        width: 18px;
+        transform: rotate(14deg);
+    }
+
+    .leaf-6 {
+        top: -52px;
+        left: 45px;
+        width: 11px;
+        transform: rotate(36deg);
+        height: 60px;
+    }
+
+    .leaf-7 {
+        top: -36px;
+        left: 25px;
+        width: 19px;
+        transform: rotate(37deg);
+        height: 41px;
+    }
 }
