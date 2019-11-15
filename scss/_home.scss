@@ -233,7 +233,7 @@ $shadow: 10px -7px 4px 0px #00000038;
 
     &::after {
         position: absolute;
-        font-size: 0.8em;
+        font-size: 13px;
         text-align: center;
         left: 0;
         bottom: -14px;
@@ -259,11 +259,53 @@ $shadow: 10px -7px 4px 0px #00000038;
     }
 
     &-2 {
-        // left: 100px; // replace using grid
-
         &::after {
             content: "Folder2";
         }
+    }
+
+    &-3 {
+        &::after {
+            content: "Folder3";
+        }
+    }
+}
+
+.folder.contact-button::before {
+    background: transparent;
+}
+
+.contact-button {
+    position: absolute;
+    background: white;
+    height: 40px;
+    width: 45px;
+    border-radius: 100% 100% 100% 0;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    // border: 2.5px solid #707070;
+
+    &::before {
+        @extend %pseudo;
+        // border-top: 2.5px solid #494949;
+        // border-bottom: 2.5px solid #494949;
+        width: 25px;
+        height: 7px;
+        left: 10px;
+        top: 14px;
+    }
+
+    &::after {
+        position: absolute;
+        content: "Contact";
+        // background: #494949;
+        // border-radius: 100%;
+        // width: 4px;
+        // height: 4px;
+        // right: 10px;
+        // top: 23px;
+        // box-shadow: 1px 0px 0px 5px white;
     }
 }
 
