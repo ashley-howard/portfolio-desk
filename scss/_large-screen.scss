@@ -1,0 +1,111 @@
+@import 'projects';
+@import 'contact';
+
+.large-screen-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+
+}
+
+#large-screen {
+    display: none; //none
+    position: absolute;
+    z-index: 2;
+    background: url('/img/pc-bg-large.jpg');
+    background-size: cover;
+    animation: screen-enlarge 3s forwards;
+    // transform: translate(3%, -5%);
+    // border: 15px solid #1e1e1e;
+    // border-radius: 5px;
+}
+
+.top-bar {
+    position: absolute;
+    background: #303030;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskbar-large {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 30px;
+    background: #00000054;
+    color: #2c2c2c;
+    font-size: 0.5em;
+}
+
+// #time {
+//     position: absolute;
+//     right: 10px;
+//     top: 7px;
+//     font-weight: 500;
+//     font-size: 2em;
+//     color: #303030;
+// }
+
+@keyframes screen-enlarge {
+    0% {
+        width: 382px;
+        height: 211px;
+        // transform: translate(-10%, 10%);
+        transform: translate(-36%, -14%);
+        // left: 28.6vw;
+        // bottom: 145px;
+    }
+
+    100% {
+        width: 92.5vw;
+        height: 88vh;
+        // left: 0;
+        // bottom: 0;
+        // transform: translate(3%, -5%);
+        transform: translate(0);
+        box-shadow: 0 0 20px 6px #ffffff63;
+    }
+}
+
+.close-screen {
+    position: absolute;
+    background: #e33b3b;
+    width: 22px;
+    height: 22px;
+    right: 10px;
+    font-size: 1em;
+    // color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.explorer-bar {
+    position: absolute;
+    background: #0000007a;
+    width: 100%;
+    height: 40px;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#explorer-url {
+    position: absolute;
+    background: white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    width: 98.5%;
+    padding-left: 5px;
+}

@@ -179,13 +179,27 @@
 
         <div id="large-screen">
 
-            <div id="screen-projects"></div>
+            <div class="top-bar">
+                <div class="close-screen" onclick="hideScreen()">X</div>
+            </div>
+
+            <div class="explorer-bar">
+                <span id="explorer-url"></span>
+            </div>
+
+            <!-- Projects -->
+            <div id="screen-projects">
+
+            </div>
+
+            <!-- Contact -->
+            <div id="screen-contact">
+
+            </div>
 
             <div class="taskbar-large">
                 <!-- <div id="time"></div> -->
             </div>
-
-            <div class="close-screen" onclick="hideScreen()">x</div>
 
         </div>
     </div>
@@ -193,6 +207,7 @@
 
 
     <script src="scripts/index.js"></script>
+    <script src="scripts/large-screen.js"></script>
 </body>
 
 </html>
