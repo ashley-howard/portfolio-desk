@@ -1,4 +1,4 @@
-.large-screen-holder {
+.large-screen-wrapper {
     display: flex;
     justify-content: center;
     height: 100vh;
@@ -71,4 +71,5 @@
     font-size: 1.5em;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
 }
