@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <script src="https://kit.fontawesome.com/e3fcc7f070.js" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/main.min.css">
     <title>Ashley Howard / Front-end Dev</title>
@@ -184,12 +185,17 @@
             </div>
 
             <div class="explorer-bar">
-                <span id="explorer-url"></span>
+                <span id="explorer-url">
+                    <div id="typed-strings">
+                            <p id="typed-url"></p>
+                    </div>
+                        <span id="typed"></span>
+                </span>
             </div>
 
             <!-- Projects -->
             <div id="screen-projects">
-                <div class="large-grid-container">
+                <div class="large-grid-container" id="project-tiles">
                     <div class="project-tile">Home</div>
                     <div class="project-tile"></div>
                     <div class="project-tile"></div>
@@ -213,7 +219,6 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="scripts/date.js"></script>
     <script src="scripts/large-screen.js"></script>
 </body>
