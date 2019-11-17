@@ -187,18 +187,19 @@
             <div class="explorer-bar">
                 <span id="explorer-url">
                     <div id="typed-strings">
-                        <p id="typed-url"></p>
+                        <!-- <p id="typed-url"></p> -->
                     </div>
-                    <span id="typed"></span>
+                    <span id="prepend-typed"></span><span id="typed"></span>
                 </span>
             </div>
 
             <!-- Projects -->
             <div id="screen-projects">
                 <div class="large-grid-container" id="project-tiles">
-                    <div class="project-tile project-home">
+                    <!-- Project - Home -->
+                    <div class="project-tile project-home" onclick="openProjects('home')">
                         <div class="project-tile-inner">
-                            <!-- Project - Home -->
+                            <img src="/img/home.jpg" alt="">
                             <div class="project-tile-name">Home</div>
                             <div class="project-tile-info">
                                 <p>What started out as a fun project to see what objects I could
@@ -211,9 +212,11 @@
                             </div>
                         </div>
                     </div>
+
                     <!-- Project - A-KIN -->
                     <div class="project-tile project-a-kin">
                         <div class="project-tile-inner">
+                            <img src="/img/a-kin.jpg" alt="">
                             <div class="project-tile-name">A-KIN</div>
                             <div class="project-tile-info">
                                 <p>An experimental-electronic composer/installation artist who creates mixes...</p>
@@ -228,6 +231,7 @@
                     <!-- Project - JD -->
                     <div class="project-tile project-jd">
                         <div class="project-tile-inner">
+                            <img src="/img/jd.jpg" alt="">
                             <div class="project-tile-name">Jack Daniels</div>
                             <div class="project-tile-info">
                                 <p>This project is based on a fictional person and his portfolio...</p>
@@ -243,6 +247,7 @@
                     <!-- Project - Ribbit -->
                     <div class="project-tile project-ribbit">
                         <div class="project-tile-inner">
+                            <img src="/img/ribbit.jpg" alt="">
                             <div class="project-tile-name">Ribbit.</div>
                             <div class="project-tile-info">
                                 <p>A to-do list which prioritises your most difficult tasks...</p>
@@ -258,6 +263,7 @@
                     <!-- Project - NoteConvert -->
                     <div class="project-tile project-note">
                         <div class="project-tile-inner">
+                            <img src="/img/note.jpg" alt="">
                             <div class="project-tile-name">NoteConvert</div>
                             <div class="project-tile-info">
                                 <p>This website converts musical notes...</p>
@@ -273,6 +279,7 @@
                     <!-- Project - Github -->
                     <div class="project-tile project-git">
                         <div class="project-tile-inner">
+                            <img src="/img/git.jpg" alt="">
                             <div class="project-tile-name">Github</div>
                             <div class="project-tile-info">
                                 <p>View more projects...</p>
@@ -286,6 +293,14 @@
                     </div>
 
                 </div>
+
+                <!-- OPEN PROJECT HOME -->
+                <!-- <div class="project-open project-open-home">
+                    <img src="/img/home-l.png" alt="">
+                </div> -->
+
+
+
             </div>
 
             <!-- Contact -->

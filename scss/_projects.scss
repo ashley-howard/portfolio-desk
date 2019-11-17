@@ -17,14 +17,12 @@
     align-items: center;
     font-size: 2em;
     color: #545454;
-    // border: 4px solid #606060;
     cursor: pointer;
 }
 
 .project-tile:hover {
-    // background: url('/img/home.jpg');
     background-size: cover !important;
-    animation: fade-in 1s forwards;
+    animation: fade-in 1.5s forwards;
     color: #fff;
 
     & .project-tile-name {
@@ -37,47 +35,57 @@
 
     & .tag {
         display: flex;
-        // animation: fade-in 1.5s forwards;
     }
-}
 
-.project-tile {
-    &.project-home:hover {
-        background: url('/img/home.jpg');
-    }
-    &.project-a-kin:hover {
-        background: url('/img/a-kin.jpg');
-    }
-    &.project-jd:hover {
-        background: url('/img/jd.jpg');
-    }
-    &.project-ribbit:hover {
-        background: url('/img/ribbit.jpg');
-    }
-    &.project-note:hover {
-        background: url('/img/note.jpg');
-    }
-    &.project-git:hover {
-        background: url('/img/git.jpg');
+    & img {
+        animation: fade-in 1.5s forwards;
     }
 }
 
 @keyframes fade-in {
     from {
-        opacity: 0;
+        // opacity: 0;
+        background: rgba(255, 255, 255, 0.35);
     }
-
+  
     to {
         opacity: 1;
     }
-}
+  }
+
+// .project-tile {
+//     &.project-home:hover {
+//         background: url('/img/home.jpg');
+//     }
+
+//     &.project-a-kin:hover {
+//         background: url('/img/a-kin.jpg');
+//     }
+
+//     &.project-jd:hover {
+//         background: url('/img/jd.jpg');
+//     }
+
+//     &.project-ribbit:hover {
+//         background: url('/img/ribbit.jpg');
+//     }
+
+//     &.project-note:hover {
+//         background: url('/img/note.jpg');
+//     }
+
+//     // &.project-git:hover {
+//     //     background: url('/img/git.jpg');
+//     // }
+// }
 
 .project-tile-tags {
-    // position: absolute;
+    position: absolute;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 10px;
+    align-self: flex-end;
+    padding-bottom: 5px;
 }
 
 .project-tile-inner {
@@ -86,16 +94,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 25vh; 
+        opacity: 0;
+    }
 }
 
 .project-tile-name {
     padding: 5px;
+    position: absolute;
 }
 
 .project-tile-info {
+    position: absolute;
     display: none;
     font-size: 0.5em;
     padding: 5px;
+    width: 25%;
+    // height: 16%;
+    // width: 25%;
 }
 
 .tag {
@@ -147,5 +167,22 @@
         &::after {
             content: "Bootstrap";
         }
+    }
+}
+
+.project-open {
+    position: absolute;
+    // background: url("/img/home-l.png");
+    // background-size: cover;
+    top: 0;
+    margin-top: 70px;
+    height: calc(88vh - 100px);
+    width: 100%;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        filter: blur(8px);
     }
 }
