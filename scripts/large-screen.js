@@ -21,6 +21,9 @@ function openProjects() {
 
 function hideScreen() {
     largeScreen.style.display = "none";
+    // reset everything
+    document.getElementById('typed').innerHTML = "";
+    document.getElementById('project-tiles').style.display = "none";
 }
 
 

@@ -3,6 +3,10 @@
     height: calc(88vh - 100px);
 }
 
+#project-tiles {
+    display: none;
+}
+
 .project-tile {
     width: 25vw;
     min-height: 25vh;
@@ -19,9 +23,9 @@
 
 .project-tile:hover {
     // background: url('/img/home.jpg');
-    background-size: cover;
+    background-size: cover !important;
     animation: fade-in 1s forwards;
-    color: white;
+    color: #fff;
 
     & .project-tile-name {
         display: none;

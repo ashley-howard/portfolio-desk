@@ -10,7 +10,7 @@
 }
 
 #large-screen {
-    display: block; // change back to none
+    display: none; // change back to none
     position: absolute;
     z-index: 2;
     background: url('/img/pc-bg-large.jpg');
