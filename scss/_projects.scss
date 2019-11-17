@@ -1,44 +1,147 @@
 #screen-projects {
     margin-top: 70px;
     height: calc(88vh - 100px);
-    // padding-top: 40px;
 }
 
-.project {
-    position: absolute;
-    background: red;
-    height: 50px;
-    width: 50px;
+.project-tile {
+    width: 25vw;
+    min-height: 25vh;
+    max-height: 30vh;
+    background: rgba(255, 255, 255, 0.35);
+    display: flex; // flex
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #545454;
+    // border: 4px solid #606060;
+    cursor: pointer;
 }
 
-.folder {
-    &-home {
+.project-tile:hover {
+    // background: url('/img/home.jpg');
+    background-size: cover;
+    animation: fade-in 1s forwards;
+    color: white;
+
+    & .project-tile-name {
+        display: none;
+    }
+
+    & .project-tile-info {
+        display: initial;
+    }
+
+    & .tag {
+        display: flex;
+        // animation: fade-in 1.5s forwards;
+    }
+}
+
+.project-tile {
+    &.project-home:hover {
         background: url('/img/home.jpg');
-        background-size: cover;
     }
-
-    &-a-kin {
+    &.project-a-kin:hover {
         background: url('/img/a-kin.jpg');
-        background-size: cover;
     }
-
-    &-jd {
+    &.project-jd:hover {
         background: url('/img/jd.jpg');
-        background-size: cover;
     }
-
-    &-ribbit {
+    &.project-ribbit:hover {
         background: url('/img/ribbit.jpg');
-        background-size: cover;
     }
-
-    &-note {
+    &.project-note:hover {
         background: url('/img/note.jpg');
-        background-size: cover;
+    }
+    &.project-git:hover {
+        background: url('/img/git.jpg');
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
     }
 
-    &-git {
-        background: url('/img/git.jpg');
-        background-size: cover;
+    to {
+        opacity: 1;
+    }
+}
+
+.project-tile-tags {
+    // position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.project-tile-inner {
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-tile-name {
+    padding: 5px;
+}
+
+.project-tile-info {
+    display: none;
+    font-size: 0.5em;
+    padding: 5px;
+}
+
+.tag {
+    width: 60px;
+    height: 25px;
+    display: none; // flex using hover
+    align-items: center;
+    justify-content: center;
+    font-size: 0.4em;
+    border-radius: 10px;
+    color: white;
+    margin: 5px;
+    padding: 0 5px;
+
+    &-html {
+        background: #4171D1;
+
+        &::after {
+            content: "HTML";
+        }
+    }
+
+    &-css,
+    &-scss {
+        background: #D14141;
+
+        &::after {
+            content: "CSS";
+        }
+    }
+
+    &-scss {
+        &::after {
+            content: "SCSS";
+        }
+    }
+
+    &-js {
+        background: #AF41D1;
+
+        &::after {
+            content: "JavaScript";
+        }
+    }
+
+    &-bs {
+        background: #D19341;
+
+        &::after {
+            content: "Bootstrap";
+        }
     }
 }

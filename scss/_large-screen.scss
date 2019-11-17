@@ -10,15 +10,27 @@
 }
 
 #large-screen {
-    display: none; //none
+    display: block; // change back to none
     position: absolute;
     z-index: 2;
     background: url('/img/pc-bg-large.jpg');
     background-size: cover;
     animation: screen-enlarge 3s forwards;
-    // transform: translate(3%, -5%);
-    // border: 15px solid #1e1e1e;
-    // border-radius: 5px;
+}
+
+@keyframes screen-enlarge {
+    0% {
+        width: 382px;
+        height: 211px;
+        transform: translate(-36%, -14%);
+    }
+
+    100% {
+        width: 92.5vw;
+        height: 88vh;
+        transform: translate(0);
+        box-shadow: 0 0 20px 6px #ffffff63;
+    }
 }
 
 .top-bar {
@@ -51,26 +63,7 @@
 //     color: #303030;
 // }
 
-@keyframes screen-enlarge {
-    0% {
-        width: 382px;
-        height: 211px;
-        // transform: translate(-10%, 10%);
-        transform: translate(-36%, -14%);
-        // left: 28.6vw;
-        // bottom: 145px;
-    }
 
-    100% {
-        width: 92.5vw;
-        height: 88vh;
-        // left: 0;
-        // bottom: 0;
-        // transform: translate(3%, -5%);
-        transform: translate(0);
-        box-shadow: 0 0 20px 6px #ffffff63;
-    }
-}
 
 .close-screen {
     position: absolute;
@@ -110,31 +103,28 @@
     padding-left: 5px;
 }
 
-.folders-large {
-    padding: 15px;
-}
+// .folders-large {
+//     padding: 15px;
+// }
 
-.folder-large {
-    position: absolute;
-    // height: 110px;
-    // width: 220px;
-    height: 20vh;
-    width: 24vw;
-    // background: #bcbcbc;
-    border-top-right-radius: 2px;
-    cursor: pointer;
-    box-shadow: inset -8px -6px 12px #9b9b9b;
-    animation: folder-enlarge 5s forwards;
-}
+// .folder-large {
+//     position: absolute;
+//     height: 20vh;
+//     width: 24vw;
+//     border-top-right-radius: 2px;
+//     cursor: pointer;
+//     box-shadow: inset -8px -6px 12px #9b9b9b;
+//     animation: folder-enlarge 5s forwards;
+// }
 
-@keyframes folder-enlarge {
-    0% {
-        display: none;
-        opacity: 0;
-    }
+// @keyframes folder-enlarge {
+//     0% {
+//         display: none;
+//         opacity: 0;
+//     }
 
-    100% {
-        display: inherit;
-        opacity: 1;
-    }
-}
+//     100% {
+//         display: inherit;
+//         opacity: 1;
+//     }
+// }
