@@ -65,6 +65,22 @@
 
 
 
+.hide-screen {
+    position: absolute;
+    background: #268BCF;
+    width: 22px;
+    height: 22px;
+    right: 38px;
+    font-size: 1em;
+    // color: white;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .close-screen {
     position: absolute;
     background: #e33b3b;

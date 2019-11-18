@@ -26,10 +26,15 @@ function openProjects(project) {
             showCursor: false,
         });
     }
+    document.getElementById('project-tiles').style.display = "none";
 
 }
 
 function hideScreen() {
+    largeScreen.style.display = "none";
+    document.getElementById('folders').style.display = "none"
+}
+function closeScreen() {
     largeScreen.style.display = "none";
     // reset everything
     prependTyped.innerHTML = '';
