@@ -33,7 +33,7 @@
                     <div class="row">
                         <!-- Projects -->
                         <div class="column column-3">
-                            <div onclick="openProjects()" class="folder folder-projects"></div>
+                            <div onclick="openProjects('main')" class="folder folder-projects"></div>
                         </div>
                         <!-- Folder 2 -->
                         <div class="column column-3">
@@ -181,6 +181,7 @@
         <div id="large-screen">
 
             <div class="top-bar">
+                <div id="back-button" onclick="openProjects('back')">← Back</div>
                 <div class="hide-screen" onclick="hideScreen()">_</div>
                 <div class="close-screen" onclick="closeScreen()">X</div>
             </div>
@@ -197,6 +198,7 @@
             <!-- Projects -->
             <div id="screen-projects">
                 <div class="large-grid-container" id="project-tiles">
+
                     <!-- Project - Home -->
                     <div class="project-tile project-home" onclick="openProjects('home')">
                         <div class="project-tile-inner">
@@ -292,9 +294,33 @@
 
                 </div>
 
+
                 <!-- OPEN PROJECT HOME -->
-                <!-- <div class="project-open project-open-home">
-                    <div class="back-button">← Back</div>
+                <div class="project-open" id="project-open">
+
+                    <div class="row-project">
+                        <div class="col col-img">
+                            <img id="project-img" src="" alt="">
+                        </div>
+
+                        <div class="col col-info">
+                            <h2 id="project-name"></h2>
+                            <a id="project-url" href=""></a>
+                            <p id="project-desc"></p>
+                            <div class="project-tile-tags large-tags">
+                                <!-- could use all and use show/hidden in css -->
+                                <div id="tag-html" class="tag tag-html"></div>
+                                <div id="tag-scss" class="tag tag-scss"></div>
+                                <div id="tag-js" class="tag tag-js"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- OPEN PROJECT HOME
+                <div class="project-open project-open-home" id="open-home">
+
                     <div class="row-project">
                         <div class="col col-img">
                             <img src="/img/home-l.png" alt="">
@@ -302,8 +328,8 @@
 
                         <div class="col col-info">
                             <h2>Home</h2>
-                            <a href="#">/</a>
-                            <p>What started out as a fun project to see what objects Icould make using CSS, I got a bit
+                            <a href="#">/index.html</a>
+                            <p>What started out as a fun project to see what objects I could make using CSS, I got a bit
                                 carried
                                 away and recreated my bedroom desk.</p>
                             <div class="project-tile-tags large-tags">
@@ -316,7 +342,7 @@
                 </div> -->
 
                 <!-- OPEN PROJECT A-KIN -->
-                <!-- <div class="project-open project-open-a-kin">
+                <div class="project-open project-open-a-kin">
                     <div class="back-button">← Back</div>
                     <div class="row-project">
                         <div class="col col-img">
@@ -338,10 +364,10 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- OPEN PROJECT JD -->
-                <!-- <div class="project-open project-open-jd">
+                <div class="project-open project-open-jd">
                     <div class="back-button">← Back</div>
                     <div class="row-project">
                         <div class="col col-img">
@@ -356,18 +382,18 @@
                                 portfolio. It demonstrates
                                 responsive web design and
                                 uses a weather API. </p>
-                                <div class="project-tile-tags large-tags">
-                                        <div class="tag tag-html"></div>
-                                        <div class="tag tag-css"></div>
-                                        <div class="tag tag-js"></div>
-                                        <div class="tag tag-bs"></div>
-                                    </div>
+                            <div class="project-tile-tags large-tags">
+                                <div class="tag tag-html"></div>
+                                <div class="tag tag-css"></div>
+                                <div class="tag tag-js"></div>
+                                <div class="tag tag-bs"></div>
+                            </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- OPEN PROJECT RIBBIT -->
-                <!-- <div class="project-open project-open-ribbit">
+                <div class="project-open project-open-ribbit">
                     <div class="back-button">← Back</div>
                     <div class="row-project">
                         <div class="col col-img">
@@ -394,7 +420,7 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- OPEN PROJECT NOTECONVERT -->
                 <div class="project-open project-open-note">

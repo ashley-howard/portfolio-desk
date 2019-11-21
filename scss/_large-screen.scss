@@ -144,3 +144,18 @@
 //         opacity: 1;
 //     }
 // }
+
+#back-button {
+    display: none; // flex
+    position: absolute;
+    background: #515151;
+    color: white;
+    width: 51px;
+    height: 23px;
+    margin: 0px 10px;
+    padding: 0 8px;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 0;
+}

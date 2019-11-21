@@ -2,33 +2,72 @@
 var largeScreen = document.getElementById('large-screen');
 var explorerUrl = document.getElementById("explorer-url");
 var prependTyped = document.getElementById('prepend-typed');
+var backButton = document.getElementById('back-button');
+
+var projectOpen = document.getElementById('project-open');
+
+var projectImg = document.getElementById('project-img');
+var projectName = document.getElementById('project-name');
+var projectUrl = document.getElementById('project-url');
+var projectDesc = document.getElementById('project-desc');
+var tagHtml = document.getElementById('tag-html');
+var tagScss = document.getElementById('tag-scss');
+var tagJs = document.getElementById('tag-js');
+
+var typed;
 
 function openProjects(project) {
-    largeScreen.style.display = "block";
-    var typed = new Typed('#typed', {
-        strings: ['C:\\Users\\Ash\\Projects\\'],
-        typeSpeed: 50,
-        showCursor: false,
-        startDelay: 2000
-    });
+    // MAIN SETTINGS
+    if (project === 'main') {
+        largeScreen.style.display = "block";
 
-    setTimeout(function () {
-        document.getElementById('project-tiles').style.display = "grid";
-    }, 3600);
-
-    // PROJECT - HOME
-    if (project === "home") {
-        typed.destroy() // resets Typed
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\';
         var typed = new Typed('#typed', {
-            strings: ['Breaking-the-second-wall'],
+            strings: ['C:\\Users\\Ash\\Projects'],
+            typeSpeed: 50,
+            showCursor: false,
+            startDelay: 2000
+        });
+
+        setTimeout(function () {
+            document.getElementById('project-tiles').style.display = "grid";
+            typed.destroy() // resets Typed
+            prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+        }, 3600);
+    }
+
+    // OPEN HOME -- repeat this code for all projects
+    else if (project === 'home') {
+
+        // LOAD IN DATA FIRST
+        projectOpen.className = "project-open project-open-home"
+        projectImg.src = '/img/home-l.png';
+        projectName.innerText = 'Home';
+        projectUrl.href = '/';
+        projectUrl.innerText = '/index.html';
+        projectDesc.innerText = 'What started out as a fun project to see what objects I could make using CSS, I got a bit carried away and recreated my bedroom desk.';
+        //  tagHtml = document.getElementById('tag-html');
+        //  tagScss = document.getElementById('tag-scss');
+        //  tagJs = 
+
+        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+        var typed = new Typed('#typed', {
+            strings: ['\\Breaking-the-second-wall'],
             typeSpeed: 50,
             showCursor: false,
         });
-    }
-    document.getElementById('project-tiles').style.display = "none";
 
+        setTimeout(function () {
+            document.getElementById('project-open').style.display = "block";
+            backButton.style.display = "flex";
+
+            typed.destroy() // resets Typed
+            prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\Breaking-the-second-wall';
+        }, 1750);
+
+        document.getElementById('project-tiles').style.display = "none";
+    }
 }
+
 
 function hideScreen() {
     largeScreen.style.display = "none";
