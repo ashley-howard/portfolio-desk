@@ -11,8 +11,6 @@ body {
   -ms-user-select: none;
 }
 
-
-
 %pseudo {
   content: "";
   position: absolute;
@@ -28,7 +26,19 @@ body {
   // color: #82aeff;
 }
 
-// .d-none {
-//   display: block; // set back to "none"
-// }
+.d-none {
+  display: none;
+}
 
+noscript {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    font-size: 5em;
+    background: #ffffffe0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}

@@ -11,7 +11,9 @@ var projectName = document.getElementById('project-name');
 var projectUrl = document.getElementById('project-url');
 var projectDesc = document.getElementById('project-desc');
 var tagHtml = document.getElementById('tag-html');
+var tagCss = document.getElementById('tag-css');
 var tagScss = document.getElementById('tag-scss');
+var tagBs = document.getElementById('tag-bs');
 var tagJs = document.getElementById('tag-js');
 
 var typed;
@@ -35,6 +37,19 @@ function openProjects(project) {
         }, 3600);
     }
 
+    else if (project === 'back') {
+        document.getElementById('project-tiles').style.display = "grid";
+        backButton.style.display = "none";
+        document.getElementById('project-open').style.display = "none";
+        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+
+        tagHtml.style.display = "none";
+        tagCss.style.display = "none";
+        tagScss.style.display = "none";
+        tagBs.style.display = "none";
+        tagJs.style.display = "none";
+    }
+
     // OPEN HOME -- repeat this code for all projects
     else if (project === 'home') {
 
@@ -45,9 +60,9 @@ function openProjects(project) {
         projectUrl.href = '/';
         projectUrl.innerText = '/index.html';
         projectDesc.innerText = 'What started out as a fun project to see what objects I could make using CSS, I got a bit carried away and recreated my bedroom desk.';
-        //  tagHtml = document.getElementById('tag-html');
-        //  tagScss = document.getElementById('tag-scss');
-        //  tagJs = 
+        tagHtml.style.display = "flex";
+        tagScss.style.display = "flex";
+        tagJs.style.display = "flex";
 
         prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
         var typed = new Typed('#typed', {
