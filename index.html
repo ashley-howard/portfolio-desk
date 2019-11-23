@@ -55,6 +55,13 @@
                     <div class="taskbar"></div>
                 </div>
 
+                <!-- Minimised screen -->
+                <!-- which has an onclick to show everything again -->
+                <div id="minimised" onclick="maximise()">
+                    <p>Screen minimised</p>
+                    <p>Click here to continue where you left off</p>
+                </div>
+
             </div>
             <div class="pc--button"></div>
             <div class="pc--stand-bottom"></div>
@@ -182,7 +189,7 @@
 
             <div class="top-bar">
                 <div id="back-button" onclick="openProjects('back')">← Back</div>
-                <div class="hide-screen" onclick="hideScreen()">_</div>
+                <div class="hide-screen" onclick="minimise()">_</div>
                 <div class="close-screen" onclick="closeScreen()">X</div>
             </div>
 
@@ -293,6 +300,8 @@
                     </a>
 
                 </div>
+
+
 
 
                 <!-- OPEN PROJECT TEMPLATE -->

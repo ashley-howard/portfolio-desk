@@ -147,16 +147,26 @@ function openProjects(project) {
 
 }
 
-function hideScreen() {
+function minimise() {
     largeScreen.style.display = "none";
-    document.getElementById('folders').style.display = "none"
+    document.getElementById('minimised').style.display = "flex";
+    // document.getElementById('folders').style.display = "none"
 }
+
+function maximise() {
+    largeScreen.style.display = "block";
+    document.getElementById('minimised').style.display = "none";
+    // document.getElementById('folders').style.display = "none"
+}
+
 function closeScreen() {
     largeScreen.style.display = "none";
     // reset everything
     prependTyped.innerHTML = '';
     document.getElementById('typed').innerHTML = "";
     projectTiles.style.display = "none";
+    document.getElementById(`open-${projectFocus}`).style.display = "none";
+    backButton.style.display = "none";
 }
 
 
