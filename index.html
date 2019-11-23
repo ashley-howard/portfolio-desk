@@ -181,6 +181,7 @@
         <div id="large-screen">
 
             <div class="top-bar">
+                <div id="back-button" onclick="openProjects('back')">← Back</div>
                 <div class="hide-screen" onclick="hideScreen()">_</div>
                 <div class="close-screen" onclick="closeScreen()">X</div>
             </div>
@@ -295,11 +296,15 @@
 
 
                 <!-- OPEN PROJECT TEMPLATE -->
-                <div class="project-open" id="project-open">
+                <!-- <div class="project-open" id="project-open">
                     <div id="back-button" onclick="openProjects('back')">← Back</div>
                     <div class="row-project">
                         <div class="col col-img">
-                            <img id="project-img" src="" alt="">
+                            <img id="project-img d-none" src="" alt="">
+                            <video id="project-vid d-none" autoplay loop poster="">
+                                <source src="" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
                         </div>
 
                         <div class="col col-info">
@@ -315,12 +320,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
-                <!-- OPEN PROJECT HOME
+                <!-- OPEN PROJECT HOME -->
                 <div class="project-open project-open-home" id="open-home">
-
                     <div class="row-project">
                         <div class="col col-img">
                             <img src="/img/home-l.png" alt="">
@@ -339,11 +343,10 @@
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- OPEN PROJECT A-KIN -->
-                <div class="project-open project-open-a-kin">
-                    <div class="back-button">← Back</div>
+                <div class="project-open project-open-a-kin" id="open-a-kin">
                     <div class="row-project">
                         <div class="col col-img">
                             <video autoplay loop poster="/img/a-kin-l.jpg">
@@ -356,7 +359,7 @@
                             <h2>A-KIN</h2>
                             <a href="https://ashley.how/a-kin" target="_blank">/a-kin</a>
                             <p>An experimental-electronic composer/installation artist who creates mixes exploring a
-                                range ofbdifferent subjects and ideas.</p>
+                                range of different subjects and ideas.</p>
                             <div class="project-tile-tags large-tags">
                                 <div class="tag tag-html"></div>
                                 <div class="tag tag-css"></div>
@@ -367,8 +370,7 @@
                 </div>
 
                 <!-- OPEN PROJECT JD -->
-                <div class="project-open project-open-jd">
-                    <div class="back-button">← Back</div>
+                <div class="project-open project-open-jd" id="open-jd">
                     <div class="row-project">
                         <div class="col col-img">
                             <img src="/img/jd-l.jpg" alt="">
@@ -393,8 +395,7 @@
                 </div>
 
                 <!-- OPEN PROJECT RIBBIT -->
-                <div class="project-open project-open-ribbit">
-                    <div class="back-button">← Back</div>
+                <div class="project-open project-open-ribbit" id="open-ribbit">
                     <div class="row-project">
                         <div class="col col-img">
                             <img src="/img/ribbit-l.jpg" alt="">
@@ -423,8 +424,7 @@
                 </div>
 
                 <!-- OPEN PROJECT NOTECONVERT -->
-                <div class="project-open project-open-note">
-                    <div class="back-button">← Back</div>
+                <div class="project-open project-open-note" id="open-note">
                     <div class="row-project">
                         <div class="col col-img">
                             <img src="/img/note-l.jpg" alt="">
