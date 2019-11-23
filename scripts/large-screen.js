@@ -98,7 +98,7 @@ function openProjects(project) {
 
             typed.destroy() // resets Typed
             prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\jack-daniels';
-        }, 1750);
+        }, 1000);
 
         projectTiles.style.display = "none";
     }
@@ -119,7 +119,7 @@ function openProjects(project) {
 
             typed.destroy() // resets Typed
             prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\ribbit';
-        }, 1750);
+        }, 550);
 
         projectTiles.style.display = "none";
     }
@@ -140,7 +140,7 @@ function openProjects(project) {
 
             typed.destroy() // resets Typed
             prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\note-convert';
-        }, 1750);
+        }, 900);
 
         projectTiles.style.display = "none";
     }
