@@ -333,6 +333,39 @@ $shadow: 10px -7px 4px 0px #00000038;
 }
 
 
+
+
+.folders svg {
+    width: 50px;
+    height: 50px;
+
+    &.folder-icon {
+        fill: #242424;
+        stroke: white;
+        stroke-width: 0.5;
+    }
+
+    &.github-icon {
+        fill: #555555;
+        stroke: white;
+        stroke-width: 0.5;
+    }
+
+    &.twitter-icon {
+        fill: lightblue;
+        stroke: white;
+        stroke-width: 0.5;
+    }
+
+    &.contact-icon {
+        fill: white;
+        stroke: #c8c8c8;
+        stroke-width: 0.5;
+    }
+}
+
+
+
 //------ /PC ----- //
 
 //------ CALENDAR ----- //
@@ -792,9 +825,9 @@ $lamp-color: #414040;
         // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#221f1f", endColorstr="#555555", GradientType=1);
 
         position: absolute;
-        transform: rotate(52deg);
-        right: -92px;
-        top: -15px;
+        transform: rotate(57deg);
+        right: -100px;
+        top: -1px;
         border-radius: 100% 100% 10px 10px;
         z-index: 1;
         border-bottom: 70px solid #4b4b4b;
@@ -888,12 +921,17 @@ $lamp-color: #414040;
 
         &::after {
             @extend %pseudo;
-            background: $lamp-color;
+            background: rgb(41, 41, 41);
+            background: -moz-linear-gradient(0deg, rgba(41, 41, 41, 1) 0%, rgba(65, 64, 64, 1) 100%);
+            background: -webkit-linear-gradient(0deg, rgba(41, 41, 41, 1) 0%, rgba(65, 64, 64, 1) 100%);
+            background: linear-gradient(0deg, rgba(41, 41, 41, 1) 0%, rgba(65, 64, 64, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#292929", endColorstr="#414040", GradientType=1);
             width: 81px;
             height: 36px;
             border-radius: 100%;
             bottom: -34px;
             left: -30px;
+            box-shadow: 0px 6px #323232;
         }
     }
 
@@ -902,13 +940,13 @@ $lamp-color: #414040;
     &--inner {
         position: absolute;
         background: #c6c6c6;
-        width: 79px;
+        width: 77px;
         height: 20px;
         border-radius: 62%;
-        bottom: -51px;
-        right: -64px;
-        box-shadow: 2px 20px 20px 14px #b8b8b8;
-        transform: rotate(52deg);
+        bottom: -62px;
+        right: -69px;
+        box-shadow: 2px 20px 20px 14px #d9b99e;
+        transform: rotate(57deg);
 
         &::after {
             @extend %pseudo;

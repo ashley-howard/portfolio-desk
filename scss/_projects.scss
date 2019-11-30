@@ -87,12 +87,14 @@
     flex-wrap: wrap;
     align-self: flex-end;
     padding-bottom: 5px;
+    width: 27%;
 }
 
 .large-tags {
     display: flex;
     position: inherit;
     align-self: center;
+    width: 100%;
     // margin-top: 10px;
 
     .tag {
@@ -182,6 +184,22 @@
             content: "Bootstrap";
         }
     }
+
+    &-sortable-js {
+        background: #17326a;
+
+        &::after {
+            content: "Sortable.js";
+        }
+    }
+
+    &-typed-js {
+        background: #41d1b0;
+
+        &::after {
+            content: "Typed.js";
+        }
+    }
 }
 
 .project-open {
@@ -242,7 +260,7 @@
 }
 
 .col {
-    &-img {
+    &-media {
         width: 65%;
         height: 59vh;
         display: flex;
