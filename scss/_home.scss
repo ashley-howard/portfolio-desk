@@ -338,6 +338,7 @@ $shadow: 10px -7px 4px 0px #00000038;
 .folders svg {
     width: 50px;
     height: 50px;
+    cursor: pointer;
 
     &.folder-icon {
         fill: #242424;
@@ -628,76 +629,55 @@ $calendar-h: 360px;
 //------ /HUB----- //
 
 //------ Coffee Mug ----- //
+.mug-container {
+    position: absolute;
+    top: calc(100vh - 133px);
+    right: 38%;
+}
+
 .mug {
     position: absolute;
-    width: 61px;
-    height: 70px;
-    background: #fefefe;
-    top: calc(100vh - 125px);
-    right: 29%;
-    border-radius: 5px 5px 26px 26px;
-    box-shadow: inset 2px 0px 20px 0px #323232;
+    width: 60px;
+    height: 49px;
+    background: #0f2800;
+    border-radius: 5px 5px 48% 48%;
+    box-shadow: inset 9px 5px 19px 4px #130400, 9px 10px 13px 4px #090909, 20px -4px 10px 2px #0000007a, inset -3px 7px 20px 0px #000000;
     z-index: 2;
-    border-bottom: 1px solid #3c3c3c;
+    top: 25px;
+    left: -1px;
 
     &::before {
         @extend %pseudo;
         width: 61px;
         height: 21px;
-        background: #999999;
+        background: #0a1500;
         top: -7px;
         border-radius: 100%;
     }
 
-    &::after {
-        @extend %pseudo;
-        width: 55px;
-        height: 18px;
-        background: #201515;
-        top: -5px;
-        box-shadow: inset 2px 5px 8px #8f3c3c;
-        border-radius: 100%;
-        left: 3px;
-    }
-
     &--handle {
         position: absolute;
-        width: 23px;
-        height: 42px;
-        background: white;
-        right: -23px;
+        width: 14px;
+        height: 30px;
+        background: #102300;
+        right: -12px;
         z-index: 0;
         border-radius: 0 100px 100px 0;
         top: 7px;
-        box-shadow: inset 2px -1px 2px 0px #3f3f3f;
+        box-shadow: inset -1px 1px 7px 0px #000000, 2px -1px 1px 0px #324b03;
+        transform: rotate(1deg);
 
         &::after {
             @extend %pseudo;
-            width: 18px;
-            height: 28px;
-            background: #201f1f;
+            width: 11px;
+            height: 18px;
+            background: linear-gradient(45deg, black, transparent);
             border-radius: 39px 197px 207px 51px;
             top: 6px;
             box-shadow: 0px 0px 11px 2px #050202;
         }
     }
 
-    &--shadow {
-        position: absolute;
-        width: 61px;
-        height: 70px;
-        top: calc(100vh - 125px);
-        right: 29%;
-        border-radius: 5px 5px 26px 26px;
-        box-shadow: 20px -7px 10px 2px #0000007a;
-
-        // &::after {
-        //     @extend %pseudo;
-        //     width: 61px;
-        //     height: 70px;
-        //     background: green;
-        // }
-    }
 
     &--text {
         font-size: 0.65em;
@@ -706,6 +686,85 @@ $calendar-h: 360px;
         width: 40px;
         height: 40px;
         margin-left: 6px;
+    }
+}
+
+
+#coffee {
+    position: absolute;
+    width: 52px;
+    height: 18px;
+    top: -5px;
+    box-shadow: inset 1px 1px 3px 0px #150000, inset 2px 5px 10px 6px #a33c00;
+    border-radius: 100%;
+    left: 2px;
+    border: 1px solid #062812;
+    background-image: url('../img/coffee.png');
+    background-size: cover;
+}
+
+.drink {
+    animation: drink-coffee 10s forwards;
+}
+
+@keyframes drink-coffee {
+    0% {
+        // opacity: 1;
+        box-shadow: inset 1px 1px 3px 0px #150000, inset 2px 5px 10px 6px #a33c00;
+    }
+
+    100% {
+        // opacity: 0;
+        background-image: none;
+        box-shadow: inset 1px 1px 20px 20px #091100;
+    }
+}
+
+.saucer {
+    position: absolute;
+    width: 100px;
+    height: 64px;
+    background: #747e39;
+    border-radius: 100%;
+    top: 23px;
+    left: -20px;
+    box-shadow: inset 0 0 20px 10px #0e2005, 2px 5px 5px 0px #131313, inset 13px 0px 12px 3px #000000, inset 5px 9px 3px 9px #ffffff;
+    border: 2px solid #0d0503bf;
+}
+
+.spoon {
+    position: absolute;
+    width: 66px;
+    height: 6px;
+    background: #dbdbdb;
+    bottom: -80px;
+    left: -18px;
+    transform: rotate(45deg);
+    box-shadow: inset 5px -1px 0px 0px #0f0f0f, -3px 4px 3px 0px #0f0f0f;
+    border-radius: 0 100% 50px 0px;
+    border-top: 2px solid #ededed;
+
+    &::before {
+        @extend %pseudo;
+        width: 24px;
+        height: 14px;
+        background: #c6c6c6;
+        border-radius: 100%;
+        top: -8px;
+        left: -8px;
+        z-index: 1;
+        box-shadow: 0px 2px 2px 0px #747474;
+    }
+
+    &::after {
+        @extend %pseudo;
+        width: 28px;
+        height: 21px;
+        background: black;
+        border-radius: 100%;
+        top: -10px;
+        left: -9px;
+        box-shadow: inset 1px -6px 7px 3px #2c2a2a, inset 1px -6px 7px 3px #ffffff, 1px 7px 11px 0px #090909;
     }
 }
 
