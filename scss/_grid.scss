@@ -81,7 +81,18 @@ $scw: (100 - ($m * ($mc - 1))) / $mc; // single column width
 }
 
 .row {
-  margin-bottom: 10px;
+  // margin-bottom: 10px;
+
+  &.row-top {
+    margin-top: 12%;
+  }
+
+  &.row-bottom {
+    background: #221c1c66;
+    height: 18%;
+  }
+
+
 }
 
 .row:last-child {

@@ -224,7 +224,23 @@ $shadow: 10px -7px 4px 0px #00000038;
     flex-direction: column;
     width: inherit;
     height: inherit;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    // background: #ffffff6e; // or only on hover?
+}
+
+.folders:hover {
+    animation: fade-in 50s forwards;
+}
+
+@keyframes fade-in {
+    0% {
+
+        background: transparent;
+    }
+
+    100% {
+        background: #ffffff6e;
+    }
 }
 
 .folder {
@@ -345,29 +361,79 @@ $shadow: 10px -7px 4px 0px #00000038;
     height: 50px;
     cursor: pointer;
 
-    &.folder-icon {
+    &.top-icon {
         fill: #242424;
-        stroke: white;
-        stroke-width: 0.5;
+        // stroke: white;
+        // stroke-width: 0.5;
     }
 
-    &.github-icon {
-        fill: #555555;
-        stroke: white;
-        stroke-width: 0.5;
+    &.bottom-icon {
+        width: 25px;
+        fill: #bebebe;
+        height: 25px;
     }
 
-    &.twitter-icon {
-        fill: lightblue;
-        stroke: white;
-        stroke-width: 0.5;
+    // &.github-icon {
+    //     fill: #555555;
+    //     stroke: white;
+    //     stroke-width: 0.5;
+    // }
+
+    &.skills-icon:hover {
+        animation: change-color 5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        // animation-fill-mode: both;
     }
 
-    &.contact-icon {
-        fill: white;
-        stroke: #c8c8c8;
-        stroke-width: 0.5;
+    @keyframes change-color {
+        0% {
+            fill: black;
+        }
+
+        20% {
+            fill: #143c11;
+        }
+
+        50% {
+            fill: lightblue;
+        }
+
+        75% {
+            fill: pink;
+        }
+
+        100% {
+            fill: #fad318;
+        }
     }
+
+    &.about-icon:hover {
+        fill: #4b1717;
+    }
+
+    &.gh-icon:hover {
+        fill: #323232;
+    }
+
+    &.tw-icon:hover {
+        fill: #5c98c2;
+    }
+
+    &.ig-icon:hover {
+        fill: #93180b;
+    }
+
+    &.li-icon:hover {
+        fill: #13598b;
+    }
+
+    // &.contact-icon {
+    //     fill: white;
+    //     stroke: #c8c8c8;
+    //     stroke-width: 0.5;
+    // }
 }
 
 
