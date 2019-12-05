@@ -219,7 +219,12 @@ $shadow: 10px -7px 4px 0px #00000038;
 }
 
 .folders {
-    padding: 15px;
+    // padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    height: inherit;
+    justify-content: space-evenly;
 }
 
 .folder {
@@ -389,7 +394,7 @@ $calendar-h: 360px;
         &--top {
             width: $calendar-w;
             height: $calendar-h / 2;
-            background: url('../img/waves.jpg');
+            background: url('../img/month/1.jpg');
             background-size: cover;
             border-radius: 2px 2px 7px 0;
 
@@ -631,40 +636,41 @@ $calendar-h: 360px;
 //------ Coffee Mug ----- //
 .mug-container {
     position: absolute;
-    top: calc(100vh - 133px);
-    right: 38%;
+    top: calc(100vh - 137px);
+    right: 40%;
 }
 
 .mug {
     position: absolute;
     width: 60px;
     height: 49px;
-    background: #0f2800;
-    border-radius: 5px 5px 48% 48%;
-    box-shadow: inset 9px 5px 19px 4px #130400, 9px 10px 13px 4px #090909, 20px -4px 10px 2px #0000007a, inset -3px 7px 20px 0px #000000;
+    background: #e5e5e5;
+    border-radius: 9px 13px 48% 48%;
+    box-shadow: inset -8px 3px 7px 0px #130400, 9px 10px 13px 4px #090909, 20px -4px 10px 2px #00000069, inset -9px 5px 20px 0px #000000;
     z-index: 2;
     top: 25px;
     left: -1px;
 
-    &::before {
-        @extend %pseudo;
-        width: 61px;
-        height: 21px;
-        background: #0a1500;
-        top: -7px;
-        border-radius: 100%;
-    }
+    // &::before {
+    //     @extend %pseudo;
+    //     width: 55px;
+    //     height: 21px;
+    //     background: #a5a5a5;
+    //     top: -6px;
+    //     border-radius: 100%;
+    //     right: 3px;
+    // }
 
     &--handle {
         position: absolute;
         width: 14px;
         height: 30px;
-        background: #102300;
+        background: #ffffff;
         right: -12px;
         z-index: 0;
         border-radius: 0 100px 100px 0;
         top: 7px;
-        box-shadow: inset -1px 1px 7px 0px #000000, 2px -1px 1px 0px #324b03;
+        box-shadow: inset -1px 1px 7px 0px #000000, 2px -1px 1px 0px #a9a9a9;
         transform: rotate(1deg);
 
         &::after {
@@ -679,14 +685,14 @@ $calendar-h: 360px;
     }
 
 
-    &--text {
-        font-size: 0.65em;
-        margin-top: 18px;
-        border: 1px solid #7c7c7c;
-        width: 40px;
-        height: 40px;
-        margin-left: 6px;
-    }
+    // &--text {
+    //     font-size: 0.65em;
+    //     margin-top: 18px;
+    //     border: 1px solid #7c7c7c;
+    //     width: 40px;
+    //     height: 40px;
+    //     margin-left: 6px;
+    // }
 }
 
 
@@ -698,7 +704,7 @@ $calendar-h: 360px;
     box-shadow: inset 1px 1px 3px 0px #150000, inset 2px 5px 10px 6px #a33c00;
     border-radius: 100%;
     left: 2px;
-    border: 1px solid #062812;
+    border: 1px solid #a5a5a5;
     background-image: url('../img/coffee.png');
     background-size: cover;
 }
@@ -716,7 +722,7 @@ $calendar-h: 360px;
     100% {
         // opacity: 0;
         background-image: none;
-        box-shadow: inset 1px 1px 20px 20px #091100;
+        box-shadow: inset 3px 9px 20px 0px #cacaca, inset 2px -5px 7px 9px #000000;
     }
 }
 
@@ -724,11 +730,11 @@ $calendar-h: 360px;
     position: absolute;
     width: 100px;
     height: 64px;
-    background: #747e39;
+    background: #ffffff;
     border-radius: 100%;
     top: 23px;
     left: -20px;
-    box-shadow: inset 0 0 20px 10px #0e2005, 2px 5px 5px 0px #131313, inset 13px 0px 12px 3px #000000, inset 5px 9px 3px 9px #ffffff;
+    box-shadow: inset 0 0 20px 10px #787878, 2px 5px 5px 0px #131313, inset 13px 0px 12px 3px #000000, inset 5px 9px 3px 9px #ffffff;
     border: 2px solid #0d0503bf;
 }
 
@@ -760,11 +766,12 @@ $calendar-h: 360px;
         @extend %pseudo;
         width: 28px;
         height: 21px;
-        background: black;
+        // background: black;
         border-radius: 100%;
         top: -10px;
         left: -9px;
-        box-shadow: inset 1px -6px 7px 3px #2c2a2a, inset 1px -6px 7px 3px #ffffff, 1px 7px 11px 0px #090909;
+        box-shadow: inset 3px -5px 10px 20px #2c2a2a, 1px 7px 11px 0px #090909;
+        border: 1px solid #727272;
     }
 }
 
