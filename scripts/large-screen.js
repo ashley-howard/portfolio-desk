@@ -148,15 +148,17 @@ function openProjects(project) {
 }
 
 function minimise() {
-    largeScreen.style.display = "none";
-    document.getElementById('minimised').style.display = "flex";
+    // largeScreen.style.display = "none";
     // document.getElementById('folders').style.display = "none"
+    document.getElementById('minimised').style.display = "flex";
+    largeScreen.style.bottom = "calc(100vh * 2)";
 }
 
 function maximise() {
-    largeScreen.style.display = "block";
-    document.getElementById('minimised').style.display = "none";
+    // largeScreen.style.display = "block";
     // document.getElementById('folders').style.display = "none"
+    document.getElementById('minimised').style.display = "none";
+    largeScreen.style.bottom = "initial";
 }
 
 function closeScreen() {
