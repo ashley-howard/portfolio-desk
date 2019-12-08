@@ -1,10 +1,22 @@
 @import 'reset';
-@import 'home';
-@import 'grid';
-@import 'large-screen';
+@import 'home/home';
 @import 'queries';
-@import 'magnet';
 @import 'dev';
+
+// @import 'bg/books';
+// @import 'bg/magnet';
+// @import 'bg/calendar';
+// @import 'bg/photos';
+// @import 'bg/plant';
+// @import 'bg/notes';
+// @import 'bg/headphones';
+// @import 'bg/lamp';
+// @import 'bg/coffee';
+// @import 'bg/hub';
+
+$shadow: 10px -7px 4px 0px #00000038;
+
+
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -48,3 +60,23 @@ noscript {
   align-items: center;
   text-align: center;
 }
+
+.copyright {
+  color: #575757;
+  font-family: 'Gochi Hand', cursive;
+  right: 5px;
+  position: absolute;
+  bottom: 2px;
+  font-size: 0.9em;
+}
+
+
+// .black-screen {
+//     position: absolute;
+//     width: 100vw;
+//     height: 100vh;
+//     background: black;
+//     top: 0;
+//     left: 0;
+//     z-index: 1;
+// }

@@ -1,0 +1,44 @@
+@import 'calendar';
+@import 'headphones';
+@import 'magnet';
+@import 'notes';
+@import 'photos';
+
+// BG NIGHT
+// background: rgb(255,203,149);
+// background: -moz-radial-gradient(circle, rgba(255,203,149,1) 0%, rgba(0,0,0,1) 100%);
+// background: -webkit-radial-gradient(circle, rgba(255,203,149,1) 0%, rgba(0,0,0,1) 100%);
+// background: radial-gradient(circle, rgba(255,203,149,1) 0%, rgba(0,0,0,1) 100%);
+// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffcb95",endColorstr="#000000",GradientType=1);
+
+// back wall 
+.bg {
+    position: absolute;
+    width: 100vw;
+    // height: 96vh;
+    height: calc(100vh - 130px);
+    // background: rgb(93, 87, 80);
+    // background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    // background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    // background: linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
+    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#5d5750", endColorstr="#5d5750", GradientType=1);
+    background: rgb(155, 120, 86);
+    background: -moz-linear-gradient(90deg, rgba(155, 120, 86, 1) 0%, rgba(250, 201, 150, 1) 50%, rgba(71, 45, 22, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(155, 120, 86, 1) 0%, rgba(250, 201, 150, 1) 50%, rgba(71, 45, 22, 1) 100%);
+    background: linear-gradient(90deg, rgba(155, 120, 86, 1) 0%, rgba(250, 201, 150, 1) 50%, rgba(71, 45, 22, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9b7856", endColorstr="#472d16", GradientType=1);
+    box-shadow: inset -20px -19px 20px 0px #00000087;
+
+    // right wall 
+    &::before {
+        @extend %pseudo;
+        right: 0;
+        width: 8.1vw;
+        height: 100vh;
+        background: rgb(71, 45, 22);
+        background: -moz-linear-gradient(90deg, rgba(71, 45, 22, 1) 0%, rgba(155, 120, 86, 1) 100%);
+        background: -webkit-linear-gradient(90deg, rgba(71, 45, 22, 1) 0%, rgba(155, 120, 86, 1) 100%);
+        background: linear-gradient(90deg, rgba(71, 45, 22, 1) 0%, rgba(155, 120, 86, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#472d16", endColorstr="#9b7856", GradientType=1);
+    }
+}

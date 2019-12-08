@@ -1,0 +1,234 @@
+
+//------ Coffee Mug ----- //
+.mug-container {
+    position: absolute;
+    top: calc(100vh - 137px);
+    right: 40%;
+}
+
+.mug {
+    position: absolute;
+    width: 60px;
+    height: 49px;
+    background: #e5e5e5;
+    border-radius: 9px 13px 48% 48%;
+    box-shadow: inset -8px 3px 7px 0px #130400, 9px 10px 13px 4px #090909, 20px -4px 10px 2px #00000069, inset -9px 5px 20px 0px #000000;
+    z-index: 2;
+    top: 25px;
+    left: -1px;
+
+    // &::before {
+    //     @extend %pseudo;
+    //     width: 55px;
+    //     height: 21px;
+    //     background: #a5a5a5;
+    //     top: -6px;
+    //     border-radius: 100%;
+    //     right: 3px;
+    // }
+
+    &--handle {
+        position: absolute;
+        width: 14px;
+        height: 30px;
+        background: #ffffff;
+        right: -12px;
+        z-index: 0;
+        border-radius: 0 100px 100px 0;
+        top: 7px;
+        box-shadow: inset -1px 1px 7px 0px #000000, 2px -1px 1px 0px #a9a9a9;
+        transform: rotate(1deg);
+
+        &::after {
+            @extend %pseudo;
+            width: 11px;
+            height: 18px;
+            background: linear-gradient(45deg, black, transparent);
+            border-radius: 39px 197px 207px 51px;
+            top: 6px;
+            box-shadow: 0px 0px 11px 2px #050202;
+        }
+    }
+
+
+    // &--text {
+    //     font-size: 0.65em;
+    //     margin-top: 18px;
+    //     border: 1px solid #7c7c7c;
+    //     width: 40px;
+    //     height: 40px;
+    //     margin-left: 6px;
+    // }
+}
+
+
+#coffee {
+    position: absolute;
+    width: 52px;
+    height: 18px;
+    top: -5px;
+    box-shadow: inset 1px 1px 3px 0px #150000, inset 2px 5px 10px 6px #a33c00;
+    border-radius: 100%;
+    left: 2px;
+    border: 1px solid #a5a5a5;
+    background-image: url('../img/coffee.png');
+    background-size: cover;
+}
+
+.drink {
+    animation: drink-coffee 10s forwards;
+}
+
+@keyframes drink-coffee {
+    0% {
+        // opacity: 1;
+        box-shadow: inset 1px 1px 3px 0px #150000, inset 2px 5px 10px 6px #a33c00;
+    }
+
+    100% {
+        // opacity: 0;
+        background-image: none;
+        box-shadow: inset 3px 9px 20px 0px #cacaca, inset 2px -5px 7px 9px #000000;
+    }
+}
+
+.saucer {
+    position: absolute;
+    width: 100px;
+    height: 64px;
+    background: #ffffff;
+    border-radius: 100%;
+    top: 23px;
+    left: -20px;
+    box-shadow: inset 0 0 20px 10px #787878, 2px 5px 5px 0px #131313, inset 13px 0px 12px 3px #000000, inset 5px 9px 3px 9px #ffffff;
+    border: 2px solid #0d0503bf;
+}
+
+.spoon {
+    position: absolute;
+    width: 66px;
+    height: 6px;
+    background: #dbdbdb;
+    bottom: -80px;
+    left: -18px;
+    transform: rotate(45deg);
+    box-shadow: inset 5px -1px 0px 0px #0f0f0f, -3px 4px 3px 0px #0f0f0f;
+    border-radius: 0 100% 50px 0px;
+    border-top: 2px solid #ededed;
+
+    &::before {
+        @extend %pseudo;
+        width: 24px;
+        height: 14px;
+        background: #c6c6c6;
+        border-radius: 100%;
+        top: -8px;
+        left: -8px;
+        z-index: 1;
+        box-shadow: 0px 2px 2px 0px #747474;
+    }
+
+    &::after {
+        @extend %pseudo;
+        width: 28px;
+        height: 21px;
+        // background: black;
+        border-radius: 100%;
+        top: -10px;
+        left: -9px;
+        box-shadow: inset 3px -5px 10px 20px #2c2a2a, 1px 7px 11px 0px #090909;
+        border: 1px solid #727272;
+    }
+}
+
+// .steam-group {
+//     position: absolute;
+//     right: 29%;
+//     bottom: 135px;
+// }
+
+// .steam {
+//     position: absolute;
+//     height: 150px;
+//     width: 150px;
+//     border-radius: 50%;
+//     background-color: #fff;
+//     margin-top: -75px;
+//     margin-left: 75px;
+//     z-index: 0;
+//     opacity: 0;
+// }
+
+// #steam-one {
+//     -webkit-animation: steam-one 4s ease-out infinite;
+//     animation: steam-one 4s ease-out infinite;
+// }
+
+// #steam-three {
+//     -webkit-animation: steam-one 4s ease-out 1s infinite;
+//     animation: steam-one 4s ease-out 1s infinite;
+// }
+
+// @-webkit-keyframes steam-one {
+//     0% {
+//         transform: translateY(0) translateX(0) scale(0.25);
+//         opacity: 0.2;
+//     }
+
+//     100% {
+//         transform: translateY(-200px) translateX(-20px) scale(1);
+//         opacity: 0;
+//     }
+// }
+
+// @keyframes steam-one {
+//     0% {
+//         transform: translateY(0) translateX(0) scale(0.25);
+//         opacity: 0.2;
+//     }
+
+//     100% {
+//         transform: translateY(-200px) translateX(-20px) scale(1);
+//         opacity: 0;
+//     }
+// }
+
+// #steam-two {
+//     -webkit-animation: steam-two 4s ease-out 0.5s infinite;
+//     animation: steam-two 4s ease-out 0.5s infinite;
+// }
+
+// #steam-four {
+//     -webkit-animation: steam-two 4s ease-out 1.5s infinite;
+//     animation: steam-two 4s ease-out 1.5s infinite;
+// }
+
+// @-webkit-keyframes steam-two {
+//     0% {
+//         transform: translateY(0) translateX(0) scale(0.25);
+//         opacity: 0.2;
+//     }
+
+//     100% {
+//         transform: translateY(-200px) translateX(20px) scale(1);
+//         opacity: 0;
+//     }
+// }
+
+// @keyframes steam-two {
+//     0% {
+//         transform: translateY(0) translateX(0) scale(0.25);
+//         opacity: 0.2;
+//     }
+
+//     100% {
+//         transform: translateY(-200px) translateX(20px) scale(1);
+//         opacity: 0;
+//     }
+// }
+
+//------ /Coffee Mug ----- //
+
+
+
+
