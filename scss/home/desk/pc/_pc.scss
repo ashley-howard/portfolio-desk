@@ -274,6 +274,14 @@
         width: 25px;
         fill: #bebebe;
         height: 25px;
+
+        &:hover {
+            animation: bounce 1s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            // animation-fill-mode: both;}
+        }
     }
 
     // &.github-icon {
@@ -282,13 +290,15 @@
     //     stroke-width: 0.5;
     // }
 
-    &.skills-icon:hover {
-        animation: change-color 5s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        // animation-fill-mode: both;
-    }
+    // &.skills-icon:hover {
+    //     animation: change-color 5s;
+    //     animation-timing-function: linear;
+    //     animation-iteration-count: infinite;
+    //     animation-direction: alternate;
+    //     // animation-fill-mode: both;
+    // }
+
+
 
     @keyframes change-color {
         0% {
@@ -337,4 +347,83 @@
     //     stroke: #c8c8c8;
     //     stroke-width: 0.5;
     // }
+}
+
+.skills-icon:hover #bar-0 {
+    animation: graph-line 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    // animation-fill-mode: both;
+}
+
+.skills-icon:hover #bar-1 {
+    animation: graph 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    // animation-fill-mode: both;
+}
+
+.skills-icon:hover #bar-2 {
+    animation: graph 3s;
+    animation-delay: 0.1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    // animation-fill-mode: both;
+}
+
+.skills-icon:hover #bar-3 {
+    animation: graph 3s;
+    animation-delay: 0.2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    // animation-fill-mode: both;
+}
+
+.skills-icon:hover #bar-4 {
+    animation: graph 3s;
+    animation-delay: 0.3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    // animation-fill-mode: both;
+}
+
+@keyframes graph-line {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+
+    to {
+        width: 155px;
+        opacity: 1;
+    }
+}
+
+@keyframes graph {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
