@@ -262,6 +262,7 @@
 .folders svg {
     width: 50px;
     height: 50px;
+    overflow: visible;
     cursor: pointer;
 
     &.top-icon {
@@ -322,8 +323,94 @@
         }
     }
 
-    &.about-icon:hover {
-        fill: #4b1717;
+    // #svg-folder-outer {
+    //     opacity: 0;
+    // }
+
+    &.projects-icon:hover #svg-folder-main {
+        animation: svg-folder-main 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        // animation-fill-mode: both;
+    }
+
+
+
+    &.projects-icon:hover #svg-folder-open {
+        animation: svg-folder-open 2s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        // animation-fill-mode: both;
+    }
+
+    // &.projects-icon:hover #svg-folder-outer {
+    //     animation: svg-folder-outer 2s;
+    //     animation-timing-function: ease;
+    //     animation-iteration-count: infinite;
+    //     animation-direction: alternate;
+    //     // animation-fill-mode: both;
+    // }
+
+    @keyframes svg-folder-main {
+        from {
+            // transform: skew(0) translateX(0);
+        }
+
+        to {
+            fill: #4f4f4f;
+            // transform: skew(-15deg, 0deg) translateX(43px);
+        }
+    }
+
+
+    @keyframes svg-folder-open {
+        from {
+            transform: skew(0) translateX(0);
+        }
+
+        to {
+            // fill: #4f4f4f;
+            transform: skew(-15deg, 0deg) translateX(43px);
+        }
+    }
+
+    // @keyframes svg-folder-outer {
+    //     from {
+    //         opacity: 0;
+    //     }
+
+    //     to {
+    //         opacity: 1;
+    //     }
+    // }
+
+    #glasses {
+        opacity: 0;
+        // transform: translateY(-93px);
+        fill: #1c1c1c;
+        stroke: white;
+    }
+
+    &.about-icon:hover #glasses {
+        animation: glasses 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        // animation-direction: alternate;
+        animation-fill-mode: both;
+    }
+
+    @keyframes glasses {
+        from {
+            opacity: 0;
+            transform: translateY(-93px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     &.gh-icon:hover {
@@ -350,7 +437,7 @@
 }
 
 .skills-icon:hover #bar-0 {
-    animation: graph-line 2s;
+    animation: graph-line 1.5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     animation-direction: alternate;
@@ -405,12 +492,16 @@
 }
 
 @keyframes graph {
-    from {
+    0% {
         opacity: 0;
     }
 
-    to {
+    50% {
         opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
@@ -425,5 +516,57 @@
 
     100% {
         transform: translateY(0);
+    }
+}
+
+.letter-icon:hover {
+    #paper {
+        animation: paper 1s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        // animation-fill-mode: both;
+    }
+
+    #paper-line-1 {
+        animation: paper-lines 4s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        // animation-direction: alternate;
+        // animation-fill-mode: both;
+    }
+
+    #paper-line-2 {
+        width: 0;
+        animation: paper-lines 4s;
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 1;
+        // animation-direction: alternate;
+        animation-fill-mode: both;
+    }
+}
+
+@keyframes paper {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes paper-lines {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75px;
     }
 }
