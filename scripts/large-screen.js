@@ -144,7 +144,22 @@ function openProjects(project) {
 
         projectTiles.style.display = "none";
     }
+}
 
+function openSkills() {
+    largeScreen.style.display = "block";
+
+    var typed = new Typed('#typed', {
+        strings: ['C:\\Users\\Ash\\Skills'],
+        typeSpeed: 50,
+        showCursor: false,
+        startDelay: 2000
+    });
+
+    setTimeout(function () {
+        typed.destroy() // resets Typed
+        prependTyped.innerHTML = 'C:\\Users\\Ash\\Skills';
+    }, 3600);
 }
 
 function minimise() {

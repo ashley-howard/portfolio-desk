@@ -1,5 +1,7 @@
 @import 'large-grid';
 @import 'projects';
+@import 'about';
+@import 'skills';
 @import 'contact';
 
 .large-screen-wrapper {
@@ -17,6 +19,7 @@
     background: url('/img/pc-bg-large.jpg');
     background-size: cover;
     animation: screen-enlarge 3s forwards;
+
 }
 
 @keyframes screen-enlarge {
@@ -66,7 +69,7 @@
 
 
 
-.hide-screen {
+.hide-screen-icon {
     position: absolute;
     background: #268BCF;
     width: 22px;
@@ -82,7 +85,7 @@
     align-items: center;
 }
 
-.close-screen {
+.close-screen-icon {
     position: absolute;
     background: #e33b3b;
     width: 22px;
@@ -116,8 +119,10 @@
     height: 30px;
     display: flex;
     align-items: center;
-    width: 98.5%;
+    width: 96.5%;
     padding-left: 5px;
+    right: 0px;
+    margin-right: 5px;
 }
 
 // .folders-large {
@@ -147,16 +152,26 @@
 // }
 
 #back-button {
-    display: none; // flex
     position: absolute;
-    background: #515151;
-    color: white;
-    width: 51px;
-    height: 23px;
-    margin: 0px 10px;
-    padding: 0 8px;
-    align-items: center;
-    border-radius: 5px;
+    width: 3%;
+    height: 30px;
+    // margin: 0px 10px;
+    // padding: 0px 8px;
     cursor: pointer;
     left: 0;
+    justify-content: center;
+    display: flex;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+#screen-projects,
+#screen-skills {
+    margin-top: 70px;
+    height: calc(88vh - 100px);
+}
+
+#project-tiles,
+#skills-tiles {
+    display: none; // to be 'grid'
 }

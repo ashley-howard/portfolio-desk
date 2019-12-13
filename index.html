@@ -44,7 +44,7 @@
                         </div>
 
                         <!-- About -->
-                        <div class="column column-3">
+                        <div class="column column-3" onclick="openAbout()">
                             <svg class="top-icon about-icon" width="132" height="138" viewBox="0 0 132 138"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path id="head"
@@ -57,7 +57,7 @@
                         </div>
 
                         <!-- Skills -->
-                        <div class="column column-3">
+                        <div class="column column-3" onclick="openSkills()">
                             <svg class="top-icon skills-icon" width="155" height="156" viewBox="0 0 155 156"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect id="bar-0" y="146" width="155" height="10" />
@@ -71,7 +71,7 @@
                         </div>
 
                         <!-- Contact -->
-                        <div class="column column-3">
+                        <div class="column column-3" onclick="openContact()">
                             <svg class="top-icon letter-icon" width="153" height="159" viewBox="0 0 153 159"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path id="Polygon 1" d="M76.5 8L153.143 62H-0.14325L76.5 8Z" fill="#1B1B1B" />
@@ -336,12 +336,13 @@
         <div id="large-screen">
 
             <div class="top-bar">
-                <div id="back-button" onclick="openProjects('back')">← Back</div>
-                <div class="hide-screen" onclick="minimise()">_</div>
-                <div class="close-screen" onclick="closeScreen()">X</div>
+                <!-- <div id="back-button" onclick="openProjects('back')">← Back</div> -->
+                <div class="hide-screen-icon" onclick="minimise()">_</div>
+                <div class="close-screen-icon" onclick="closeScreen()">X</div>
             </div>
 
             <div class="explorer-bar">
+                <div id="back-button" onclick="openProjects('back')">←</div>
                 <span id="explorer-url">
                     <div id="typed-strings">
                         <!-- <p id="typed-url"></p> -->
@@ -352,7 +353,7 @@
 
             <!-- Projects -->
             <div id="screen-projects">
-                <div class="large-grid-container" id="project-tiles">
+                <div class="projects-large-grid-container" id="project-tiles">
 
                     <!-- Project - Home -->
                     <div class="project-tile project-home" onclick="openProjects('home')">
@@ -450,37 +451,6 @@
                     </a>
 
                 </div>
-
-
-
-
-                <!-- OPEN PROJECT TEMPLATE -->
-                <!-- <div class="project-open" id="project-open">
-                    <div id="back-button" onclick="openProjects('back')">← Back</div>
-                    <div class="row-project">
-                        <div class="col col-media">
-                            <img id="project-img d-none" src="" alt="">
-                            <video id="project-vid d-none" autoplay loop poster="">
-                                <source src="" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-
-                        <div class="col col-info">
-                            <h2 id="project-name"></h2>
-                            <a id="project-url" href=""></a>
-                            <p id="project-desc"></p>
-                            <div class="project-tile-tags large-tags">
-                                <div id="tag-html" class="tag tag-html d-none"></div>
-                                <div id="tag-css" class="tag tag-css d-none"></div>
-                                <div id="tag-scss" class="tag tag-scss d-none"></div>
-                                <div id="tag-bs" class="tag tag-bs d-none"></div>
-                                <div id="tag-js" class="tag tag-js d-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
 
                 <!-- OPEN PROJECT HOME -->
                 <div class="project-open project-open-home" id="open-home">
@@ -609,25 +579,33 @@
 
             </div>
 
-            <!-- Contact -->
-            <div id="screen-contact">
+            <!-- Skills -->
+            <div id="screen-skills">
+                <div class="skills-large-grid-container" id="skills-tiles">
+                    <h2>Skills</h2>
+
+                    <div class="column column-3">
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="taskbar-large">
+                    <!-- <div id="time"></div> -->
+                </div>
 
             </div>
-
-            <div class="taskbar-large">
-                <!-- <div id="time"></div> -->
-            </div>
-
         </div>
-    </div>
 
-    <!-- <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script> -->
-    <!-- <script src="scripts/magnet.js"></script> -->
-    <script src="scripts/main.js"></script>
-    <script src="scripts/date.js"></script>
-    <script src="scripts/large-screen.js"></script>
+        <!-- <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script> -->
+        <!-- <script src="scripts/magnet.js"></script> -->
+        <script src="scripts/main.js"></script>
+        <script src="scripts/date.js"></script>
+        <script src="scripts/large-screen.js"></script>
 
-    <noscript>Please enable JavaScript for the best viewing experience.</noscript>
+        <noscript>Please enable JavaScript for the best viewing experience.</noscript>
 </body>
 
 </html>
