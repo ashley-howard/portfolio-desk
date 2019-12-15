@@ -1,22 +1,8 @@
 @import 'reset';
 @import 'home/home';
 @import 'queries';
+@import 'animations';
 @import 'dev';
-
-// @import 'bg/books';
-// @import 'bg/magnet';
-// @import 'bg/calendar';
-// @import 'bg/photos';
-// @import 'bg/plant';
-// @import 'bg/notes';
-// @import 'bg/headphones';
-// @import 'bg/lamp';
-// @import 'bg/coffee';
-// @import 'bg/hub';
-
-$shadow: 10px -7px 4px 0px #00000038;
-
-
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -29,6 +15,9 @@ body {
 // a {
 //   text-decoration: none;
 // }
+
+// does this work? otherwise change to mix-in
+$shadow: 10px -7px 4px 0px #00000038;
 
 %pseudo {
   content: "";
@@ -70,7 +59,6 @@ noscript {
   bottom: 2px;
   font-size: 0.9em;
 }
-
 
 // .black-screen {
 //     position: absolute;

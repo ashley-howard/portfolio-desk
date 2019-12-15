@@ -1,5 +1,6 @@
 @import 'grid';
 @import 'large/large-screen';
+// @import '../../../animations';
 
 .pc {
     position: absolute;
@@ -25,32 +26,21 @@
 
     &--screen {
         position: absolute;
+        opacity: 0;
         background-color: #1e1e1e;
         // border: 15px solid #1e1e1e;
         // border-radius: 5px;
         // width: 86vw;
         // height: 67vh;
+        background-image: url(../img/pc-bg.jpg);
         background-size: cover;
         width: 380px;
         height: 210px;
         transform: translate(10px, 10px);
-        animation: pc-screen 4s forwards;
+        animation: fade-in 4s forwards;
         animation-timing-function: ease-in;
     }
 
-    @keyframes pc-screen {
-        0% {
-            background-image: url(../img/pc-bg.jpg);
-            opacity: 0;
-
-        }
-
-        100% {
-            opacity: 1;
-            background-image: url(../img/pc-bg.jpg);
-            // box-shadow: 0 0 6px 0px #ffffff63;
-        }
-    }
 
     &--button {
         position: absolute;
@@ -63,17 +53,7 @@
         animation: pc-button 3s forwards;
     }
 
-    @keyframes pc-button {
-        0% {
-            background-color: #ff5b5b;
-            box-shadow: 0 0 4px 1px #ff5b5b;
-        }
 
-        100% {
-            background-color: #75b9d9;
-            box-shadow: 0 0 4px 1px #75b9d9;
-        }
-    }
 
     // &--keyboard {
     //     position: absolute;
@@ -300,43 +280,6 @@
     // }
 
 
-
-    @keyframes change-color {
-        0% {
-            fill: black;
-        }
-
-        20% {
-            fill: #143c11;
-        }
-
-        50% {
-            fill: lightblue;
-        }
-
-        75% {
-            fill: pink;
-        }
-
-        100% {
-            fill: #fad318;
-        }
-    }
-
-    // #svg-folder-outer {
-    //     opacity: 0;
-    // }
-
-    &.projects-icon:hover #svg-folder-main {
-        animation: svg-folder-main 2s;
-        animation-timing-function: ease;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        // animation-fill-mode: both;
-    }
-
-
-
     &.projects-icon:hover #svg-folder-open {
         animation: svg-folder-open 2s;
         animation-timing-function: ease-in-out;
@@ -345,46 +288,6 @@
         // animation-fill-mode: both;
     }
 
-    // &.projects-icon:hover #svg-folder-outer {
-    //     animation: svg-folder-outer 2s;
-    //     animation-timing-function: ease;
-    //     animation-iteration-count: infinite;
-    //     animation-direction: alternate;
-    //     // animation-fill-mode: both;
-    // }
-
-    @keyframes svg-folder-main {
-        from {
-            // transform: skew(0) translateX(0);
-        }
-
-        to {
-            fill: #4f4f4f;
-            // transform: skew(-15deg, 0deg) translateX(43px);
-        }
-    }
-
-
-    @keyframes svg-folder-open {
-        from {
-            transform: skew(0) translateX(0);
-        }
-
-        to {
-            // fill: #4f4f4f;
-            transform: skew(-15deg, 0deg) translateX(43px);
-        }
-    }
-
-    // @keyframes svg-folder-outer {
-    //     from {
-    //         opacity: 0;
-    //     }
-
-    //     to {
-    //         opacity: 1;
-    //     }
-    // }
 
     #glasses {
         opacity: 0;
@@ -399,18 +302,6 @@
         animation-iteration-count: 1;
         // animation-direction: alternate;
         animation-fill-mode: both;
-    }
-
-    @keyframes glasses {
-        from {
-            opacity: 0;
-            transform: translateY(-93px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
     }
 
     &.gh-icon:hover {
@@ -479,45 +370,6 @@
     // animation-fill-mode: both;
 }
 
-@keyframes graph-line {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-
-    to {
-        width: 155px;
-        opacity: 1;
-    }
-}
-
-@keyframes graph {
-    0% {
-        opacity: 0;
-    }
-
-    50% {
-        opacity: 1;
-    }
-
-    100% {
-        opacity: 0;
-    }
-}
-
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}
 
 .letter-icon:hover {
     #paper {
@@ -544,29 +396,5 @@
         animation-iteration-count: 1;
         // animation-direction: alternate;
         animation-fill-mode: both;
-    }
-}
-
-@keyframes paper {
-    0% {
-        transform: translateY(0px);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-
-    100% {
-        transform: translateY(-7px);
-    }
-}
-
-@keyframes paper-lines {
-    0% {
-        width: 0;
-    }
-
-    100% {
-        width: 75px;
     }
 }
