@@ -13,6 +13,7 @@
     // box-shadow: 4px -3px 14px 0px #202020;
     box-shadow: 17px -13px 20px 0px #00000073, inset 0 0px 0px 10px #3a3a3a;
     // z-index: 0;
+    z-index: 1;
 
     &--speakers {
         position: absolute;
@@ -47,8 +48,6 @@
 
     &--screen {
         position: absolute;
-        background-image: url('/img/hub-day.png');
-        background-size: contain;
         width: 150px;
         height: 89px;
         left: 10px;
@@ -111,6 +110,40 @@
         color: white;
         text-shadow: 0 0 20px #3f3f3f;
     }
+
+    &--slides {
+        width: inherit;
+        height: inherit;
+        background-size: contain;
+        position: absolute;
+
+        &.slide-1 {
+            background-image: url('/img/hub-day.png');
+        }
+
+        &.slide-2 {
+            background-image: radial-gradient(farthest-corner at 153px 13px, #fff 0%, #338fee 100%);
+        }
+
+        &.slide-3 {
+            background: lightgrey;
+        }
+    }
+
+    &--weather-cond {
+        position: absolute;
+        top: 4px;
+        left: 5px;
+        color: white;
+    }
+
+    &--weather-temp {
+        position: absolute;
+        right: 5px;
+        bottom: 5px;
+        color: white;
+        font-size: 3em;
+    }
 }
 
 .fa-sun {
@@ -125,5 +158,3 @@
 #weather-cond {
     font-size: 0.8em;
 }
-
-//------ /HUB----- //

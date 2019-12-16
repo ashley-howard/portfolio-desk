@@ -2,6 +2,7 @@
 @import 'home/home';
 @import 'queries';
 @import 'animations';
+@import 'shadows';
 @import 'dev';
 
 body {
@@ -15,9 +16,6 @@ body {
 // a {
 //   text-decoration: none;
 // }
-
-// does this work? otherwise change to mix-in
-$shadow: 10px -7px 4px 0px #00000038;
 
 %pseudo {
   content: "";

@@ -25,6 +25,7 @@
 
 .project-tile:hover {
     background-size: cover !important;
+    background: rgba(255, 255, 255, 0.35);
     animation: fade-in 1.5s forwards;
     color: #fff;
 
@@ -46,16 +47,16 @@
     }
 }
 
-@keyframes fade-in {
-    from {
-        // opacity: 0;
-        background: rgba(255, 255, 255, 0.35);
-    }
+// @keyframes fade-in {
+//     from {
+//         // opacity: 0;
+//         background: rgba(255, 255, 255, 0.35);
+//     }
 
-    to {
-        opacity: 1;
-    }
-}
+//     to {
+//         opacity: 1;
+//     }
+// }
 
 // .project-tile {
 //     &.project-home:hover {
@@ -201,6 +202,14 @@
 
         &::after {
             content: "Typed.js";
+        }
+    }
+
+    &-regex {
+        background: #18744e;
+
+        &::after {
+            content: "Regex";
         }
     }
 }
