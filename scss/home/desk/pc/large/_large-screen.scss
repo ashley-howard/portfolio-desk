@@ -22,21 +22,6 @@
 
 }
 
-@keyframes screen-enlarge {
-    0% {
-        width: 382px;
-        height: 211px;
-        transform: translate(-10vw, 20%);
-    }
-
-    100% {
-        width: 92.5vw;
-        height: 88vh;
-        transform: translate(0);
-        box-shadow: 0 0 20px 6px #ffffff63;
-    }
-}
-
 .top-bar {
     position: absolute;
     background: #303030;

@@ -16,19 +16,36 @@
     <div class="bg">
 
         <!-- Window -->
-        <!-- <div class="window">
+        <div class="window">
             <div class="window--blur"></div>
-        </div> -->
+        </div>
 
         <div class="desk"></div>
 
         <!-- <div class="black-screen"></div> -->
 
         <!-- PC -->
-        <div class="pc">
-            <div class="pc--screen">
+        <div class="pc extendable ">
+            <div class="pc--screen extendable ">
+
+                <div class="top-bar">
+                    <!-- <div id="back-button" onclick="openProjects('back')">← Back</div> -->
+                    <div class="hide-screen-icon" onclick="minimise()">_</div>
+                    <div class="close-screen-icon" onclick="closeScreen()">X</div>
+                </div>
+
+                <div class="explorer-bar">
+                    <div id="back-button" onclick="openProjects('back')">←</div>
+                    <span id="explorer-url">
+                        <div id="typed-strings">
+                            <!-- <p id="typed-url"></p> -->
+                        </div>
+                        <span id="prepend-typed"></span><span id="typed"></span>
+                    </span>
+                </div>
+
                 <div class="folders" id="folders">
-                    <div class="row row-top">
+                    <div class="row row-top extendable">
                         <!-- Projects -->
                         <div class="column column-3" onclick="openProjects('main')">
                             <svg class="top-icon projects-icon" width="153" height="159" viewBox="0 0 190 150"
@@ -233,6 +250,10 @@
                 <div class="hub--slides slide-3">
 
                 </div>
+                <!-- 4. Clock -->
+                <div class="hub--slides slide-4">
+
+                </div>
 
                 <!-- Date and weather -->
                 <!-- <div class="hub--weather">
@@ -301,13 +322,13 @@
         </div> -->
 
         <!-- Headphones -->
-        <div class="headphones-all">
+        <!-- <div class="headphones-all">
             <div class="hook"></div>
             <div class="headphones">
                 <div class="headphones--l"></div>
                 <div class="headphones--r"></div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Books -->
         <div class="books-container">
@@ -328,6 +349,7 @@
         <div class="coffee-cup">
             <div class="coffee-cup-main">
                 <img src="/img/starbucks.svg" alt="">
+                <span class="coffee-cup-text">Ashely</span>
             </div>
             <div class="coffee-cup-topbottom"></div>
         </div>
@@ -361,8 +383,7 @@
 
         <div id="large-screen">
 
-            <div class="top-bar">
-                <!-- <div id="back-button" onclick="openProjects('back')">← Back</div> -->
+            <!-- <div class="top-bar">
                 <div class="hide-screen-icon" onclick="minimise()">_</div>
                 <div class="close-screen-icon" onclick="closeScreen()">X</div>
             </div>
@@ -371,11 +392,11 @@
                 <div id="back-button" onclick="openProjects('back')">←</div>
                 <span id="explorer-url">
                     <div id="typed-strings">
-                        <!-- <p id="typed-url"></p> -->
+
                     </div>
                     <span id="prepend-typed"></span><span id="typed"></span>
                 </span>
-            </div>
+            </div> -->
 
             <!-- Projects -->
             <div id="screen-projects">

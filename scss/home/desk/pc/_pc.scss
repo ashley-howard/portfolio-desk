@@ -24,6 +24,19 @@
     box-shadow: -17px 12px 4px 0px #00000017;
     border-radius: 4px;
 
+    &.extended {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        left: 0;
+        top: 0;
+        background: none;
+        z-index: 2;
+    }
+
+
     &--screen {
         position: absolute;
         // opacity: 0;
@@ -39,6 +52,32 @@
         transform: translate(10px, 10px);
         animation: fade-in 4s forwards;
         animation-timing-function: ease-in;
+
+        &.extended {
+            width: 92.5vw;
+            height: 88vh;
+            position: absolute;
+            z-index: 2;
+            background: url('/img/pc-bg-large.jpg');
+            background-size: cover;
+            animation: screen-enlarge 3s forwards;
+        }
+
+
+        @keyframes screen-enlarge {
+            0% {
+                width: 382px;
+                height: 211px;
+                transform: translate(-10vw, 20%);
+            }
+
+            100% {
+                width: 92.5vw;
+                height: 88vh;
+                transform: translate(0);
+                box-shadow: 0 0 20px 6px #ffffff63;
+            }
+        }
     }
 
 
@@ -71,7 +110,7 @@
         background: inherit;
         width: 30px;
         height: 70px;
-        transform: translate(187px, 229px);
+        transform: translate(187px, 230px);
         box-shadow: 7px -4px 4px 0px #00000038;
         border-radius: 0 0 5px 5px;
     }
@@ -109,6 +148,8 @@
     height: inherit;
     justify-content: space-between;
     // background: #ffffff6e; // or only on hover?
+
+    &.extended {}
 }
 
 // .folders:hover {
@@ -244,6 +285,11 @@
     height: 50px;
     overflow: visible;
     cursor: pointer;
+
+    .extended>& {
+        width: 80px;
+        height: 80px;
+    }
 
     &.top-icon {
         fill: #242424;

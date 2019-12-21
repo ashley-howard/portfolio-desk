@@ -224,7 +224,8 @@
 .coffee-cup {
     position: absolute;
     right: 458px;
-    bottom: -79px;
+    // bottom: -79px;
+    top: calc(100vh - 115px);
     -webkit-perspective: 100px;
     /* Safari 4-8  */
     perspective: 100px;
@@ -237,9 +238,9 @@
     width: 60px;
 
     box-shadow: inset -10px 10px 20px 0px #3b3b3b;
-    -webkit-transform-style: preserve-3d;
     /* Safari 3-8  */
-    -webkit-transform: rotateX(45deg);
+    // -webkit-transform: rotateX(45deg);
+    -webkit-transform-style: preserve-3d;
     /* Safari 3-8  */
     transform-style: preserve-3d;
     transform: rotateX(-12deg);
@@ -253,7 +254,7 @@
         height: 0;
         border-left: 0px solid transparent;
         border-right: 9px solid transparent;
-        border-bottom: 100px solid #242424;
+        border-bottom: 100px solid #191919;
     }
 
     &::after {
@@ -263,7 +264,7 @@
         height: 0;
         border-left: 9px solid transparent;
         border-right: 0px solid transparent;
-        border-bottom: 100px solid #242424;
+        border-bottom: 100px solid #191919;
         right: 0;
     }
 
@@ -283,6 +284,7 @@
     border-top-left-radius: 62%;
     border-top-right-radius: 15px;
     border-bottom: 1px solid #bababa;
+    box-shadow: inset 4px 3px 8px #0000006e, 12px 3px 8px #0000006e;
 
     &::before {
         position: absolute;
@@ -294,6 +296,7 @@
         left: -3px;
         box-shadow: inset 0px 2px 0px 0px #cfcfcf, inset 0px 6px 3px 0px #9a9a9a, inset 0px 33px 0px 0px #a8a8a8;
         border-radius: 3px 3px 0 0;
+        border-bottom: 1.5px solid #898989;
     }
 
 
@@ -312,7 +315,16 @@
         background: -webkit-linear-gradient(90deg, rgb(211, 211, 211) 67%, rgb(131, 131, 131) 100%);
         background: linear-gradient(90deg, rgb(211, 211, 211) 67%, rgb(131, 131, 131) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d3d3d3", endColorstr="#838383", GradientType=1);
+        box-shadow: 0px 3px 0px 0px #1c1c1c;
     }
 
 
+}
+
+.coffee-cup-text {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    font-family: 'Gochi Hand', cursive;
+    transform: rotate(-27deg) translate(-3px, 8px);
 }
