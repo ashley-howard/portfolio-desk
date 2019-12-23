@@ -18,7 +18,7 @@
     width: 100vw;
     // height: 96vh;
     // height: calc(100vh - 130px);
-    height: 100vw;
+    height: 100vh;
     // background: rgb(93, 87, 80);
     // background: -moz-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
     // background: -webkit-linear-gradient(90deg, rgba(93, 87, 80, 1) 0%, rgba(180, 180, 180, 1) 50%, rgba(93, 87, 80, 1) 100%);
@@ -62,4 +62,6 @@
     //     background: linear-gradient(90deg, rgba(71, 45, 22, 1) 0%, rgba(155, 120, 86, 1) 100%);
     //     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#472d16", endColorstr="#9b7856", GradientType=1);
     // }
+
+    perspective: 100px;
 }

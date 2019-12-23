@@ -15,9 +15,28 @@ var projectFocus;
 
 var typed;
 
+// --eventually rename this function to "openScreen(screen)"--
 function openProjects(project) {
+    // if (project === 'main') {
+    //     largeScreen.style.display = "block";
+
+    //     var typed = new Typed('#typed', {
+    //         strings: ['C:\\Users\\Ash\\Projects'],
+    //         typeSpeed: 50,
+    //         showCursor: false,
+    //         startDelay: 2000
+    //     });
+
+    //     setTimeout(function () {
+    //         projectTiles.style.display = "grid";
+    //         typed.destroy() // resets Typed
+    //         prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+    //     }, 3600);
+    // }
     if (project === 'main') {
-        largeScreen.style.display = "block";
+        // largeScreen.style.display = "block";
+
+        extend()
 
         var typed = new Typed('#typed', {
             strings: ['C:\\Users\\Ash\\Projects'],
@@ -144,6 +163,8 @@ function openProjects(project) {
 
         projectTiles.style.display = "none";
     }
+
+    // document.body.style.perspective = "unset"
 }
 
 function openSkills() {
@@ -186,5 +207,21 @@ function closeScreen() {
     backButton.style.display = "none";
 }
 
+// // use loop | put extendable on all elements that you want to extend
+// // create button to activate
+var extendables = document.getElementsByClassName('extendable')
+
+function extend() {
+    var i;
+    for (i = 0; i < extendables.length; i++) {
+        extendables[i].classList.add("extended");
+    }
+}
+function shrink() {
+    var i;
+    for (i = 0; i < extendables.length; i++) {
+        extendables[i].classList.remove("extended");
+    }
+}
 
 

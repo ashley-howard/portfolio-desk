@@ -11,7 +11,7 @@
     <title>Ashley Howard / Front-end Dev</title>
 </head>
 
-<body unselectable="on">
+<body unselectable="on" class="extendable">
     <!-- Back & side wall -->
     <div class="bg">
 
@@ -20,21 +20,23 @@
             <div class="window--blur"></div>
         </div>
 
+
         <div class="desk"></div>
+
 
         <!-- <div class="black-screen"></div> -->
 
         <!-- PC -->
-        <div class="pc extendable ">
-            <div class="pc--screen extendable ">
+        <div class="pc extendable">
+            <div class="pc--screen extendable">
 
-                <div class="top-bar">
+                <div class="top-bar extendable">
                     <!-- <div id="back-button" onclick="openProjects('back')">← Back</div> -->
                     <div class="hide-screen-icon" onclick="minimise()">_</div>
                     <div class="close-screen-icon" onclick="closeScreen()">X</div>
                 </div>
 
-                <div class="explorer-bar">
+                <div class="explorer-bar extendable">
                     <div id="back-button" onclick="openProjects('back')">←</div>
                     <span id="explorer-url">
                         <div id="typed-strings">
@@ -167,11 +169,11 @@
                 </div>
 
             </div>
-            <div class="pc--button"></div>
+            <div class="pc--button extendable"></div>
             <div class="pc--stand-bottom"></div>
-            <div class="pc--stand-top"></div>
-            <div class="pc--keyboard"></div>
-            <div class="pc--mouse"></div>
+            <div class="pc--stand-top extendable"></div>
+            <!-- <div class="pc--keyboard"></div>
+            <div class="pc--mouse"></div> -->
 
         </div>
 
@@ -331,7 +333,7 @@
         </div> -->
 
         <!-- Books -->
-        <div class="books-container">
+        <!-- <div class="books-container">
             <div class="books">
                 <div class="book nineteen">
                     <div class="book-text">
@@ -340,7 +342,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Poster -->
         <div class="poster"></div>

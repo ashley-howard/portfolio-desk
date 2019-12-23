@@ -226,9 +226,9 @@
     right: 458px;
     // bottom: -79px;
     top: calc(100vh - 115px);
-    -webkit-perspective: 100px;
-    /* Safari 4-8  */
-    perspective: 100px;
+    // -webkit-perspective: 100px;
+    // /* Safari 4-8  */
+    // perspective: 100px;
 }
 
 .coffee-cup-main {
@@ -240,10 +240,10 @@
     box-shadow: inset -10px 10px 20px 0px #3b3b3b;
     /* Safari 3-8  */
     // -webkit-transform: rotateX(45deg);
-    -webkit-transform-style: preserve-3d;
+    // -webkit-transform-style: preserve-3d;
     /* Safari 3-8  */
-    transform-style: preserve-3d;
-    transform: rotateX(-12deg);
+    // transform-style: preserve-3d;
+    // transform: rotateX(-12deg);
     // border-bottom-right-radius: 20%;
     // border-bottom-left-radius: 20%;
 
@@ -305,10 +305,10 @@
         position: absolute;
         content: "";
 
-        width: 44px;
+        width: 46px;
         height: 8px;
-        bottom: -72px;
-        left: 10px;
+        bottom: -75px;
+        left: 9px;
         border-radius: 100%;
         background: rgb(211, 211, 211);
         background: -moz-linear-gradient(90deg, rgbrgb(211, 211, 211) 67%, rgb(131, 131, 131) 100%);

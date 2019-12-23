@@ -11,9 +11,14 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   overflow: hidden;
-  -webkit-perspective: 100px;
-  /* Safari 4-8  */
-  perspective: 100px;
+
+  // // ----BUGGY---- //
+  // perspective: 100px; // need to disable when screen is large = unset
+  // // ----BUGGY---- //
+
+  // &.extended {
+  //   perspective: unset;
+  // }
 }
 
 // a {
