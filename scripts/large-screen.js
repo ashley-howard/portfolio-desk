@@ -1,4 +1,4 @@
-// var screenProjects = document.getElementById('screen-projects');
+var screenProjects = document.getElementById('screen-projects');
 var largeScreen = document.getElementById('large-screen');
 var explorerUrl = document.getElementById("explorer-url");
 var prependTyped = document.getElementById('prepend-typed');
@@ -15,7 +15,6 @@ var projectFocus;
 
 var typed;
 
-// --eventually rename this function to "openScreen(screen)"--
 function openProjects(project) {
     // if (project === 'main') {
     //     largeScreen.style.display = "block";
@@ -34,7 +33,7 @@ function openProjects(project) {
     //     }, 3600);
     // }
     if (project === 'main') {
-        // largeScreen.style.display = "block";
+        screenProjects.style.display = "block";
 
         extend()
 

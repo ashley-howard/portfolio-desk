@@ -4,6 +4,13 @@
 @import 'skills';
 @import 'contact';
 
+// large-screen div
+// -- screen-home
+// -- screen-projects 
+// -- screen-about 
+// -- screen-skills
+// -- screen-contact
+
 .large-screen-wrapper {
     display: flex;
     justify-content: center;
@@ -158,13 +165,21 @@
     color: #ffffff;
 }
 
+#screen-home,
 #screen-projects,
-#screen-skills {
+#screen-about,
+#screen-skills,
+#screen-contact {
     margin-top: 70px;
     height: calc(88vh - 100px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
 }
 
 #project-tiles,
-#skills-tiles {
+#skills-tiles,
+#screen-projects {
     display: none; // to be 'grid'
 }

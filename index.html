@@ -16,9 +16,9 @@
     <div class="bg">
 
         <!-- Window -->
-        <div class="window">
+        <!-- <div class="window">
             <div class="window--blur"></div>
-        </div>
+        </div> -->
 
 
         <div class="desk"></div>
@@ -46,6 +46,7 @@
                     </span>
                 </div>
 
+                <!-- small screen -->
                 <div class="folders" id="folders">
                     <div class="row row-top extendable">
                         <!-- Projects -->
@@ -159,6 +160,9 @@
                     <div onclick="" class="folder folder-2"></div> -->
 
                     <!-- <div class="taskbar"></div> -->
+
+
+
                 </div>
 
                 <!-- Minimised screen -->
@@ -168,7 +172,243 @@
                     <p>Click here to continue where you left off</p>
                 </div>
 
+
+                <!-- Projects -->
+                <div id="screen-projects">
+                    <div class="projects-large-grid-container" id="project-tiles">
+
+                        <!-- Project - Home -->
+                        <div class="project-tile project-home" onclick="openProjects('home')">
+                            <div class="project-tile-inner">
+                                <img src="/img/home.jpg" alt="">
+                                <div class="project-tile-name">Home</div>
+                                <div class="project-tile-info">
+                                    <p>What started out as a fun project to see what objects I could
+                                        make using CSS...</p>
+                                </div>
+                                <div class="project-tile-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-scss"></div>
+                                    <div class="tag tag-js"></div>
+                                    <div class="tag tag-typed-js"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Project - A-KIN -->
+                        <div class="project-tile project-a-kin" onclick="openProjects('a-kin')">
+                            <div class="project-tile-inner">
+                                <img src="/img/a-kin.jpg" alt="">
+                                <div class="project-tile-name">A-KIN</div>
+                                <div class="project-tile-info">
+                                    <p>An experimental-electronic composer/installation artist who creates mixes...
+                                    </p>
+                                </div>
+                                <div class="project-tile-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-css"></div>
+                                    <div class="tag tag-bs"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project - JD -->
+                        <div class="project-tile project-jd" onclick="openProjects('jd')">
+                            <div class="project-tile-inner">
+                                <img src="/img/jd.jpg" alt="">
+                                <div class="project-tile-name">Jack Daniels</div>
+                                <div class="project-tile-info">
+                                    <p>This project is based on a fictional person and his portfolio...</p>
+                                </div>
+                                <div class="project-tile-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-css"></div>
+                                    <div class="tag tag-js"></div>
+                                    <div class="tag tag-bs"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project - Ribbit -->
+                        <div class="project-tile project-ribbit" onclick="openProjects('ribbit')">
+                            <div class="project-tile-inner">
+                                <img src="/img/ribbit.jpg" alt="">
+                                <div class="project-tile-name">Ribbit.</div>
+                                <div class="project-tile-info">
+                                    <p>A to-do list which prioritises your most difficult tasks...</p>
+                                </div>
+                                <div class="project-tile-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-css"></div>
+                                    <div class="tag tag-js"></div>
+                                    <div class="tag tag-bs"></div>
+                                    <div class="tag tag-sortable-js"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project - NoteConvert -->
+                        <div class="project-tile project-note" onclick="openProjects('note')">
+                            <div class="project-tile-inner">
+                                <img src="/img/note.jpg" alt="">
+                                <div class="project-tile-name">NoteConvert</div>
+                                <div class="project-tile-info">
+                                    <p>This website converts musical notes...</p>
+                                </div>
+                                <div class="project-tile-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-css"></div>
+                                    <div class="tag tag-js"></div>
+                                    <div class="tag tag-bs"></div>
+                                    <div class="tag tag-regex"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Project - Github -->
+                        <a href="https://github.com/ashley-howard" target="_blank">
+                            <div class="project-tile project-git">
+                                <div class="project-tile-inner">
+                                    <img src="/img/git.jpg" alt="">
+                                    <div class="project-tile-name">Github</div>
+                                    <div class="project-tile-info">
+                                        <p>View more projects...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+
+                    <!-- OPEN PROJECT HOME -->
+                    <div class="project-open project-open-home" id="open-home">
+                        <div class="row-project">
+                            <div class="col col-media">
+                                <img src="/img/home-l.png" alt="">
+                            </div>
+
+                            <div class="col col-info">
+                                <h2>Home</h2>
+                                <a href="#">/index.html</a>
+                                <p>What started out as a fun project to see what objects I could make using CSS, I
+                                    got a bit
+                                    carried
+                                    away and recreated my bedroom desk.</p>
+                                <div class="project-tile-tags large-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-scss"></div>
+                                    <div class="tag tag-js"></div>
+                                    <div class="tag tag-typed-js"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OPEN PROJECT A-KIN -->
+                    <div class="project-open project-open-a-kin" id="open-a-kin">
+                        <div class="row-project">
+                            <div class="col col-media">
+                                <video autoplay loop poster="/img/a-kin-l.jpg">
+                                    <source src="/img/a-kin.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <div class="col col-info">
+                                <h2>A-KIN</h2>
+                                <a href="https://ashley.how/a-kin" target="_blank">/a-kin</a>
+                                <p>An experimental-electronic composer/installation artist who creates mixes
+                                    exploring a
+                                    range of different subjects and ideas.</p>
+                                <div class="project-tile-tags large-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-css"></div>
+                                    <div class="tag tag-bs"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OPEN PROJECT JD -->
+                    <div class="project-open project-open-jd" id="open-jd">
+                        <div class="row-project">
+                            <div class="col col-media">
+                                <img src="/img/jd-l.jpg" alt="">
+                            </div>
+
+                            <div class="col col-info">
+                                <h2>Jack Daniels</h2>
+                                <a href="https://ashley.how/jackdaniels" target="_blank">/jackdaniels</a>
+                                <p>This project is based on a
+                                    fictional person and his
+                                    portfolio. It demonstrates
+                                    responsive web design and
+                                    uses a weather API. </p>
+                                <div class="project-tile-tags large-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-css"></div>
+                                    <div class="tag tag-js"></div>
+                                    <div class="tag tag-bs"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OPEN PROJECT RIBBIT -->
+                    <div class="project-open project-open-ribbit" id="open-ribbit">
+                        <div class="row-project">
+                            <div class="col col-media">
+                                <img src="/img/ribbit-l.jpg" alt="">
+                            </div>
+
+                            <div class="col col-info">
+                                <h2>Ribbit.</h2>
+                                <a href="https://ashley.how/ribbit-app" target="_blank">/ribbit-app</a>
+                                <p>A to-do list which prioritises
+                                    your most difficult tasks.
+                                    Based on Mark Twain's
+                                    quote: "If it’s your job to eat
+                                    a frog, it’s best to do it first
+                                    thing in the morning. And
+                                    if it’s your job to eat two
+                                    frogs, it’s best to eat the
+                                    biggest one first."</p>
+                                <div class="project-tile-tags large-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-css"></div>
+                                    <div class="tag tag-bs"></div>
+                                    <div class="tag tag-js"></div>
+                                    <div class="tag tag-sortable-js"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OPEN PROJECT NOTECONVERT -->
+                    <div class="project-open project-open-note" id="open-note">
+                        <div class="row-project">
+                            <div class="col col-media">
+                                <img src="/img/note-l.jpg" alt="">
+                            </div>
+
+                            <div class="col col-info">
+                                <h2>NoteConvert</h2>
+                                <a href="https://noteconvert.com" target="_blank">noteconvert.com</a>
+                                <p>This website converts musical
+                                    notes from C D E F G A B
+                                    to Do Re Mi Fa Sol La Si.</p>
+                                <div class="project-tile-tags large-tags">
+                                    <div class="tag tag-html"></div>
+                                    <div class="tag tag-css"></div>
+                                    <div class="tag tag-js"></div>
+                                    <div class="tag tag-bs"></div>
+                                    <div class="tag tag-regex"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
+
+
             <div class="pc--button extendable"></div>
             <div class="pc--stand-bottom"></div>
             <div class="pc--stand-top extendable"></div>
@@ -400,235 +640,7 @@
                 </span>
             </div> -->
 
-            <!-- Projects -->
-            <div id="screen-projects">
-                <div class="projects-large-grid-container" id="project-tiles">
 
-                    <!-- Project - Home -->
-                    <div class="project-tile project-home" onclick="openProjects('home')">
-                        <div class="project-tile-inner">
-                            <img src="/img/home.jpg" alt="">
-                            <div class="project-tile-name">Home</div>
-                            <div class="project-tile-info">
-                                <p>What started out as a fun project to see what objects I could
-                                    make using CSS...</p>
-                            </div>
-                            <div class="project-tile-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-scss"></div>
-                                <div class="tag tag-js"></div>
-                                <div class="tag tag-typed-js"></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Project - A-KIN -->
-                    <div class="project-tile project-a-kin" onclick="openProjects('a-kin')">
-                        <div class="project-tile-inner">
-                            <img src="/img/a-kin.jpg" alt="">
-                            <div class="project-tile-name">A-KIN</div>
-                            <div class="project-tile-info">
-                                <p>An experimental-electronic composer/installation artist who creates mixes...</p>
-                            </div>
-                            <div class="project-tile-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-css"></div>
-                                <div class="tag tag-bs"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project - JD -->
-                    <div class="project-tile project-jd" onclick="openProjects('jd')">
-                        <div class="project-tile-inner">
-                            <img src="/img/jd.jpg" alt="">
-                            <div class="project-tile-name">Jack Daniels</div>
-                            <div class="project-tile-info">
-                                <p>This project is based on a fictional person and his portfolio...</p>
-                            </div>
-                            <div class="project-tile-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-css"></div>
-                                <div class="tag tag-js"></div>
-                                <div class="tag tag-bs"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project - Ribbit -->
-                    <div class="project-tile project-ribbit" onclick="openProjects('ribbit')">
-                        <div class="project-tile-inner">
-                            <img src="/img/ribbit.jpg" alt="">
-                            <div class="project-tile-name">Ribbit.</div>
-                            <div class="project-tile-info">
-                                <p>A to-do list which prioritises your most difficult tasks...</p>
-                            </div>
-                            <div class="project-tile-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-css"></div>
-                                <div class="tag tag-js"></div>
-                                <div class="tag tag-bs"></div>
-                                <div class="tag tag-sortable-js"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project - NoteConvert -->
-                    <div class="project-tile project-note" onclick="openProjects('note')">
-                        <div class="project-tile-inner">
-                            <img src="/img/note.jpg" alt="">
-                            <div class="project-tile-name">NoteConvert</div>
-                            <div class="project-tile-info">
-                                <p>This website converts musical notes...</p>
-                            </div>
-                            <div class="project-tile-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-css"></div>
-                                <div class="tag tag-js"></div>
-                                <div class="tag tag-bs"></div>
-                                <div class="tag tag-regex"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project - Github -->
-                    <a href="https://github.com/ashley-howard" target="_blank">
-                        <div class="project-tile project-git">
-                            <div class="project-tile-inner">
-                                <img src="/img/git.jpg" alt="">
-                                <div class="project-tile-name">Github</div>
-                                <div class="project-tile-info">
-                                    <p>View more projects...</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                </div>
-
-                <!-- OPEN PROJECT HOME -->
-                <div class="project-open project-open-home" id="open-home">
-                    <div class="row-project">
-                        <div class="col col-media">
-                            <img src="/img/home-l.png" alt="">
-                        </div>
-
-                        <div class="col col-info">
-                            <h2>Home</h2>
-                            <a href="#">/index.html</a>
-                            <p>What started out as a fun project to see what objects I could make using CSS, I got a bit
-                                carried
-                                away and recreated my bedroom desk.</p>
-                            <div class="project-tile-tags large-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-scss"></div>
-                                <div class="tag tag-js"></div>
-                                <div class="tag tag-typed-js"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- OPEN PROJECT A-KIN -->
-                <div class="project-open project-open-a-kin" id="open-a-kin">
-                    <div class="row-project">
-                        <div class="col col-media">
-                            <video autoplay loop poster="/img/a-kin-l.jpg">
-                                <source src="/img/a-kin.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
-
-                        <div class="col col-info">
-                            <h2>A-KIN</h2>
-                            <a href="https://ashley.how/a-kin" target="_blank">/a-kin</a>
-                            <p>An experimental-electronic composer/installation artist who creates mixes exploring a
-                                range of different subjects and ideas.</p>
-                            <div class="project-tile-tags large-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-css"></div>
-                                <div class="tag tag-bs"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- OPEN PROJECT JD -->
-                <div class="project-open project-open-jd" id="open-jd">
-                    <div class="row-project">
-                        <div class="col col-media">
-                            <img src="/img/jd-l.jpg" alt="">
-                        </div>
-
-                        <div class="col col-info">
-                            <h2>Jack Daniels</h2>
-                            <a href="https://ashley.how/jackdaniels" target="_blank">/jackdaniels</a>
-                            <p>This project is based on a
-                                fictional person and his
-                                portfolio. It demonstrates
-                                responsive web design and
-                                uses a weather API. </p>
-                            <div class="project-tile-tags large-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-css"></div>
-                                <div class="tag tag-js"></div>
-                                <div class="tag tag-bs"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- OPEN PROJECT RIBBIT -->
-                <div class="project-open project-open-ribbit" id="open-ribbit">
-                    <div class="row-project">
-                        <div class="col col-media">
-                            <img src="/img/ribbit-l.jpg" alt="">
-                        </div>
-
-                        <div class="col col-info">
-                            <h2>Ribbit.</h2>
-                            <a href="https://ashley.how/ribbit-app" target="_blank">/ribbit-app</a>
-                            <p>A to-do list which prioritises
-                                your most difficult tasks.
-                                Based on Mark Twain's
-                                quote: "If it’s your job to eat
-                                a frog, it’s best to do it first
-                                thing in the morning. And
-                                if it’s your job to eat two
-                                frogs, it’s best to eat the
-                                biggest one first."</p>
-                            <div class="project-tile-tags large-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-css"></div>
-                                <div class="tag tag-bs"></div>
-                                <div class="tag tag-js"></div>
-                                <div class="tag tag-sortable-js"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- OPEN PROJECT NOTECONVERT -->
-                <div class="project-open project-open-note" id="open-note">
-                    <div class="row-project">
-                        <div class="col col-media">
-                            <img src="/img/note-l.jpg" alt="">
-                        </div>
-
-                        <div class="col col-info">
-                            <h2>NoteConvert</h2>
-                            <a href="https://noteconvert.com" target="_blank">noteconvert.com</a>
-                            <p>This website converts musical
-                                notes from C D E F G A B
-                                to Do Re Mi Fa Sol La Si.</p>
-                            <div class="project-tile-tags large-tags">
-                                <div class="tag tag-html"></div>
-                                <div class="tag tag-css"></div>
-                                <div class="tag tag-js"></div>
-                                <div class="tag tag-bs"></div>
-                                <div class="tag tag-regex"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
 
             <!-- Skills -->
             <div id="screen-skills">

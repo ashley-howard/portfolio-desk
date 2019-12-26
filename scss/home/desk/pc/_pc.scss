@@ -1,10 +1,9 @@
 @import 'grid';
 @import 'large/large-screen';
-// @import '../../../animations';
 
 .pc {
     position: absolute;
-    background: #171717;
+    // background: #171717;
     background: rgb(0, 0, 0);
     background: -moz-linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(46, 46, 46, 1) 100%);
     background: -webkit-linear-gradient(90deg, rgba(0, 0, 0, 1) 70%, rgba(46, 46, 46, 1) 100%);
