@@ -37,7 +37,8 @@
                 </div>
 
                 <div class="explorer-bar extendable">
-                    <div id="back-button" onclick="openProjects('back')">←</div>
+                    <div id="back-button">←</div>
+                    <!-- <div id="back-button" onclick="openProjects('back')">←</div> -->
                     <span id="explorer-url">
                         <div id="typed-strings">
                             <!-- <p id="typed-url"></p> -->
@@ -47,10 +48,10 @@
                 </div>
 
                 <!-- small screen -->
-                <div class="folders" id="folders">
+                <div class="folders extendable" id="folders">
                     <div class="row row-top extendable">
                         <!-- Projects -->
-                        <div class="column column-3" onclick="openProjects('main')">
+                        <div class="column column-3" onclick="openProject('main')">
                             <svg class="top-icon projects-icon" width="153" height="159" viewBox="0 0 190 150"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path id="svg-folder-main"
@@ -177,11 +178,11 @@
                 <div id="screen-projects">
                     <div class="projects-large-grid-container" id="project-tiles">
 
-                        <!-- Project - Home -->
-                        <div class="project-tile project-home" onclick="openProjects('home')">
+                        <!-- Project - ashley.how -->
+                        <div class="project-tile project-ashley" onclick="openProject('ashley')">
                             <div class="project-tile-inner">
                                 <img src="/img/home.jpg" alt="">
-                                <div class="project-tile-name">Home</div>
+                                <div class="project-tile-name">ashley.how</div>
                                 <div class="project-tile-info">
                                     <p>What started out as a fun project to see what objects I could
                                         make using CSS...</p>
@@ -196,7 +197,7 @@
                         </div>
 
                         <!-- Project - A-KIN -->
-                        <div class="project-tile project-a-kin" onclick="openProjects('a-kin')">
+                        <div class="project-tile project-a-kin" onclick="openProject('a-kin')">
                             <div class="project-tile-inner">
                                 <img src="/img/a-kin.jpg" alt="">
                                 <div class="project-tile-name">A-KIN</div>
@@ -212,7 +213,7 @@
                             </div>
                         </div>
                         <!-- Project - JD -->
-                        <div class="project-tile project-jd" onclick="openProjects('jd')">
+                        <div class="project-tile project-jd" onclick="openProject('jd')">
                             <div class="project-tile-inner">
                                 <img src="/img/jd.jpg" alt="">
                                 <div class="project-tile-name">Jack Daniels</div>
@@ -228,7 +229,7 @@
                             </div>
                         </div>
                         <!-- Project - Ribbit -->
-                        <div class="project-tile project-ribbit" onclick="openProjects('ribbit')">
+                        <div class="project-tile project-ribbit" onclick="openProject('ribbit')">
                             <div class="project-tile-inner">
                                 <img src="/img/ribbit.jpg" alt="">
                                 <div class="project-tile-name">Ribbit.</div>
@@ -245,7 +246,7 @@
                             </div>
                         </div>
                         <!-- Project - NoteConvert -->
-                        <div class="project-tile project-note" onclick="openProjects('note')">
+                        <div class="project-tile project-note" onclick="openProject('note')">
                             <div class="project-tile-inner">
                                 <img src="/img/note.jpg" alt="">
                                 <div class="project-tile-name">NoteConvert</div>
@@ -276,16 +277,16 @@
 
                     </div>
 
-                    <!-- OPEN PROJECT HOME -->
-                    <div class="project-open project-open-home" id="open-home">
+                    <!-- OPEN PROJECT ashley.how -->
+                    <div class="project-open project-ashley" id="project-ashley">
                         <div class="row-project">
                             <div class="col col-media">
                                 <img src="/img/home-l.png" alt="">
                             </div>
 
                             <div class="col col-info">
-                                <h2>Home</h2>
-                                <a href="#">/index.html</a>
+                                <h2>ashley.how</h2>
+                                <a href="#">ashley.how</a>
                                 <p>What started out as a fun project to see what objects I could make using CSS, I
                                     got a bit
                                     carried
@@ -301,7 +302,7 @@
                     </div>
 
                     <!-- OPEN PROJECT A-KIN -->
-                    <div class="project-open project-open-a-kin" id="open-a-kin">
+                    <div class="project-open project-a-kin" id="project-a-kin">
                         <div class="row-project">
                             <div class="col col-media">
                                 <video autoplay loop poster="/img/a-kin-l.jpg">
@@ -326,7 +327,7 @@
                     </div>
 
                     <!-- OPEN PROJECT JD -->
-                    <div class="project-open project-open-jd" id="open-jd">
+                    <div class="project-open project-jd" id="project-jd">
                         <div class="row-project">
                             <div class="col col-media">
                                 <img src="/img/jd-l.jpg" alt="">
@@ -351,7 +352,7 @@
                     </div>
 
                     <!-- OPEN PROJECT RIBBIT -->
-                    <div class="project-open project-open-ribbit" id="open-ribbit">
+                    <div class="project-open project-ribbit" id="project-ribbit">
                         <div class="row-project">
                             <div class="col col-media">
                                 <img src="/img/ribbit-l.jpg" alt="">
@@ -381,7 +382,7 @@
                     </div>
 
                     <!-- OPEN PROJECT NOTECONVERT -->
-                    <div class="project-open project-open-note" id="open-note">
+                    <div class="project-open project-note" id="project-note">
                         <div class="row-project">
                             <div class="col col-media">
                                 <img src="/img/note-l.jpg" alt="">

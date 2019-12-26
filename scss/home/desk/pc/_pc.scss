@@ -93,7 +93,7 @@
         &.extended {
             display: none;
         }
-        
+
     }
 
 
@@ -157,7 +157,9 @@
     justify-content: space-between;
     // background: #ffffff6e; // or only on hover?
 
-    // &.extended {}
+    &.extended {
+        display: none;
+    }
 }
 
 // .folders:hover {

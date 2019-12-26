@@ -6,16 +6,24 @@ var backButton = document.getElementById('back-button');
 
 var projectTiles = document.getElementById('project-tiles');
 // var projectOpen = document.getElementById('project-open');
-var openHome = document.getElementById('open-home');
-var openAkin = document.getElementById('open-a-kin');
-var openJd = document.getElementById('open-jd');
-var openRibbit = document.getElementById('open-ribbit');
-var openNote = document.getElementById('open-note');
+var projectAshley = document.getElementById('project-ashley');
+var projectAkin = document.getElementById('project-a-kin');
+var projectJd = document.getElementById('project-jd');
+var projectRibbit = document.getElementById('project-ribbit');
+var projectNote = document.getElementById('project-note');
 var projectFocus;
 
 var typed;
 
-function openProjects(project) {
+function openHome() {
+    screenProjects.style.display = "none";
+    document.getElementById('folders').style.display = "flex";
+
+    prependTyped.innerHTML = 'C:\\Users\\Ash\\';
+    backButton.style.display = "none";
+}
+
+function openProject(project) {
     // if (project === 'main') {
     //     largeScreen.style.display = "block";
 
@@ -34,8 +42,12 @@ function openProjects(project) {
     // }
     if (project === 'main') {
         screenProjects.style.display = "block";
+        backButton.style.display = "flex";
+        backButton.setAttribute("onclick", "openHome()")
 
         extend()
+
+        prependTyped.innerHTML = '';
 
         var typed = new Typed('#typed', {
             strings: ['C:\\Users\\Ash\\Projects'],
@@ -53,13 +65,15 @@ function openProjects(project) {
 
     else if (project === 'back') {
         projectTiles.style.display = "grid";
-        backButton.style.display = "none";
+        // backButton.style.display = "none";
+        backButton.style.display = "flex";
+        backButton.setAttribute("onclick", "openHome()")
         prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-        document.getElementById(`open-${projectFocus}`).style.display = "none";
+        document.getElementById(`project-${projectFocus}`).style.display = "none";
     }
 
-    else if (project === 'home') {
-        projectFocus = 'home';
+    else if (project === 'ashley') {
+        projectFocus = 'ashley';
 
         prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
         var typed = new Typed('#typed', {
@@ -69,7 +83,7 @@ function openProjects(project) {
         });
 
         setTimeout(function () {
-            openHome.style.display = "block";
+            projectAshley.style.display = "block";
             backButton.style.display = "flex";
 
             typed.destroy() // resets Typed
@@ -77,6 +91,8 @@ function openProjects(project) {
         }, 1750);
 
         projectTiles.style.display = "none";
+        backButton.style.display = "flex";
+        backButton.setAttribute("onclick", "openProject('back')")
     }
 
     else if (project === 'a-kin') {
@@ -90,7 +106,7 @@ function openProjects(project) {
         });
 
         setTimeout(function () {
-            openAkin.style.display = "block";
+            projectAkin.style.display = "block";
             backButton.style.display = "flex";
 
             typed.destroy() // resets Typed
@@ -98,6 +114,8 @@ function openProjects(project) {
         }, 600);
 
         projectTiles.style.display = "none";
+        backButton.style.display = "flex";
+        backButton.setAttribute("onclick", "openProject('back')")
     }
 
     else if (project === 'jd') {
@@ -111,7 +129,7 @@ function openProjects(project) {
         });
 
         setTimeout(function () {
-            openJd.style.display = "block";
+            projectJd.style.display = "block";
             backButton.style.display = "flex";
 
             typed.destroy() // resets Typed
@@ -119,6 +137,8 @@ function openProjects(project) {
         }, 1000);
 
         projectTiles.style.display = "none";
+        backButton.style.display = "flex";
+        backButton.setAttribute("onclick", "openProject('back')")
     }
 
     else if (project === 'ribbit') {
@@ -132,7 +152,7 @@ function openProjects(project) {
         });
 
         setTimeout(function () {
-            openRibbit.style.display = "block";
+            projectRibbit.style.display = "block";
             backButton.style.display = "flex";
 
             typed.destroy() // resets Typed
@@ -140,6 +160,8 @@ function openProjects(project) {
         }, 550);
 
         projectTiles.style.display = "none";
+        backButton.style.display = "flex";
+        backButton.setAttribute("onclick", "openProject('back')")
     }
 
     else if (project === 'note') {
@@ -153,7 +175,7 @@ function openProjects(project) {
         });
 
         setTimeout(function () {
-            openNote.style.display = "block";
+            projectNote.style.display = "block";
             backButton.style.display = "flex";
 
             typed.destroy() // resets Typed
@@ -161,7 +183,10 @@ function openProjects(project) {
         }, 900);
 
         projectTiles.style.display = "none";
+        backButton.style.display = "flex";
+        backButton.setAttribute("onclick", "openProject('back')")
     }
+
 
     // document.body.style.perspective = "unset"
 }
@@ -202,7 +227,7 @@ function closeScreen() {
     prependTyped.innerHTML = '';
     document.getElementById('typed').innerHTML = "";
     projectTiles.style.display = "none";
-    document.getElementById(`open-${projectFocus}`).style.display = "none";
+    document.getElementById(`project-${projectFocus}`).style.display = "none";
     backButton.style.display = "none";
 }
 
