@@ -122,11 +122,39 @@
         }
 
         &.slide-2 {
+            opacity: 0;
             background-image: radial-gradient(farthest-corner at 153px 13px, #fff 0%, #338fee 100%);
+
+            animation: hub-screen 40s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 5;
+            animation-delay: 10s;
+            animation-direction: alternate;
+            animation-fill-mode: both;
         }
 
         &.slide-3 {
+            opacity: 0;
             background: lightgrey;
+
+            animation: hub-screen 40s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 5;
+            animation-delay: 18s;
+            animation-direction: alternate;
+            animation-fill-mode: both;
+        }
+
+        &.slide-4 {
+            opacity: 0;
+            background: lightgrey;
+
+            animation: hub-screen 40s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 5;
+            animation-delay: 26s;
+            animation-direction: alternate;
+            animation-fill-mode: both;
         }
     }
 

@@ -5,47 +5,23 @@ var prependTyped = document.getElementById('prepend-typed');
 var backButton = document.getElementById('back-button');
 
 var projectTiles = document.getElementById('project-tiles');
-// var projectOpen = document.getElementById('project-open');
-var projectAshley = document.getElementById('project-ashley');
-var projectAkin = document.getElementById('project-a-kin');
-var projectJd = document.getElementById('project-jd');
-var projectRibbit = document.getElementById('project-ribbit');
-var projectNote = document.getElementById('project-note');
-var projectFocus;
-
+var projectCache;
 var typed;
 
 function openHome() {
     screenProjects.style.display = "none";
     document.getElementById('folders').style.display = "flex";
-
     prependTyped.innerHTML = 'C:\\Users\\Ash\\';
     backButton.style.display = "none";
 }
 
 function openProject(project) {
-    // if (project === 'main') {
-    //     largeScreen.style.display = "block";
-
-    //     var typed = new Typed('#typed', {
-    //         strings: ['C:\\Users\\Ash\\Projects'],
-    //         typeSpeed: 50,
-    //         showCursor: false,
-    //         startDelay: 2000
-    //     });
-
-    //     setTimeout(function () {
-    //         projectTiles.style.display = "grid";
-    //         typed.destroy() // resets Typed
-    //         prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-    //     }, 3600);
-    // }
     if (project === 'main') {
+        extend()
+        document.getElementById('folders').style.display = "none";
         screenProjects.style.display = "block";
         backButton.style.display = "flex";
         backButton.setAttribute("onclick", "openHome()")
-
-        extend()
 
         prependTyped.innerHTML = '';
 
@@ -57,6 +33,7 @@ function openProject(project) {
         });
 
         setTimeout(function () {
+            
             projectTiles.style.display = "grid";
             typed.destroy() // resets Typed
             prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
@@ -65,134 +42,67 @@ function openProject(project) {
 
     else if (project === 'back') {
         projectTiles.style.display = "grid";
-        // backButton.style.display = "none";
         backButton.style.display = "flex";
         backButton.setAttribute("onclick", "openHome()")
         prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-        document.getElementById(`project-${projectFocus}`).style.display = "none";
+        document.getElementById(`project-${projectCache}`).style.display = "none";
     }
 
-    else if (project === 'ashley') {
-        projectFocus = 'ashley';
+    else if (project === '1' || project === '2' || project === '3' || project === '4' || project === '5') {
+
+        if (project === '1') {
+            typedString = 'Breaking-the-second-wall'; // ashley
+            projectTimeout = 1750;
+        }
+
+        else if (project === '2') {
+            typedString = 'a-kin';
+            projectTimeout = 600;
+        }
+
+        else if (project === '3') {
+            typedString = 'jack-daniels';
+            projectTimeout = 1000;
+        }
+
+        else if (project === '4') {
+            typedString = 'ribbit';
+            projectTimeout = 550;
+        }
+
+        else if (project === '5') {
+            typedString = 'note-convert';
+            projectTimeout = 900;
+        }
+
+        projectCache = project;
 
         prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+
         var typed = new Typed('#typed', {
-            strings: ['\\Breaking-the-second-wall'],
+            strings: [`\\${typedString}`],
             typeSpeed: 50,
             showCursor: false,
         });
 
         setTimeout(function () {
-            projectAshley.style.display = "block";
+            document.getElementById(`project-${project}`).style.display = "block";
             backButton.style.display = "flex";
 
             typed.destroy() // resets Typed
-            prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\Breaking-the-second-wall';
-        }, 1750);
+            prependTyped.innerHTML = `C:\\Users\\Ash\\Projects\\${typedString}`;
+        }, projectTimeout);
 
         projectTiles.style.display = "none";
-        backButton.style.display = "flex";
         backButton.setAttribute("onclick", "openProject('back')")
     }
 
-    else if (project === 'a-kin') {
-        projectFocus = 'a-kin';
-
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-        var typed = new Typed('#typed', {
-            strings: ['\\a-kin'],
-            typeSpeed: 50,
-            showCursor: false,
-        });
-
-        setTimeout(function () {
-            projectAkin.style.display = "block";
-            backButton.style.display = "flex";
-
-            typed.destroy() // resets Typed
-            prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\a-kin';
-        }, 600);
-
-        projectTiles.style.display = "none";
-        backButton.style.display = "flex";
-        backButton.setAttribute("onclick", "openProject('back')")
-    }
-
-    else if (project === 'jd') {
-        projectFocus = 'jd';
-
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-        var typed = new Typed('#typed', {
-            strings: ['\\jack-daniels'],
-            typeSpeed: 50,
-            showCursor: false,
-        });
-
-        setTimeout(function () {
-            projectJd.style.display = "block";
-            backButton.style.display = "flex";
-
-            typed.destroy() // resets Typed
-            prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\jack-daniels';
-        }, 1000);
-
-        projectTiles.style.display = "none";
-        backButton.style.display = "flex";
-        backButton.setAttribute("onclick", "openProject('back')")
-    }
-
-    else if (project === 'ribbit') {
-        projectFocus = 'ribbit';
-
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-        var typed = new Typed('#typed', {
-            strings: ['\\ribbit'],
-            typeSpeed: 50,
-            showCursor: false,
-        });
-
-        setTimeout(function () {
-            projectRibbit.style.display = "block";
-            backButton.style.display = "flex";
-
-            typed.destroy() // resets Typed
-            prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\ribbit';
-        }, 550);
-
-        projectTiles.style.display = "none";
-        backButton.style.display = "flex";
-        backButton.setAttribute("onclick", "openProject('back')")
-    }
-
-    else if (project === 'note') {
-        projectFocus = 'note';
-
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-        var typed = new Typed('#typed', {
-            strings: ['\\note-convert'],
-            typeSpeed: 50,
-            showCursor: false,
-        });
-
-        setTimeout(function () {
-            projectNote.style.display = "block";
-            backButton.style.display = "flex";
-
-            typed.destroy() // resets Typed
-            prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects\\note-convert';
-        }, 900);
-
-        projectTiles.style.display = "none";
-        backButton.style.display = "flex";
-        backButton.setAttribute("onclick", "openProject('back')")
-    }
-
-
-    // document.body.style.perspective = "unset"
 }
 
 function openSkills() {
-    largeScreen.style.display = "block";
+    // largeScreen.style.display = "block";
+
+    extend() 
 
     var typed = new Typed('#typed', {
         strings: ['C:\\Users\\Ash\\Skills'],
@@ -210,6 +120,7 @@ function openSkills() {
 function minimise() {
     // largeScreen.style.display = "none";
     // document.getElementById('folders').style.display = "none"
+    shrink()
     document.getElementById('minimised').style.display = "flex";
     largeScreen.style.bottom = "calc(100vh * 2)";
 }
@@ -222,12 +133,13 @@ function maximise() {
 }
 
 function closeScreen() {
+   
     largeScreen.style.display = "none";
     // reset everything
     prependTyped.innerHTML = '';
     document.getElementById('typed').innerHTML = "";
     projectTiles.style.display = "none";
-    document.getElementById(`project-${projectFocus}`).style.display = "none";
+    document.getElementById(`project-${projectCache}`).style.display = "none";
     backButton.style.display = "none";
 }
 

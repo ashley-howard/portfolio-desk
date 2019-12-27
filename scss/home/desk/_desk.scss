@@ -5,13 +5,21 @@
 @import 'plant';
 @import 'pc/pc';
 
+.desk-wrapper {
+    perspective: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+}
 
 .desk {
     position: fixed;
     bottom: 0;
     // width: 92vw;
     width: 100vw;
-    height: 110px;
+    height: 100px;
     // height: 130px;
     // clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
     // transform: skewX(50deg);

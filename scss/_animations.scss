@@ -160,6 +160,29 @@
     }
 }
 
+@keyframes hub-screen {
+    0% {
+        opacity: 0;
+    }
+    
+    3% {
+        opacity: 1;
+    }
+
+    55% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
 @keyframes drink-coffee {
     0% {
         // opacity: 1;
