@@ -67,7 +67,8 @@
 
 .hide-screen-icon {
     position: absolute;
-    background: #268BCF;
+    // background: #268BCF;
+    color: white;
     width: 22px;
     height: 22px;
     right: 38px;
@@ -79,11 +80,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover,
+    &:active {
+        background: #414141;
+    }
 }
 
 .close-screen-icon {
     position: absolute;
     background: #e33b3b;
+    color: white;
     width: 22px;
     height: 22px;
     right: 10px;
@@ -95,6 +102,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &:hover,
+    &:active {
+        background: #b83131;
+    }
 }
 
 .explorer-bar {
@@ -163,6 +175,11 @@
     display: flex;
     font-size: 28px;
     color: #ffffff;
+
+    &:hover,
+    &:active {
+        background: #0000005c;
+    }
 }
 
 #screen-home,
