@@ -140,6 +140,8 @@ function maximise() {
 }
 
 function closeScreen() {
+
+    shrink()
    
     largeScreen.style.display = "none";
     // reset everything
