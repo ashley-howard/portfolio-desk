@@ -1,10 +1,12 @@
 var screenProjects = document.getElementById('screen-projects');
+var screenSkills = document.getElementById('screen-skills');
 var largeScreen = document.getElementById('large-screen');
 var explorerUrl = document.getElementById("explorer-url");
 var prependTyped = document.getElementById('prepend-typed');
 var backButton = document.getElementById('back-button');
 
 var projectTiles = document.getElementById('project-tiles');
+var skillsTiles = document.getElementById('skills-tiles');
 var projectCache;
 var typed;
 
@@ -103,6 +105,8 @@ function openSkills() {
     // largeScreen.style.display = "block";
 
     extend() 
+    screenSkills.style.display = "block";
+    skillsTiles.style.display = "block";
 
     var typed = new Typed('#typed', {
         strings: ['C:\\Users\\Ash\\Skills'],
