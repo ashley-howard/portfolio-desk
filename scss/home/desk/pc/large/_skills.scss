@@ -1,0 +1,33 @@
+#screen-skills {
+    background: rgb(137, 59, 0);
+    background: -moz-linear-gradient(0deg, rgba(137, 59, 0, 0.51) 0%, rgba(255, 0, 0, 0.68) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(137, 59, 0, 0.51) 0%, rgba(255, 0, 0, 0.68) 100%);
+    background: linear-gradient(0deg, rgba(137, 59, 0, 0.51) 0%, rgba(255, 0, 0, 0.68) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#893b00", endColorstr="#ff0000", GradientType=1);
+
+    color: white;
+
+    h2 {
+        text-align: center;
+        font-size: 3em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+}
+
+// .skills-icon-container {
+//     display: flex;
+//     width: 31%;
+//     justify-content: center;
+// }
+
+
+#skills-tiles {
+    padding: 10px;
+
+    img {
+        width: 35%;
+    }
+}

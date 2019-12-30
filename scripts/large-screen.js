@@ -105,8 +105,8 @@ function openSkills() {
     // largeScreen.style.display = "block";
 
     extend() 
-    screenSkills.style.display = "block";
-    skillsTiles.style.display = "block";
+    
+    // skillsTiles.style.display = "block";
 
     var typed = new Typed('#typed', {
         strings: ['C:\\Users\\Ash\\Skills'],
@@ -116,9 +116,12 @@ function openSkills() {
     });
 
     setTimeout(function () {
+        screenSkills.style.display = "block";
+        skillsTiles.style.display = "grid";
         typed.destroy() // resets Typed
         prependTyped.innerHTML = 'C:\\Users\\Ash\\Skills';
-    }, 3600);
+    }, 3400);
+
 }
 
 function minimise() {

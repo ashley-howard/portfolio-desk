@@ -201,21 +201,3 @@
 #screen-skills {
     display: none; // to be 'grid'
 }
-
-// .skills-icon-container {
-//     display: flex;
-//     width: 31%;
-//     justify-content: center;
-// }
-
-#screen-skills {
-    background: rgb(137, 59, 0);
-    background: -moz-linear-gradient(0deg, rgba(137, 59, 0, 0.51) 0%, rgba(255, 0, 0, 0.68) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(137, 59, 0, 0.51) 0%, rgba(255, 0, 0, 0.68) 100%);
-    background: linear-gradient(0deg, rgba(137, 59, 0, 0.51) 0%, rgba(255, 0, 0, 0.68) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#893b00", endColorstr="#ff0000", GradientType=1);
-}
-
-#skills-tiles img {
-    width: 35%;
-}

@@ -312,13 +312,13 @@
         fill: #bebebe;
         height: 25px;
 
-        &:hover {
-            animation: bounce 1s;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            // animation-fill-mode: both;}
-        }
+        // &:hover {
+        //     animation: bounce 1s;
+        //     animation-timing-function: ease-in-out;
+        //     animation-iteration-count: infinite;
+        //     animation-direction: alternate;
+        //     // animation-fill-mode: both;}
+        // }
     }
 
     // &.github-icon {
@@ -373,7 +373,7 @@
     }
 
     &.li-icon:hover {
-        fill: #13598b;
+        fill: #142949;
     }
 
     // &.contact-icon {
