@@ -13,33 +13,56 @@ var typed;
 function openHome() {
     screenProjects.style.display = "none";
     document.getElementById('folders').style.display = "flex";
-    prependTyped.innerHTML = 'C:\\Users\\Ash\\';
+    prependTyped.innerHTML = 'C:\\Users\\Ash';
+    // prependTyped.style.display = "none";
     backButton.style.display = "none";
+    // document.getElementById(`project-${projectCache}`).style.display = "none";
+    projectCache = 0
 }
 
 function openProject(project) {
     if (project === 'main') {
         extend()
         document.getElementById('folders').style.display = "none";
-        screenProjects.style.display = "block";
+
         backButton.style.display = "flex";
+        // prependTyped.style.display = "block";
         backButton.setAttribute("onclick", "openHome()")
 
-        prependTyped.innerHTML = '';
+        if (projectCache === 0) {
+            var typed = new Typed('#typed', {
+                strings: ['\\Projects'],
+                typeSpeed: 50,
+                showCursor: false,
+                // startDelay: 0
+            });
 
-        var typed = new Typed('#typed', {
-            strings: ['C:\\Users\\Ash\\Projects'],
-            typeSpeed: 50,
-            showCursor: false,
-            startDelay: 2000
-        });
+            setTimeout(function () {
+                screenProjects.style.display = "block";
+                projectTiles.style.display = "grid";
+                typed.destroy() // resets Typed
+                prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+            }, 800);
+        }
 
-        setTimeout(function () {
-            
-            projectTiles.style.display = "grid";
-            typed.destroy() // resets Typed
-            prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-        }, 3600);
+        else {
+            prependTyped.innerHTML = '';
+
+            var typed = new Typed('#typed', {
+                strings: ['C:\\Users\\Ash\\Projects'],
+                typeSpeed: 50,
+                showCursor: false,
+                startDelay: 2000
+            });
+
+            setTimeout(function () {
+                screenProjects.style.display = "block";
+                projectTiles.style.display = "grid";
+                typed.destroy() // resets Typed
+                prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+            }, 3600);
+        }
+
     }
 
     else if (project === 'back') {
@@ -104,8 +127,8 @@ function openProject(project) {
 function openSkills() {
     // largeScreen.style.display = "block";
 
-    extend() 
-    
+    extend()
+
     // skillsTiles.style.display = "block";
 
     var typed = new Typed('#typed', {
@@ -142,7 +165,7 @@ function maximise() {
 function closeScreen() {
 
     shrink()
-   
+
     largeScreen.style.display = "none";
     // reset everything
     prependTyped.innerHTML = '';
