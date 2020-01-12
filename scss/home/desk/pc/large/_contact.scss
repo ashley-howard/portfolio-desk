@@ -21,8 +21,11 @@
 #contact-tiles {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    // justify-content: center;
     align-items: center;
+    overflow-y: scroll;
+    position: relative;
+    height: calc(88vh - 70px);
 }
 
 .email-container {
@@ -32,13 +35,18 @@
     align-items: center;
     background: white;
     width: 90%;
-    height: 240px;
+    height: 420px;
+    position: absolute;
+    margin-top: 95px;
+    margin-bottom: 35px;
 
-    input {
+    input,
+    textarea {
         width: 95%;
         border: 0;
-        font-size: 2em;
+        font-size: 32px;
         padding: 15px 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
         &:focus {
             outline: none;
@@ -46,11 +54,25 @@
 
         &::placeholder {
             color: #CFCFCF;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
 
         &.lined {
             border-bottom: 2px solid #e5e5e5;
         }
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    button {
+        background: #94C3DF;
+        border: 0;
+        color: white;
+        padding: 3px 13px;
+        font-size: 1.5em;
+        border-radius: 2px;
+        align-self: flex-start;
+        margin: 15px 0 15px 35px;
     }
 }
