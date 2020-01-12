@@ -1,12 +1,17 @@
 var screenProjects = document.getElementById('screen-projects');
+var screenAbout = document.getElementById('screen-about');
 var screenSkills = document.getElementById('screen-skills');
+var screenContact = document.getElementById('screen-contact');
 var largeScreen = document.getElementById('large-screen');
 var explorerUrl = document.getElementById("explorer-url");
 var prependTyped = document.getElementById('prepend-typed');
 var backButton = document.getElementById('back-button');
 
 var projectTiles = document.getElementById('project-tiles');
+var aboutTiles = document.getElementById('about-tiles');
 var skillsTiles = document.getElementById('skills-tiles');
+var contactTiles = document.getElementById('contact-tiles');
+
 var projectCache;
 var typed;
 
@@ -143,6 +148,30 @@ function openSkills() {
         skillsTiles.style.display = "grid";
         typed.destroy() // resets Typed
         prependTyped.innerHTML = 'C:\\Users\\Ash\\Skills';
+    }, 3400);
+
+}
+
+
+function openContact() {
+    // largeScreen.style.display = "block";
+
+    extend()
+
+    // skillsTiles.style.display = "block";
+
+    var typed = new Typed('#typed', {
+        strings: ['C:\\Users\\Ash\\Contact'],
+        typeSpeed: 50,
+        showCursor: false,
+        startDelay: 2000
+    });
+
+    setTimeout(function () {
+        screenContact.style.display = "block";
+        contactTiles.style.display = "flex";
+        typed.destroy() // resets Typed
+        prependTyped.innerHTML = 'C:\\Users\\Ash\\Contact';
     }, 3400);
 
 }

@@ -6,11 +6,11 @@ function drinkCoffee() {
     }, 3200);
 }
 
-var typed = new Typed('#intro-typed', {
-    stringsElement: '#intro-typed-strings',
-    typeSpeed: 75,
-    showCursor: false
-});
+// var typed = new Typed('#intro-typed', {
+//     stringsElement: '#intro-typed-strings',
+//     typeSpeed: 75,
+//     showCursor: false
+// });
 
 const introScreen = document.getElementById('intro-screen');
 const lightSwitch = document.getElementById('light-switch')
@@ -35,12 +35,14 @@ function light(action) {
     if (action === 'on') {
         introScreen.style.display = 'flex';
         lightSwitch.attributes.onclick.value = "light('off')"
-        lightSwitch.style.boxShadow = 'inset 0px -3px 2px #262626'
+        lightSwitch.style.boxShadow = 'rgb(50, 50, 50) -1px -4px 2px inset, rgb(69, 69, 69) 1px 2px 5px 0px'
     } else {
         introScreen.style.display = 'none';
         lightSwitch.attributes.onclick.value = "light('on')"
-        lightSwitch.style.boxShadow = 'inset 0px 3px 2px #262626'
+        lightSwitch.style.boxShadow = 'rgb(50, 50, 50) -1px 4px 2px inset, rgb(69, 69, 69) 1px 2px 5px 0px'
     }
+
+    localStorage.setItem('firstTime', 'false');
 }
 
 
