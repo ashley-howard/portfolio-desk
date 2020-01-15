@@ -13,9 +13,9 @@
         margin: 20px;
     }
 
-    .row {
-        background: red;
-    }
+    // .row {
+    //     background: red;
+    // }
 }
 
 #contact-tiles {
@@ -23,7 +23,7 @@
     flex-direction: column;
     // justify-content: center;
     align-items: center;
-    overflow-y: scroll;
+    overflow-y: auto;
     position: relative;
     height: calc(88vh - 70px);
 }
@@ -82,5 +82,6 @@
         border-radius: 2px;
         align-self: flex-start;
         margin: 15px 0 15px 35px;
+        cursor: pointer;
     }
 }

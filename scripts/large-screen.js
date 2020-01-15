@@ -130,11 +130,7 @@ function openProject(project) {
 }
 
 function openSkills() {
-    // largeScreen.style.display = "block";
-
     extend()
-
-    // skillsTiles.style.display = "block";
 
     var typed = new Typed('#typed', {
         strings: ['C:\\Users\\Ash\\Skills'],
@@ -153,12 +149,27 @@ function openSkills() {
 }
 
 
-function openContact() {
-    // largeScreen.style.display = "block";
-
+function openAbout() {
     extend()
 
-    // skillsTiles.style.display = "block";
+    var typed = new Typed('#typed', {
+        strings: ['C:\\Users\\Ash\\About'],
+        typeSpeed: 50,
+        showCursor: false,
+        startDelay: 2000
+    });
+
+    setTimeout(function () {
+        screenAbout.style.display = "block";
+        aboutTiles.style.display = "flex";
+        typed.destroy() // resets Typed
+        prependTyped.innerHTML = 'C:\\Users\\Ash\\About';
+    }, 3400);
+}
+
+
+function openContact() {
+    extend()
 
     var typed = new Typed('#typed', {
         strings: ['C:\\Users\\Ash\\Contact'],
