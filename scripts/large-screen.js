@@ -46,7 +46,7 @@ function openProject(project) {
                 screenProjects.style.display = "block";
                 projectTiles.style.display = "grid";
                 typed.destroy() // resets Typed
-                prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+                prependTyped.innerHTML = 'https://ashley.how/projects';
             }, 800);
         }
 
@@ -54,7 +54,7 @@ function openProject(project) {
             prependTyped.innerHTML = '';
 
             var typed = new Typed('#typed', {
-                strings: ['C:\\Users\\Ash\\Projects'],
+                strings: ['https://ashley.how/projects'],
                 typeSpeed: 50,
                 showCursor: false,
                 startDelay: 2000
@@ -64,8 +64,8 @@ function openProject(project) {
                 screenProjects.style.display = "block";
                 projectTiles.style.display = "grid";
                 typed.destroy() // resets Typed
-                prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
-            }, 3600);
+                prependTyped.innerHTML = 'https://ashley.how/projects';
+            }, 3900);
         }
 
     }
@@ -74,15 +74,15 @@ function openProject(project) {
         projectTiles.style.display = "grid";
         backButton.style.display = "flex";
         backButton.setAttribute("onclick", "openHome()")
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+        prependTyped.innerHTML = 'https://ashley.how/projects';
         document.getElementById(`project-${projectCache}`).style.display = "none";
     }
 
     else if (project === '1' || project === '2' || project === '3' || project === '4' || project === '5') {
 
         if (project === '1') {
-            typedString = 'Breaking-the-second-wall'; // ashley
-            projectTimeout = 1750;
+            typedString = 'portfolio'; // ashley
+            projectTimeout = 800;
         }
 
         else if (project === '2') {
@@ -107,10 +107,10 @@ function openProject(project) {
 
         projectCache = project;
 
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Projects';
+        prependTyped.innerHTML = 'https://ashley.how/projects';
 
         var typed = new Typed('#typed', {
-            strings: [`\\${typedString}`],
+            strings: [`/${typedString}`],
             typeSpeed: 50,
             showCursor: false,
         });
@@ -120,7 +120,7 @@ function openProject(project) {
             backButton.style.display = "flex";
 
             typed.destroy() // resets Typed
-            prependTyped.innerHTML = `C:\\Users\\Ash\\Projects\\${typedString}`;
+            prependTyped.innerHTML = `https://ashley.how/projects/${typedString}`;
         }, projectTimeout);
 
         projectTiles.style.display = "none";
@@ -129,31 +129,14 @@ function openProject(project) {
 
 }
 
-function openSkills() {
-    extend()
 
-    var typed = new Typed('#typed', {
-        strings: ['C:\\Users\\Ash\\Skills'],
-        typeSpeed: 50,
-        showCursor: false,
-        startDelay: 2000
-    });
-
-    setTimeout(function () {
-        screenSkills.style.display = "block";
-        skillsTiles.style.display = "grid";
-        typed.destroy() // resets Typed
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Skills';
-    }, 3400);
-
-}
 
 
 function openAbout() {
     extend()
 
     var typed = new Typed('#typed', {
-        strings: ['C:\\Users\\Ash\\About'],
+        strings: ['https://ashley.how/ard'],
         typeSpeed: 50,
         showCursor: false,
         startDelay: 2000
@@ -163,8 +146,27 @@ function openAbout() {
         screenAbout.style.display = "block";
         aboutTiles.style.display = "flex";
         typed.destroy() // resets Typed
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\About';
+        prependTyped.innerHTML = 'https://ashley.how/ard';
+    }, 3650);
+}
+
+function openSkills() {
+    extend()
+
+    var typed = new Typed('#typed', {
+        strings: ['https://ashley.how/skills'],
+        typeSpeed: 50,
+        showCursor: false,
+        startDelay: 2000
+    });
+
+    setTimeout(function () {
+        screenSkills.style.display = "block";
+        skillsTiles.style.display = "grid";
+        typed.destroy() // resets Typed
+        prependTyped.innerHTML = 'https://ashley.how/skills';
     }, 3400);
+
 }
 
 
@@ -172,7 +174,7 @@ function openContact() {
     extend()
 
     var typed = new Typed('#typed', {
-        strings: ['C:\\Users\\Ash\\Contact'],
+        strings: ['https://ashley.how/contact'],
         typeSpeed: 50,
         showCursor: false,
         startDelay: 2000
@@ -182,8 +184,8 @@ function openContact() {
         screenContact.style.display = "block";
         contactTiles.style.display = "flex";
         typed.destroy() // resets Typed
-        prependTyped.innerHTML = 'C:\\Users\\Ash\\Contact';
-    }, 3400);
+        prependTyped.innerHTML = 'https://ashley.how/contact';
+    }, 3900);
 
 }
 
