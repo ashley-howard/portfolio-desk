@@ -22,9 +22,15 @@ body {
   // }
 }
 
-// a {
-//   text-decoration: none;
-// }
+a {
+  text-decoration: none;
+}
+
+
+b {
+  font-weight: 500;
+}
+
 
 %pseudo {
   content: "";
@@ -76,3 +82,23 @@ noscript {
 //     left: 0;
 //     z-index: 1;
 // }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+// ::-webkit-scrollbar-track {
+//   background: #f1f1f1; 
+// }
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0000008c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

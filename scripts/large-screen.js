@@ -162,7 +162,7 @@ function openSkills() {
 
     setTimeout(function () {
         screenSkills.style.display = "block";
-        skillsTiles.style.display = "grid";
+        skillsTiles.style.display = "flex"; // grid?
         typed.destroy() // resets Typed
         prependTyped.innerHTML = 'https://ashley.how/skills';
     }, 3400);
