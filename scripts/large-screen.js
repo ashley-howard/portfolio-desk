@@ -44,7 +44,7 @@ function openProject(project) {
 
             setTimeout(function () {
                 screenProjects.style.display = "block";
-                projectTiles.style.display = "grid";
+                projectTiles.style.display = "flex"; // grid?
                 typed.destroy() // resets Typed
                 prependTyped.innerHTML = 'https://ashley.how/projects';
             }, 800);
@@ -62,7 +62,7 @@ function openProject(project) {
 
             setTimeout(function () {
                 screenProjects.style.display = "block";
-                projectTiles.style.display = "grid";
+                projectTiles.style.display = "flex"; // grid?
                 typed.destroy() // resets Typed
                 prependTyped.innerHTML = 'https://ashley.how/projects';
             }, 3900);
@@ -71,7 +71,7 @@ function openProject(project) {
     }
 
     else if (project === 'back') {
-        projectTiles.style.display = "grid";
+        projectTiles.style.display = "flex"; //grid?
         backButton.style.display = "flex";
         backButton.setAttribute("onclick", "openHome()")
         prependTyped.innerHTML = 'https://ashley.how/projects';
