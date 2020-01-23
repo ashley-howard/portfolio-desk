@@ -16,6 +16,9 @@ var backButton = document.getElementById('back-button');
 var projectCache;
 var screenCache;
 var typed;
+var typedString;
+var typedStartDelay;
+var projectName;
 
 //renamed to 'main'
 function openHome() {
@@ -209,47 +212,89 @@ function openHome() {
 
 
 
-function openScreen(screen, projectNo) {
+function openScreen(screenName, projectNo) {
     extend()
 
-    if (screen === 'projects') {
+    console.log(screenName)
 
-        // show all projects
-        screenProjects.style.display = "flex";
-        // projectTiles.style.display = "flex"; //grid?
+    if (screenName === 'projects') {
 
-        if (projectNo === '1' || projectNo === '2' || projectNo === '3' || projectNo === '4' || projectNo === '5') {
+        projectTimeout = 3900;
 
-            if (projectNo === '1') {
-                typedString = 'portfolio';
+        if (projectNo === 1 || projectNo === 2 || projectNo === 3 || projectNo === 4 || projectNo === 5) {
+
+            if (projectNo === 1) {
+                projectName = 'portfolio';
                 projectTimeout = 800;
             }
 
-            else if (projectNo === '2') {
-                typedString = 'a-kin';
+            else if (projectNo === 2) {
+                projectName = 'a-kin';
                 projectTimeout = 600;
             }
 
-            else if (projectNo === '3') {
-                typedString = 'jack-daniels';
+            else if (projectNo === 3) {
+                projectName = 'jack-daniels';
                 projectTimeout = 1000;
             }
 
-            else if (projectNo === '4') {
-                typedString = 'ribbit';
+            else if (projectNo === 4) {
+                projectName = 'ribbit';
                 projectTimeout = 550;
             }
 
             else {
-                typedString = 'note-convert';
+                projectName = 'note-convert';
                 projectTimeout = 900;
             }
             console.log(projectNo)
         }
 
+    }
 
+    // if screenCache doesn't exist, write full URL, or only have it when the tag "large screen" is active
+    if (projectName){
+        typedString = `/${projectName}`
+        typedStartDelay = 0
+    }
+    
+    else if (screenCache) {
+        typedString = `/${screenName}`
+        typedStartDelay = 0
 
     }
+
+    else {
+        typedString = `https://ashley.how/${screenName}`;
+        typedStartDelay = 2000
+
+    }
+
+    var typed = new Typed('#typed', {
+        strings: [typedString],
+        typeSpeed: 50,
+        showCursor: false,
+        startDelay: typedStartDelay
+    });
+
+    setTimeout(function () {
+        document.getElementById(`screen-${screenName}`).style.display = "block";
+        // document.getElementById(`${screen}-tiles`).style.display = "flex"; // is this code really necessary? set to flex in CSS
+        typed.destroy()
+
+        if (projectName) {
+            prependTyped.innerHTML = `https://ashley.how/projects/${projectName}`;
+        }
+        else {
+            prependTyped.innerHTML = `${typedString}`;
+        }
+
+    }, projectTimeout);
+
+
+
+    screenCache = document.getElementById(`screen-${screenName}`);
+
 }
 
 
