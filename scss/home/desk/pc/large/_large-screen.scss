@@ -187,6 +187,7 @@
 #screen-about,
 #screen-skills,
 #screen-contact {
+    display: none;
     margin-top: 70px;
     height: calc(88vh - 70px);
     position: absolute;
@@ -198,10 +199,6 @@
 #project-tiles,
 #about-tiles,
 #skills-tiles,
-#contact-tiles,
-#screen-projects,
-#screen-about,
-#screen-skills,
-#screen-contact {
-    display: none; // to be 'grid'
+#contact-tiles {
+    display: flex; // was none
 }

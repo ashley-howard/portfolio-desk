@@ -5,189 +5,256 @@ var screenContact = document.getElementById('screen-contact');
 var largeScreen = document.getElementById('large-screen');
 var explorerUrl = document.getElementById("explorer-url");
 var prependTyped = document.getElementById('prepend-typed');
+
 var backButton = document.getElementById('back-button');
 
-var projectTiles = document.getElementById('project-tiles');
-var aboutTiles = document.getElementById('about-tiles');
-var skillsTiles = document.getElementById('skills-tiles');
-var contactTiles = document.getElementById('contact-tiles');
+// var projectTiles = document.getElementById('project-tiles');
+// var aboutTiles = document.getElementById('about-tiles');
+// var skillsTiles = document.getElementById('skills-tiles');
+// var contactTiles = document.getElementById('contact-tiles');
 
 var projectCache;
+var screenCache;
 var typed;
 
+//renamed to 'main'
 function openHome() {
-    screenProjects.style.display = "none";
+    screenCache.style.display = "none"
+    // screenProjects.style.display = "none";
+    // screenAbout.style.display = "none";
+    // screenContact.style.display = "none";
+    // screenSkills.style.display = "none";
     document.getElementById('folders').style.display = "flex";
-    prependTyped.innerHTML = 'C:\\Users\\Ash';
+    prependTyped.innerHTML = 'https://ashley.how';
     // prependTyped.style.display = "none";
     backButton.style.display = "none";
     // document.getElementById(`project-${projectCache}`).style.display = "none";
     projectCache = 0
 }
 
-function openProject(project) {
-    if (project === 'main') {
-        extend()
-        document.getElementById('folders').style.display = "none";
+// function openProject(project) {
+//     if (project === 'main') {
+//         extend()
+//         document.getElementById('folders').style.display = "none";
+//         // screenCache = screenProjects;
 
-        backButton.style.display = "flex";
-        // prependTyped.style.display = "block";
-        backButton.setAttribute("onclick", "openHome()")
+//         backButton.style.display = "flex";
+//         // prependTyped.style.display = "block";
+//         backButton.setAttribute("onclick", "openHome()")
 
-        if (projectCache === 0) {
-            var typed = new Typed('#typed', {
-                strings: ['\\Projects'],
-                typeSpeed: 50,
-                showCursor: false,
-                // startDelay: 0
-            });
+//         if (project === 0) {
+//             var typed = new Typed('#typed', {
+//                 strings: ['/projects'],
+//                 typeSpeed: 50,
+//                 showCursor: false,
+//                 // startDelay: 0
+//             });
 
-            setTimeout(function () {
-                screenProjects.style.display = "block";
-                projectTiles.style.display = "flex"; // grid?
-                typed.destroy() // resets Typed
-                prependTyped.innerHTML = 'https://ashley.how/projects';
-            }, 800);
-        }
+//             setTimeout(function () {
+//                 screenProjects.style.display = "block";
+//                 projectTiles.style.display = "flex"; // grid?
+//                 typed.destroy() // resets Typed
+//                 prependTyped.innerHTML = 'https://ashley.how/projects';
+//             }, 800);
+//         }
 
-        else {
-            prependTyped.innerHTML = '';
+//         else {
+//             prependTyped.innerHTML = '';
 
-            var typed = new Typed('#typed', {
-                strings: ['https://ashley.how/projects'],
-                typeSpeed: 50,
-                showCursor: false,
-                startDelay: 2000
-            });
+//             var typed = new Typed('#typed', {
+//                 strings: ['https://ashley.how/projects'],
+//                 typeSpeed: 50,
+//                 showCursor: false,
+//                 startDelay: 2000
+//             });
 
-            setTimeout(function () {
-                screenProjects.style.display = "block";
-                projectTiles.style.display = "flex"; // grid?
-                typed.destroy() // resets Typed
-                prependTyped.innerHTML = 'https://ashley.how/projects';
-            }, 3900);
-        }
+//             setTimeout(function () {
+//                 screenProjects.style.display = "block";
+//                 projectTiles.style.display = "flex"; // grid?
+//                 typed.destroy() // resets Typed
+//                 prependTyped.innerHTML = 'https://ashley.how/projects';
+//             }, 3900);
+//         }
+//         screenCache = screenProjects;
 
-    }
+//     }
 
-    else if (project === 'back') {
-        projectTiles.style.display = "flex"; //grid?
-        backButton.style.display = "flex";
-        backButton.setAttribute("onclick", "openHome()")
-        prependTyped.innerHTML = 'https://ashley.how/projects';
-        document.getElementById(`project-${projectCache}`).style.display = "none";
-    }
+//     else if (project === 'back') {
+//         projectTiles.style.display = "flex"; //grid?
+//         backButton.style.display = "flex";
+//         backButton.setAttribute("onclick", "openHome()")
+//         prependTyped.innerHTML = 'https://ashley.how/projects';
+//         document.getElementById(`project-${projectCache}`).style.display = "none";
+//     }
 
-    else if (project === '1' || project === '2' || project === '3' || project === '4' || project === '5') {
+//     else if (project === '1' || project === '2' || project === '3' || project === '4' || project === '5') {
 
-        if (project === '1') {
-            typedString = 'portfolio'; // ashley
-            projectTimeout = 800;
-        }
+//         if (project === '1') {
+//             typedString = 'portfolio'; // ashley
+//             projectTimeout = 800;
+//         }
 
-        else if (project === '2') {
-            typedString = 'a-kin';
-            projectTimeout = 600;
-        }
+//         else if (project === '2') {
+//             typedString = 'a-kin';
+//             projectTimeout = 600;
+//         }
 
-        else if (project === '3') {
-            typedString = 'jack-daniels';
-            projectTimeout = 1000;
-        }
+//         else if (project === '3') {
+//             typedString = 'jack-daniels';
+//             projectTimeout = 1000;
+//         }
 
-        else if (project === '4') {
-            typedString = 'ribbit';
-            projectTimeout = 550;
-        }
+//         else if (project === '4') {
+//             typedString = 'ribbit';
+//             projectTimeout = 550;
+//         }
 
-        else if (project === '5') {
-            typedString = 'note-convert';
-            projectTimeout = 900;
-        }
+//         else if (project === '5') {
+//             typedString = 'note-convert';
+//             projectTimeout = 900;
+//         }
 
-        projectCache = project;
+//         projectCache = project;
+//         screenCache = screenProjects;
 
-        prependTyped.innerHTML = 'https://ashley.how/projects';
+//         prependTyped.innerHTML = 'https://ashley.how/projects';
 
-        var typed = new Typed('#typed', {
-            strings: [`/${typedString}`],
-            typeSpeed: 50,
-            showCursor: false,
-        });
+//         var typed = new Typed('#typed', {
+//             strings: [`/${typedString}`],
+//             typeSpeed: 50,
+//             showCursor: false,
+//         });
 
-        setTimeout(function () {
-            document.getElementById(`project-${project}`).style.display = "block";
-            backButton.style.display = "flex";
+//         setTimeout(function () {
+//             document.getElementById(`project-${project}`).style.display = "block";
+//             backButton.style.display = "flex";
 
-            typed.destroy() // resets Typed
-            prependTyped.innerHTML = `https://ashley.how/projects/${typedString}`;
-        }, projectTimeout);
+//             typed.destroy() // resets Typed
+//             prependTyped.innerHTML = `https://ashley.how/projects/${typedString}`;
+//         }, projectTimeout);
 
-        projectTiles.style.display = "none";
-        backButton.setAttribute("onclick", "openProject('back')")
-    }
+//         projectTiles.style.display = "none";
+//         backButton.setAttribute("onclick", "openProject('back')")
 
-}
+//     }
+
+// }
 
 
 
 
-function openAbout() {
+// function openAbout() {
+//     extend()
+//     screenCache = screenAbout;
+//     backButton.setAttribute("onclick", "openHome()")
+
+//     var typed = new Typed('#typed', {
+//         strings: ['https://ashley.how/ard'],
+//         typeSpeed: 50,
+//         showCursor: false,
+//         startDelay: 2000
+//     });
+
+//     setTimeout(function () {
+//         screenAbout.style.display = "block";
+//         aboutTiles.style.display = "flex";
+//         typed.destroy() // resets Typed
+//         prependTyped.innerHTML = 'https://ashley.how/ard';
+//     }, 3650);
+// }
+
+// function openSkills() {
+//     extend()
+//     screenCache = screenSkills;
+//     backButton.setAttribute("onclick", "openHome()")
+
+//     var typed = new Typed('#typed', {
+//         strings: ['https://ashley.how/skills'],
+//         typeSpeed: 50,
+//         showCursor: false,
+//         startDelay: 2000
+//     });
+
+//     setTimeout(function () {
+//         screenSkills.style.display = "block";
+//         skillsTiles.style.display = "flex"; // grid?
+//         typed.destroy() // resets Typed
+//         prependTyped.innerHTML = 'https://ashley.how/skills';
+//     }, 3400);
+
+// }
+
+
+// function openContact() {
+//     extend()
+
+//     screenCache = screenContact;
+//     backButton.setAttribute("onclick", "openHome()")
+
+//     var typed = new Typed('#typed', {
+//         strings: ['https://ashley.how/contact'],
+//         typeSpeed: 50,
+//         showCursor: false,
+//         startDelay: 2000
+//     });
+
+//     setTimeout(function () {
+//         screenContact.style.display = "block";
+//         contactTiles.style.display = "flex";
+//         typed.destroy() // resets Typed
+//         prependTyped.innerHTML = 'https://ashley.how/contact';
+//     }, 3900);
+
+// }
+
+
+
+function openScreen(screen, projectNo) {
     extend()
 
-    var typed = new Typed('#typed', {
-        strings: ['https://ashley.how/ard'],
-        typeSpeed: 50,
-        showCursor: false,
-        startDelay: 2000
-    });
+    if (screen === 'projects') {
 
-    setTimeout(function () {
-        screenAbout.style.display = "block";
-        aboutTiles.style.display = "flex";
-        typed.destroy() // resets Typed
-        prependTyped.innerHTML = 'https://ashley.how/ard';
-    }, 3650);
+        // show all projects
+        screenProjects.style.display = "flex";
+        // projectTiles.style.display = "flex"; //grid?
+
+        if (projectNo === '1' || projectNo === '2' || projectNo === '3' || projectNo === '4' || projectNo === '5') {
+
+            if (projectNo === '1') {
+                typedString = 'portfolio';
+                projectTimeout = 800;
+            }
+
+            else if (projectNo === '2') {
+                typedString = 'a-kin';
+                projectTimeout = 600;
+            }
+
+            else if (projectNo === '3') {
+                typedString = 'jack-daniels';
+                projectTimeout = 1000;
+            }
+
+            else if (projectNo === '4') {
+                typedString = 'ribbit';
+                projectTimeout = 550;
+            }
+
+            else {
+                typedString = 'note-convert';
+                projectTimeout = 900;
+            }
+            console.log(projectNo)
+        }
+
+
+
+    }
 }
 
-function openSkills() {
-    extend()
-
-    var typed = new Typed('#typed', {
-        strings: ['https://ashley.how/skills'],
-        typeSpeed: 50,
-        showCursor: false,
-        startDelay: 2000
-    });
-
-    setTimeout(function () {
-        screenSkills.style.display = "block";
-        skillsTiles.style.display = "flex"; // grid?
-        typed.destroy() // resets Typed
-        prependTyped.innerHTML = 'https://ashley.how/skills';
-    }, 3400);
-
-}
 
 
-function openContact() {
-    extend()
 
-    var typed = new Typed('#typed', {
-        strings: ['https://ashley.how/contact'],
-        typeSpeed: 50,
-        showCursor: false,
-        startDelay: 2000
-    });
-
-    setTimeout(function () {
-        screenContact.style.display = "block";
-        contactTiles.style.display = "flex";
-        typed.destroy() // resets Typed
-        prependTyped.innerHTML = 'https://ashley.how/contact';
-    }, 3900);
-
-}
 
 function minimise() {
     // largeScreen.style.display = "none";

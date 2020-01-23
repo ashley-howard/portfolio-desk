@@ -1,4 +1,5 @@
 #screen-skills {
+
     background: rgb(137, 59, 0);
     background: -moz-linear-gradient(0deg, rgba(137, 59, 0, 0.51) 0%, rgba(255, 0, 0, 0.68) 100%);
     background: -webkit-linear-gradient(0deg, rgba(137, 59, 0, 0.51) 0%, rgba(255, 0, 0, 0.68) 100%);
@@ -6,6 +7,37 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#893b00", endColorstr="#ff0000", GradientType=1);
 
     color: white;
+
+    overflow-y: auto;
+    position: relative;
+    height: calc(88vh - 70px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    img {
+        width: 52%;
+        max-width: 110px;
+        height: 58px;
+    }
+
+    .column {
+        display: flex;
+        padding: 5px;
+        min-height: 30px;
+        text-align: center;
+        flex-direction: column;
+        align-items: center;
+        background: #ffffff0a;
+        margin: 5px;
+    }
 
     h2 {
         text-align: center;
@@ -37,38 +69,3 @@
         }
     }
 }
-
-
-#skills-tiles {
-    overflow-y: auto;
-    position: relative;
-    height: calc(88vh - 70px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .row {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100%;
-    }
-
-    img {
-        width: 52%;
-        max-width: 110px;
-        height: 58px;
-    }
-
-    .column {
-        display: flex;
-        padding: 5px;
-        min-height: 30px;
-        text-align: center;
-        flex-direction: column;
-        align-items: center;
-        background: #ffffff0a;
-        margin: 5px;
-    }
-}
-
