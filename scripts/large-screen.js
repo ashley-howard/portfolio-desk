@@ -250,14 +250,20 @@ function openScreen(screenName, projectNo) {
         }
     }
 
-    else if (screenName === 'about') {
-        timeout = 3700;
+    else if (screenName === 'main') {
+        timeout = 0;
     }
-    
+
+    else if (screenName === 'about') {
+
+        timeout = 3700;
+
+    }
+
     else if (screenName === 'skills') {
         timeout = 3800;
     }
-    
+
     else if (screenName === 'contact') {
         timeout = 3900;
     }
@@ -268,24 +274,64 @@ function openScreen(screenName, projectNo) {
     //     typedStartDelay = 0
     // }
 
-    if (screenCache) {
-        typedString = `/${screenName}`
-        typedStartDelay = 0
-    } else {
-        typedString = `https://ashley.how/${screenName}`;
-        typedStartDelay = 2000
+    if (screenName === 'main') {
+        prependTyped.innerHTML = `https://ashley.how`;
     }
 
-    var typed = new Typed('#typed', {
-        strings: [typedString],
-        typeSpeed: 50,
-        showCursor: false,
-        startDelay: typedStartDelay
-    });
+    else if (screenCache === 'main' && screenName !== 'main') {
+        timeout = timeout - 3100;
+        typedString = `/${screenName}`
+        typedStartDelay = 0
+
+        var typed = new Typed('#typed', {
+            strings: [typedString],
+            typeSpeed: 50,
+            showCursor: false,
+            startDelay: typedStartDelay
+        });
+    }
+    else if (screenCache && screenName !== 'main') {
+
+        typedString = `/${screenName}`
+        typedStartDelay = 0
+
+        var typed = new Typed('#typed', {
+            strings: [typedString],
+            typeSpeed: 50,
+            showCursor: false,
+            startDelay: typedStartDelay
+        });
+    }
+    else {
+        typedString = `https://ashley.how/${screenName}`;
+        typedStartDelay = 2000
+
+        var typed = new Typed('#typed', {
+            strings: [typedString],
+            typeSpeed: 50,
+            showCursor: false,
+            startDelay: typedStartDelay
+        });
+    }
+
+
 
     setTimeout(function () {
-        document.getElementById(`screen-${screenName}`).style.display = "block";
-        typed.destroy()
+        if (screenName === 'main') {
+            screenCache.style.display = "none";
+            document.getElementById('folders').style.display = "flex";
+            prependTyped.innerHTML = 'https://ashley.how';
+            backButton.style.display = "none";
+            screenCache = 'main';
+        }
+        else {
+            typed.destroy()
+            document.getElementById('folders').style.display = "none";
+            document.getElementById(`screen-${screenName}`).style.display = "block";
+            prependTyped.innerHTML = `${typedString}`;
+            screenCache = document.getElementById(`screen-${screenName}`);
+            backButton.style.display = "flex";
+        }
 
         // if (projectName) {
         //     prependTyped.innerHTML = `https://ashley.how/projects/${projectName}`;
@@ -298,12 +344,10 @@ function openScreen(screenName, projectNo) {
         //     backButton.setAttribute("onclick", "openScreen('main')")
         // }
 
-        prependTyped.innerHTML = `${typedString}`;
         backButton.setAttribute("onclick", "openScreen('main')")
 
     }, timeout);
 
-    screenCache = document.getElementById(`screen-${screenName}`);
 }
 
 
