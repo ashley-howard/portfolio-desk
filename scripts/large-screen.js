@@ -255,9 +255,7 @@ function openScreen(screenName, projectNo) {
     }
 
     else if (screenName === 'about') {
-
         timeout = 3700;
-
     }
 
     else if (screenName === 'skills') {
@@ -290,9 +288,9 @@ function openScreen(screenName, projectNo) {
             startDelay: typedStartDelay
         });
     }
-    else if (screenCache && screenName !== 'main') {
 
-        typedString = `/${screenName}`
+    else if (screenCache === document.getElementById(`screen-projects`) && projectNo) {
+        typedString = `/${projectName}`
         typedStartDelay = 0
 
         var typed = new Typed('#typed', {
@@ -302,6 +300,21 @@ function openScreen(screenName, projectNo) {
             startDelay: typedStartDelay
         });
     }
+
+
+    // else if (screenCache && screenName !== 'main') {
+
+    //     typedString = `/${screenName}`
+    //     typedStartDelay = 0
+
+    //     var typed = new Typed('#typed', {
+    //         strings: [typedString],
+    //         typeSpeed: 50,
+    //         showCursor: false,
+    //         startDelay: typedStartDelay
+    //     });
+    // }
+
     else {
         typedString = `https://ashley.how/${screenName}`;
         typedStartDelay = 2000
@@ -324,6 +337,15 @@ function openScreen(screenName, projectNo) {
             backButton.style.display = "none";
             screenCache = 'main';
         }
+
+        else if (projectNo) {
+            typed.destroy()
+            backButton.setAttribute("onclick", "openScreen('projects')");
+            document.getElementById(`project-${projectNo}`).style.display = "block";
+            prependTyped.innerHTML = `https://ashley.how/projects/${projectName}`;
+            projectTiles.style.display = "none";
+        }
+
         else {
             typed.destroy()
             document.getElementById('folders').style.display = "none";
@@ -331,7 +353,9 @@ function openScreen(screenName, projectNo) {
             prependTyped.innerHTML = `https://ashley.how/${screenName}`;
             screenCache = document.getElementById(`screen-${screenName}`);
             backButton.style.display = "flex";
+            backButton.setAttribute("onclick", "openScreen('main')")
         }
+
 
         // if (projectName) {
         //     prependTyped.innerHTML = `https://ashley.how/projects/${projectName}`;
@@ -344,7 +368,6 @@ function openScreen(screenName, projectNo) {
         //     backButton.setAttribute("onclick", "openScreen('main')")
         // }
 
-        backButton.setAttribute("onclick", "openScreen('main')")
 
     }, timeout);
 
