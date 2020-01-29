@@ -8,7 +8,7 @@ var prependTyped = document.getElementById('prepend-typed');
 
 var backButton = document.getElementById('back-button');
 
-// var projectTiles = document.getElementById('project-tiles');
+var projectTiles = document.getElementById('project-tiles');
 // var aboutTiles = document.getElementById('about-tiles');
 // var skillsTiles = document.getElementById('skills-tiles');
 // var contactTiles = document.getElementById('contact-tiles');
@@ -19,6 +19,7 @@ var typed;
 var typedString;
 var typedStartDelay;
 var projectName;
+var timeout;
 
 //renamed to 'main'
 function openHome() {
@@ -211,7 +212,6 @@ function openHome() {
 // }
 
 
-
 function openScreen(screenName, projectNo) {
     extend()
 
@@ -219,55 +219,61 @@ function openScreen(screenName, projectNo) {
 
     if (screenName === 'projects') {
 
-        projectTimeout = 3900;
+        timeout = 3900;
 
-        if (projectNo === 1 || projectNo === 2 || projectNo === 3 || projectNo === 4 || projectNo === 5) {
-
+        if (projectNo) {
             if (projectNo === 1) {
                 projectName = 'portfolio';
-                projectTimeout = 800;
+                timeout = 800;
             }
 
             else if (projectNo === 2) {
                 projectName = 'a-kin';
-                projectTimeout = 600;
+                timeout = 600;
             }
 
             else if (projectNo === 3) {
                 projectName = 'jack-daniels';
-                projectTimeout = 1000;
+                timeout = 1000;
             }
 
             else if (projectNo === 4) {
                 projectName = 'ribbit';
-                projectTimeout = 550;
+                timeout = 550;
             }
 
             else {
                 projectName = 'note-convert';
-                projectTimeout = 900;
+                timeout = 900;
             }
             console.log(projectNo)
         }
-
     }
 
-    // if screenCache doesn't exist, write full URL, or only have it when the tag "large screen" is active
-    if (projectName){
-        typedString = `/${projectName}`
-        typedStartDelay = 0
+    else if (screenName === 'about') {
+        timeout = 3700;
     }
     
-    else if (screenCache) {
-        typedString = `/${screenName}`
-        typedStartDelay = 0
-
+    else if (screenName === 'skills') {
+        timeout = 3800;
+    }
+    
+    else if (screenName === 'contact') {
+        timeout = 3900;
     }
 
-    else {
+    // // if screenCache doesn't exist, write full URL, or only have it when the tag "large screen" is active
+    // if (projectName) {
+    //     typedString = `/${projectName}`
+    //     typedStartDelay = 0
+    // }
+
+    if (screenCache) {
+        typedString = `/${screenName}`
+        typedStartDelay = 0
+    } else {
         typedString = `https://ashley.how/${screenName}`;
         typedStartDelay = 2000
-
     }
 
     var typed = new Typed('#typed', {
@@ -279,22 +285,25 @@ function openScreen(screenName, projectNo) {
 
     setTimeout(function () {
         document.getElementById(`screen-${screenName}`).style.display = "block";
-        // document.getElementById(`${screen}-tiles`).style.display = "flex"; // is this code really necessary? set to flex in CSS
         typed.destroy()
 
-        if (projectName) {
-            prependTyped.innerHTML = `https://ashley.how/projects/${projectName}`;
-        }
-        else {
-            prependTyped.innerHTML = `${typedString}`;
-        }
+        // if (projectName) {
+        //     prependTyped.innerHTML = `https://ashley.how/projects/${projectName}`;
+        //     document.getElementById(`project-${projectNo}`).style.display = "block";
+        //     projectTiles.style.display = "none";
+        //     backButton.setAttribute("onclick", "openScreen('projects')")
+        // }
+        // else {
+        //     prependTyped.innerHTML = `${typedString}`;
+        //     backButton.setAttribute("onclick", "openScreen('main')")
+        // }
 
-    }, projectTimeout);
+        prependTyped.innerHTML = `${typedString}`;
+        backButton.setAttribute("onclick", "openScreen('main')")
 
-
+    }, timeout);
 
     screenCache = document.getElementById(`screen-${screenName}`);
-
 }
 
 
@@ -319,14 +328,15 @@ function maximise() {
 function closeScreen() {
 
     shrink()
-
-    largeScreen.style.display = "none";
-    // reset everything
+    screenCache = undefined;
     prependTyped.innerHTML = '';
-    document.getElementById('typed').innerHTML = "";
-    projectTiles.style.display = "none";
-    document.getElementById(`project-${projectCache}`).style.display = "none";
-    backButton.style.display = "none";
+
+    // largeScreen.style.display = "none";
+    // reset everything
+    // document.getElementById('typed').innerHTML = "";
+    // projectTiles.style.display = "none";
+    // document.getElementById(`project-${projectCache}`).style.display = "none";
+    // backButton.style.display = "none";
 }
 
 // // use loop | put extendable on all elements that you want to extend

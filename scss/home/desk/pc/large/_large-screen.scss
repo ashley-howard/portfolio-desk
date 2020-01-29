@@ -202,3 +202,15 @@
 #contact-tiles {
     display: flex; // was none
 }
+
+.large-grid-container {
+    display: flex; //change back to none, transforms into grid using animation
+    align-items: center;
+    background: rgba(114, 186, 94, 0.05);
+    animation: projects-enlarge 5s forwards;
+    width: 100%;
+    overflow-y: auto;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
