@@ -328,7 +328,7 @@ function openScreen(screenName, projectNo) {
             typed.destroy()
             document.getElementById('folders').style.display = "none";
             document.getElementById(`screen-${screenName}`).style.display = "block";
-            prependTyped.innerHTML = `${typedString}`;
+            prependTyped.innerHTML = `https://ashley.how/${screenName}`;
             screenCache = document.getElementById(`screen-${screenName}`);
             backButton.style.display = "flex";
         }
