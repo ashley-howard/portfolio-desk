@@ -19,6 +19,7 @@ var typed;
 var typedString;
 var typedStartDelay;
 var projectName;
+var projectNumber;
 var timeout;
 
 //renamed to 'main'
@@ -223,26 +224,31 @@ function openScreen(screenName, projectNo) {
 
         if (projectNo) {
             if (projectNo === 1) {
+                projectNumber = 1;
                 projectName = 'portfolio';
                 timeout = 800;
             }
 
             else if (projectNo === 2) {
+                projectNumber = 2;
                 projectName = 'a-kin';
                 timeout = 600;
             }
 
             else if (projectNo === 3) {
+                projectNumber = 3;
                 projectName = 'jack-daniels';
                 timeout = 1000;
             }
 
             else if (projectNo === 4) {
+                projectNumber = 4;
                 projectName = 'ribbit';
                 timeout = 550;
             }
 
             else {
+                projectNumber = 5;
                 projectName = 'note-convert';
                 timeout = 900;
             }
@@ -354,6 +360,15 @@ function openScreen(screenName, projectNo) {
             screenCache = document.getElementById(`screen-${screenName}`);
             backButton.style.display = "flex";
             backButton.setAttribute("onclick", "openScreen('main')")
+
+            //----testing code
+            projectTiles.style.display = "flex";
+            // remove project current screen open
+            document.getElementById(`project-${projectNumber}`) ? document.getElementById(`project-${projectNumber}`).style.display = "none" : document.getElementById(`project-${projectNumber}`);
+
+            //try to fix url?
+
+            //----/testing code
         }
 
 

@@ -12,6 +12,11 @@
     color: #545454;
     cursor: pointer;
     margin: 10px;
+
+    & .tag {
+        display: flex;
+        animation: fade-in 1.5s forwards;
+    }
 }
 
 .project-tile:hover {
@@ -28,10 +33,7 @@
         display: initial;
     }
 
-    & .tag {
-        display: flex;
-        animation: fade-in 1.5s forwards;
-    }
+
 
     & img {
         animation: fade-in 1.5s forwards;
@@ -96,6 +98,7 @@
         display: flex;
         font-size: 1em;
         padding: 2px 15px;
+        background: #00000030;
     }
 }
 
@@ -145,7 +148,7 @@
     padding: 0 5px;
 
     &-html {
-        background: #4171D1;
+        background: #F0A202;
 
         &::after {
             content: "HTML";
@@ -154,7 +157,7 @@
 
     &-css,
     &-scss {
-        background: #D14141;
+        background: #F18805;
 
         &::after {
             content: "CSS";
@@ -168,7 +171,7 @@
     }
 
     &-js {
-        background: #AF41D1;
+        background: #D95D39;
 
         &::after {
             content: "JavaScript";
@@ -176,36 +179,36 @@
     }
 
     &-bs {
-        background: #D19341;
+        background: #bb7217;
 
         &::after {
             content: "Bootstrap";
         }
     }
 
-    &-sortable-js {
-        background: #17326a;
+    // &-sortable-js {
+    //     background: #412722;
 
-        &::after {
-            content: "Sortable.js";
-        }
-    }
+    //     &::after {
+    //         content: "Sortable.js";
+    //     }
+    // }
 
-    &-typed-js {
-        background: #41d1b0;
+    // &-typed-js {
+    //     background: #d14141;
 
-        &::after {
-            content: "Typed.js";
-        }
-    }
+    //     &::after {
+    //         content: "Typed.js";
+    //     }
+    // }
 
-    &-regex {
-        background: #18744e;
+    // &-regex {
+    //     background: #7B9E89;
 
-        &::after {
-            content: "Regex";
-        }
-    }
+    //     &::after {
+    //         content: "Regex";
+    //     }
+    // }
 }
 
 .project {
@@ -287,7 +290,7 @@
 
     &-info {
         width: 35%;
-        height: 100%;
+        // height: 100%;
         margin-right: 1.5%;
         display: flex;
         flex-direction: column;
