@@ -312,6 +312,11 @@
         fill: #bebebe;
         height: 25px;
 
+        .extended>& {
+            width: 45px;
+            height: 45px;
+        }
+
         // &:hover {
         //     animation: bounce 1s;
         //     animation-timing-function: ease-in-out;
@@ -360,20 +365,11 @@
         animation-fill-mode: both;
     }
 
-    &.gh-icon:hover {
-        fill: #323232;
-    }
-
-    &.tw-icon:hover {
-        fill: #5c98c2;
-    }
-
-    &.ig-icon:hover {
-        fill: #93180b;
-    }
-
+    &.gh-icon:hover,
+    &.tw-icon:hover,
+    &.ig-icon:hover,
     &.li-icon:hover {
-        fill: #142949;
+        fill: rgb(36, 36, 36);
     }
 
     // &.contact-icon {

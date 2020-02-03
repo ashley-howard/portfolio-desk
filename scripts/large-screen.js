@@ -94,7 +94,6 @@ function maximise() {
 function closeScreen() {
     shrink()
     document.getElementById(screenCache.id).style.display = "none";
-    screenCache = undefined;
     document.getElementById('folders').style.display = "flex";
     prependTyped.innerHTML = '';
 }
