@@ -4,6 +4,7 @@
     // min-height: 25vh;
     // max-height: 30vh;
     background: rgba(255, 255, 255, 0.35);
+    
     display: flex; // flex
     justify-content: center;
     align-items: center;
@@ -16,13 +17,43 @@
         display: flex;
         animation: fade-in 1.5s forwards;
     }
+
+}
+
+.project-tile-hover {
+    display: none;
 }
 
 .project-tile:hover {
     background-size: cover !important;
+    background-position: center center !important;
     background: rgba(255, 255, 255, 0.35);
     animation: fade-in 1.5s forwards;
     color: #fff;
+
+    &#meme-generator {
+        background-image: url('../img/home.jpg');
+    }
+
+    &#ribbit {
+        background-image: url('../img/ribbit.jpg');
+    }
+
+    &#a-kin {
+        background-image: url('../img/a-kin.jpg');
+    }
+
+    &#jack-daniels {
+        background-image: url('../img/jd.jpg');
+    }
+
+    &#github {
+        background-image: url('../img/git.jpg');
+    }
+
+    &#note-convert {
+        background-image: url('../img/note.jpg');
+    }
 
     & .project-tile-name {
         display: none;
@@ -83,8 +114,7 @@
 //     // }
 // }
 
-.project-tile-tags,
-.project-tile-links {
+.project-tile-tags {
     // position: absolute;
     display: flex;
     justify-content: center;
@@ -94,14 +124,33 @@
     // width: 27%;
 }
 
+
+
 .project-tile-links {
     display: none;
-    justify-content: center;
-    height: 180px;
-    align-items: center;
+    // justify-content: center;
+    // height: 180px;
+    // align-items: center;
     font-size: 34px;
-    position: absolute;
-    width: 430px;
+    // position: absolute;
+    // height: inherit;
+    // width: 430px;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+
+    & a {
+        border-bottom: 2px solid #ffffff29;
+        display: flex;
+        color: #f4f4f4;
+
+
+        &:hover {
+            color: #a48b53;
+            border-bottom-color: #a48b5338;
+        }
+    }
 }
 
 .large-tags {
@@ -126,6 +175,7 @@
     // flex-wrap: wrap;
     // justify-content: center;
     height: 100%;
+    width: 100%;
     // position: relative;
 
     img {
@@ -157,8 +207,7 @@
     // width: 25%;
 }
 
-.tag,
-.project-tile-links a {
+.tag {
     width: 60px;
     height: 25px;
     // display: none; // flex using hover
@@ -235,13 +284,7 @@
     // }
 }
 
-.project-tile-links a {
-    background: #d1d1d11f;
 
-    &:hover {
-        background: #ffffff1f;
-    }
-}
 
 .project {
     &-open {
