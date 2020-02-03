@@ -21,6 +21,7 @@ var typedStartDelay;
 var projectName;
 var projectNumber;
 var timeout;
+var screenName;
 
 //renamed to 'main'
 function openHome() {
@@ -225,8 +226,8 @@ function openScreen(screenName, projectNo) {
         if (projectNo) {
             if (projectNo === 1) {
                 projectNumber = 1;
-                projectName = 'portfolio';
-                timeout = 800;
+                projectName = 'meta';
+                timeout = 500;
             }
 
             else if (projectNo === 2) {
