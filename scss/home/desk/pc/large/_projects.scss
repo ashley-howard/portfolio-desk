@@ -18,14 +18,15 @@
 
 
     &:hover {
+        background: #040404c4;
         background-size: cover;
         background-position: center center;
         animation: fade-in 1.5s forwards;
         color: #fff;
 
-        &#meme-generator {
-            background-image: url('../img/home.jpg');
-        }
+        // &#meme-generator {
+        //     background-image: url('../img/home.jpg');
+        // }
 
         &#ribbit {
             background-image: url('../img/ribbit.jpg');

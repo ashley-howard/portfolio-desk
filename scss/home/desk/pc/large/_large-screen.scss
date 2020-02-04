@@ -212,5 +212,10 @@
     overflow-y: auto;
     justify-content: center;
     flex-wrap: wrap;
-    height: 100%;
+
+    #screen-projects &,
+    #screen-about & {
+        height: 100%;
+
+    }
 }
