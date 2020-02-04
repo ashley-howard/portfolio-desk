@@ -91,7 +91,10 @@
     #back-button {
         display: none;
         position: initial;
-        width: 7%;
+        width: 11%;
+        background: #ffffff;
+        color: #838383;
+        border-right: 1px solid #c7c7c7;
     }
 
     #screen-about img {
@@ -143,7 +146,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
 
-        & .column{
+        & .column {
             height: 114px;
 
         }
