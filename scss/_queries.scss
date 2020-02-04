@@ -73,7 +73,7 @@
         margin-top: 0;
         position: initial;
         width: 100%;
-        height: 95%;
+        height: 94%;
     }
 
     #explorer-url {
@@ -95,5 +95,63 @@
 
     #screen-about img {
         display: none;
+    }
+
+    div#github {
+        color: black;
+        background: #ffffffbd;
+    }
+
+    .row.row-bottom {
+        margin-bottom: 6px;
+    }
+}
+
+@media only screen and (max-width: 567px) {
+    .project-tile {
+        width: 90%;
+        font-size: 1.5em;
+    }
+
+    .project-tile-inner {
+        width: inherit;
+    }
+
+    #github {
+        color: #000000;
+        background: #a8a8a8e3;
+        height: 50px;
+        line-height: 18px;
+        border-radius: 30px;
+    }
+
+    .project-tile-tags {
+        flex-wrap: wrap;
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+    .row.row-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & .column{
+            height: 114px;
+
+        }
+    }
+
+    .row.row-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .column {
+        width: 50%;
+        margin: 0;
     }
 }
