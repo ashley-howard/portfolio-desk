@@ -17,9 +17,6 @@
         width: 100vw; // change back to 100 if problems
         height: 100vh; // change back to 100 if problems
         height: calc(var(--vh, 1vh) * 100);
-
-
-
     }
 
     .pc {
@@ -108,6 +105,10 @@
 
     .row.row-bottom {
         margin-bottom: 6px;
+    }
+
+    .pc--button {
+        display: none;
     }
 }
 
