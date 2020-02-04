@@ -5,7 +5,7 @@ const extendables = document.getElementsByClassName('extendable');
 
 var screenCache, typed, typedString, typedStartDelay, timeout;
 
-if (window.matchMedia("(max-width: 991px)")) {
+if (window.matchMedia("(max-width: 991px)").matches) {
     prependTyped.innerHTML = `https://ashley.how`;
 }
 
@@ -37,7 +37,7 @@ function openScreen(screen) {
         prependTyped.innerHTML = `https://ashley.how`;
     }
 
-    else if (screenCache === 'main' && screen !== 'main' || (window.matchMedia("(max-width: 991px)"))) {
+    else if (screenCache === 'main' && screen !== 'main' || (window.matchMedia("(max-width: 991px)").matches)) {
         timeout = timeout - 3100;
         typedString = `/${screen}`
         typedStartDelay = 0
@@ -56,7 +56,7 @@ function openScreen(screen) {
         // prependTyped.innerHTML = ``;
 
         // if screen width lower than 991px, delay is 0
-        if (window.matchMedia("(max-width: 991px)")) {
+        if (window.matchMedia("(max-width: 991px)").matches) {
             typedStartDelay = 0;
         } else {
             typedStartDelay = 2000
@@ -111,12 +111,13 @@ function closeScreen() {
 }
 
 function extend() {
-    if (!window.matchMedia("(max-width: 991px)")) {
+    if (!window.matchMedia("(max-width: 992px)").matches) {
         var i;
         for (i = 0; i < extendables.length; i++) {
             extendables[i].classList.add("extended");
         }
     }
+    
     else {
         console.log("don't extend")
     }
