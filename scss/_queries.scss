@@ -16,6 +16,10 @@
         justify-content: center;
         width: 100vw; // change back to 100 if problems
         height: 100vh; // change back to 100 if problems
+        height: calc(var(--vh, 1vh) * 100);
+
+
+
     }
 
     .pc {
