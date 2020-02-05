@@ -1,12 +1,29 @@
-var monthText = document.getElementById('month');
-var calendarDays = document.getElementById('calendar-days');
+// var monthText = document.getElementById('month');
+// var calendarDays = document.getElementById('calendar-days');
 // var taskbarTime = document.getElementById('taskbar-time');
 
 const date = new Date;
-const month = date.toLocaleString('default', { month: 'long' });
+// const month = date.toLocaleString('default', { month: 'long' });
 const day = date.getDate();
+var hour = date.getHours();
+var welcomeText = document.getElementById('welcome-text')
 
 document.getElementById('day').innerHTML = day;
+
+if (hour >= 5 && hour <= 11) {
+    welcomeText.innerHTML = "Good morning";
+}
+else if (hour >= 12 && hour <= 17) {
+    welcomeText.innerHTML = "Good afternoon";
+}
+else if (hour >= 18 && hour <= 20) {
+    welcomeText.innerHTML = "Good evening";
+}
+else {
+    welcomeText.innerHTML = "Good night";
+}
+
+
 
 // monthText.innerHTML = month;
 // taskbarTime.innerHTML = date.getHours() + ':' + date.getMinutes();
