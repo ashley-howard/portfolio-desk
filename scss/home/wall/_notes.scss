@@ -8,7 +8,6 @@
     border-radius: 1px;
     box-shadow: 8px 3px 8px #766c38;
     border-bottom: 2px solid #93820b;
-    transform: rotate(-2deg);
     font-size: 0.56em;
     font-family: 'Gochi Hand', cursive;
     padding: 6px;
@@ -16,13 +15,13 @@
     li {
         padding-bottom: 3px;
     }
+}
 
-    // &::after {
-    //     @extend %pseudo;
-    //     width: 62px;
-    //     height: 3px;
-    //     bottom: 0px;
-    //     right: -2px;
-    //     background: linear-gradient(180deg, #b29839e0 30px, #f3f1e2 0);
-    // }
+.strike::after {
+    content: "";
+    position: absolute;
+    border-top: 1px solid black;
+    top: 8px;
+    left: 5px;
+    animation: line-through 4s forwards;
 }

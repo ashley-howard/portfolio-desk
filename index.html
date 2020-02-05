@@ -571,12 +571,7 @@
             <div class="pc--button extendable"></div>
             <div class="pc--stand-bottom"></div>
             <div class="pc--stand-top extendable"></div>
-            <!-- <div class="pc--keyboard"></div>
-            <div class="pc--mouse"></div> -->
-
         </div>
-
-
 
         <!-- Calendar -->
         <!-- <div class="calendar">
@@ -635,27 +630,68 @@
         <div class="hub">
             <div class="hub--speakers"></div>
             <div class="hub--screen">
-                <!-- 1. Welcome -->
+
+                <div class="slideshow-container">
+
+                    <div class="mySlides fade">
+                        <img src="./img/hub-day.png">
+                        <div class="hub--welcome">Good morning, Ash!</div>
+                        <div class="hub--day">14</div>
+                    </div> 
+
+                    <div class="mySlides fade">
+                        <div class="hub--weather-cond">Sunny</div>
+                        <div class="hub--weather-temp">22°</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="hub--calendar">
+                            <p>Coming up</p>
+                            <div class="calendar-item">
+                                <div class="calendar-item-date">Event • March 9</div>
+                                <div class="calendar-item-task">Do that thing</div>
+                            </div>
+                            <div class="calendar-item">
+                                <div class="calendar-item-date">Event • March 15</div>
+                                <div class="calendar-item-task">Finish that project</div>
+                            </div>
+                        </div>
+
+                        <div class="hub--music">
+                            <p><img src="./img/music/spotify.png" alt=""> Spotify</p>
+                            <div class="track-info">
+                                <div class="album"><img src="./img/music/juno.jfif" alt=""></div>
+                                <div class="track">Juno</div>
+
+                            </div>
+                            <div class="track-info">
+                                <div class="album"><img src="./img/music/tjom.jpg" alt=""></div>
+                                <div class="track">The Woven Web</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 
                 <div class="hub--slides slide-1">
                     <div class="hub--welcome">Good morning, Ash!</div>
-                    <!-- Day no. -->
                     <div class="hub--day">14</div>
                 </div>
 
-                <!-- 2. Large Weather -->
                 <div class="hub--slides slide-2">
                     <div class="hub--weather-cond">Sunny</div>
                     <div class="hub--weather-temp">22°</div>
                 </div>
-                <!-- 3. Small weather & Music -->
                 <div class="hub--slides slide-3">
 
                     <p>slide 3</p>
                 </div>
-                <!-- 4. Clock -->
                 <div class="hub--slides slide-4">
                     <p>Slide 4 - Clock</p>
-                </div>
+                </div> -->
 
                 <!-- Date and weather -->
                 <!-- <div class="hub--weather">
@@ -666,31 +702,12 @@
             </div>
         </div>
 
-        <!-- Coffee Mug -->
-        <!-- <div class="mug-container" onclick="drinkCoffee()">
-            <div class="saucer"></div>
-            <div class="mug"> -->
-        <!-- <div class="mug--text">
-                <p>CSS</p>
-                <p>IS</p>
-                <p style="font-weight: 500;">AWESOME</p>
-            </div> -->
-        <!-- <div id="coffee"></div>
-                <div class="mug--handle"></div>
-            </div>
-            <div class="spoon"></div>
-        </div> -->
 
 
-        <!-- <div class="steam-group">
-            <div class="steam" id="steam-one"></div>
-            <div class="steam" id="steam-two"></div>
-            <div class="steam" id="steam-three"></div>
-            <div class="steam" id="steam-four"></div>
-        </div>
 
 
-        - Photos -->
+
+        <!-- Photos -->
         <!-- <div class="photos">
             <div class="photos__item photo-1">
                 <div class="image"></div>
@@ -724,13 +741,13 @@
         </div> -->
 
         <!-- Headphones -->
-        <!-- <div class="headphones-all">
+        <div class="headphones-all">
             <div class="hook"></div>
             <div class="headphones">
                 <div class="headphones--l"></div>
                 <div class="headphones--r"></div>
             </div>
-        </div> -->
+        </div>
 
         <!-- Books -->
         <!-- <div class="books-container">
@@ -748,7 +765,7 @@
         <div class="poster"></div>
 
         <!-- Coffee Cup -->
-        <div class="coffee-cup">
+        <div class="coffee-cup" onclick="drinkCoffee()">
             <img src="/img/coffee.svg" alt="">
             <!-- <span class="coffee-cup-text">Ashley</span> -->
             <!-- <div class="coffee-cup-main">
@@ -795,8 +812,8 @@
 
     <!-- <div id="light-switch" onclick="light('off')"></div> -->
 
-    <!-- <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script> -->
-    <!-- <script src="scripts/magnet.js"></script> -->
+    <!-- <script src="https://unpkg.com/draggabilly@2/dist/draggabilly.pkgd.min.js"></script>
+    <script src="scripts/magnet.js"></script> -->
     <script src="scripts/main.js"></script>
     <script src="scripts/date.js"></script>
     <script src="scripts/large-screen.js"></script>

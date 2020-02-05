@@ -1,9 +1,5 @@
 function drinkCoffee() {
-    document.getElementById("coffee").classList.add("drink");
-
-    setTimeout(function () {
-        document.getElementById("coffee-note").style.textDecoration = "line-through";
-    }, 3200);
+    document.getElementById("coffee-note").classList.add("strike");
 }
 
 // var typed = new Typed('#intro-typed', {
@@ -51,3 +47,20 @@ window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+
+// slideshow
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) { slideIndex = 1 }
+    slides[slideIndex - 1].style.display = "flex";
+    setTimeout(showSlides, 5000);
+}
