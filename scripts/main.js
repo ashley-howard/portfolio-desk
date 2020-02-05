@@ -64,3 +64,99 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "flex";
     setTimeout(showSlides, 5000);
 }
+
+
+// weather
+const appKey = "6a42348f3f2db5f744296408f0807ef2";
+var weatherUnit = "&units=metric"; // or "imperial" for fahrenheit - if doesn't update, it's because localstorage needs clearing
+let weatherLocation = 'London'; // getting location from HTML
+// let weatherIcon = document.getElementById("weather-icon");
+const temperature = document.getElementById("weather-temp");
+const weatherSlide = document.getElementById("weather-slide");
+const weatherCond = document.getElementById("weather-cond");
+//let weatherUpdate = document.getElementById("update-weather")
+
+var api = "https://api.openweathermap.org/data/2.5/weather?q=" + weatherLocation + "&appid=" + appKey + weatherUnit;
+
+
+var userTime = new Date().getTime();
+let getUserTime = localStorage.getItem('userTime');
+
+// if userTime is not set, set it now and load weather details OR if userTime is more than 1 hour (3600000 ms) do this
+if (!getUserTime || userTime > (Number(getUserTime) + 3600000)) {
+    userTime = new Date().getTime();
+    localStorage.setItem('userTime', userTime); // set time
+    findWeatherDetails();
+    setTimeout(function () {
+        localStorage.setItem('weatherBg', weatherSlide.style.background); // set weather bg
+        localStorage.setItem('weatherCond', weatherCond.innerText); // set weather condition
+        localStorage.setItem('weatherTemp', temperature.innerText); // set temperature
+    }, 3000); // do this after 3 seconds
+}
+
+// don't reload weather, only retrieve icon and temp
+else {
+    weatherCond.innerText = localStorage.getItem('weatherCond'); // retrieve icon 
+    weatherSlide.style.background = localStorage.getItem('weatherBg'); // retrieve icon 
+    temperature.innerText = localStorage.getItem('weatherTemp'); // retrieve temp
+
+    // time remaining until next update
+    console.log(Math.trunc((3600000 - (userTime - Number(getUserTime))) / 60000) + " minute(s) until next weather update.")
+}
+
+function findWeatherDetails() {
+    httpRequestAsync(api, theResponse);
+}
+
+function theResponse(response) {
+    let jsonObject = JSON.parse(response);
+    temperature.innerHTML = parseInt(jsonObject.main.temp) + "°";
+    weatherCond.innerHTML = jsonObject.weather[0].main;
+
+    if (200 <= jsonObject.weather[0].id && jsonObject.weather[0].id <= 232) {
+        // weatherIcon.className = "fas fa-bolt";
+        // change background to yellow/black
+        weatherSlide.style.background = 'radial-gradient(at 153px 13px, rgb(242, 242, 242) 0%, rgb(162, 115, 0) 100%)'
+    }
+    else if (300 <= jsonObject.weather[0].id && jsonObject.weather[0].id <= 531) {
+        // weatherIcon.className = "fas fa-cloud-rain";
+        // change background to gray/blue
+        weatherSlide.style.background = 'radial-gradient(at 153px 13px, rgb(2, 46, 71) 0%, rgb(122, 122, 122) 100%)'
+    }
+    else if (600 <= jsonObject.weather[0].id && jsonObject.weather[0].id <= 622) {
+        // weatherIcon.className = "fas fa-snowflake";
+        // change background to white
+        weatherSlide.style.background = 'radial-gradient(at 153px 13px, rgb(255, 255, 255) 0%, rgb(122, 122, 122) 100%)'
+    }
+    else if (701 <= jsonObject.weather[0].id && jsonObject.weather[0].id <= 781) {
+        // weatherIcon.className = "fas fa-smog";
+        // change background to gray
+        weatherSlide.style.background = 'radial-gradient(at 153px 13px, rgb(143, 143, 143) 0%, rgb(65, 65, 65) 100%)'
+    }
+    else if (jsonObject.weather[0].id && jsonObject.weather[0].id === 800) {
+        // weatherIcon.className = "fas fa-sun";
+        // change background to yellow/blue
+        weatherSlide.style.background = 'radial-gradient(farthest-corner at 153px 13px, #fff 0%, #338fee 100%)'
+    }
+    else if (801 <= jsonObject.weather[0].id && jsonObject.weather[0].id <= 804) {
+        // weatherIcon.className = "fas fa-cloud";
+        // change background to gray/white
+        weatherSlide.style.background = 'radial-gradient(at 153px 13px, rgb(255, 255, 255) 0%, rgb(63, 63, 63) 100%)'
+    }
+    else {
+        console.log("Error");
+    }
+
+    console.log(jsonObject.weather[0].id)
+    console.log(jsonObject.weather[0].main)
+}
+
+function httpRequestAsync(url, callback) {
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = () => {
+        if (httpRequest.readyState == 4 && httpRequest.status == 200)
+            callback(httpRequest.responseText);
+    }
+    httpRequest.open("GET", url, true); // true for asynchronous 
+    httpRequest.send();
+}

@@ -6,6 +6,8 @@ const date = new Date;
 const month = date.toLocaleString('default', { month: 'long' });
 const day = date.getDate();
 
+document.getElementById('day').innerHTML = day;
+
 // monthText.innerHTML = month;
 // taskbarTime.innerHTML = date.getHours() + ':' + date.getMinutes();
 

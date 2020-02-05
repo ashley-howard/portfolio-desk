@@ -173,7 +173,7 @@
 }
 
 #weather-temp {
-    font-size: 2em;
+    font-size: 3em;
 }
 
 #weather-cond {
@@ -200,7 +200,15 @@
     height: 100%;
 
     &:nth-child(2) {
-        background-image: radial-gradient(farthest-corner at 153px 13px, #fff 0%, #338fee 100%);
+        p {
+            position: absolute;
+            top: 21px;
+            left: 5px;
+            font-size: 10px;
+            color: #eaeaea;
+        }
+
+        // background-image: radial-gradient(farthest-corner at 153px 13px, #fff 0%, #338fee 100%);
     }
 
     &:nth-child(3) {
@@ -304,3 +312,9 @@
         opacity: 1
     }
 }
+
+// //DEV ONLY
+// #weather-slide {
+//     display: flex !important;
+//     z-index: 99;
+// }
