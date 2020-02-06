@@ -20,7 +20,8 @@
     top: calc(100vh - 380px);
     // top: 10%;
     z-index: 1;
-    box-shadow: -17px 12px 4px 0px #00000017;
+    // box-shadow: -17px 12px 4px 0px #00000017;
+    // box-shadow: 0 0 20px 20px #0072ff40;
     border-radius: 4px;
 
     &.extended {
@@ -87,7 +88,7 @@
         bottom: -4px;
         border-radius: 0 0 5px 5px;
         right: 35px;
-        border: 1px solid #1111111f;
+        // border: 1px solid #1111111f;
         animation: pc-button 3s forwards;
 
         &.extended {

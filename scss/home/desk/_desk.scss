@@ -3,6 +3,8 @@
 @import 'hub';
 @import 'lamp';
 @import 'plant';
+@import 'speakers';
+@import 'pc-tower';
 @import 'pc/pc';
 
 .desk-wrapper {
@@ -32,11 +34,12 @@
     // background: linear-gradient(90deg, #131313 0%, #2a2a2a 100%);
     // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131313", endColorstr="#2a2a2a", GradientType=1);
     // background-image: url("../img/wood.png");
-    background: linear-gradient(0deg, rgb(25, 25, 25) 65%, rgba(77, 77, 77, 0.93) 100%);
+    // background: linear-gradient(0deg, rgb(25, 25, 25) 65%, rgba(77, 77, 77, 0.93) 100%);
+    background: #121212f2;
     transform-style: preserve-3d;
     transform: rotateX(14deg);
     // z-index: 1;
-    box-shadow: -2px 20px 20px 20px #323232;
+    box-shadow: -3px -3px 20px 13px #323232;
 
     // &::after {
     //     @extend %pseudo;
