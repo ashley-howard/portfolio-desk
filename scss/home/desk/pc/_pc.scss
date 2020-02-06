@@ -44,7 +44,7 @@
         // border-radius: 5px;
         // width: 86vw;
         // height: 67vh;
-        background-image: url(../img/pc-bg.jpg);
+        background-image: url('../img/pc-bg.jpg');
         background-size: cover;
         width: 380px;
         height: 210px;
@@ -57,7 +57,7 @@
             height: 88vh;
             position: absolute;
             z-index: 2;
-            background: url('/img/pc-bg-large.jpg');
+            background: url('../img/pc-bg-large.jpg');
             background-size: cover;
             animation: screen-enlarge 3s forwards;
         }
