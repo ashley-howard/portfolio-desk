@@ -41,7 +41,8 @@
 
     #folders {
         width: 100%;
-        height: 95%;
+        // height: 95%;
+        height: calc(81vh - 40px);
     }
 
     .row.row-top {
@@ -75,7 +76,8 @@
         margin-top: 0;
         position: initial;
         width: 100%;
-        height: 94%;
+        // height: 94%;
+        height: calc(81vh - 40px);
     }
 
 
@@ -108,9 +110,9 @@
         background: #ffffffbd;
     }
 
-    .row.row-bottom {
-        margin-bottom: 6px;
-    }
+    // .row.row-bottom {
+    //     margin-bottom: 6px;
+    // }
 
     .pc--button {
         display: none;
@@ -207,7 +209,7 @@
         margin: 0;
     }
 
-     h2 {
+    h2 {
         font-size: 35px !important;
     }
 
@@ -222,5 +224,13 @@
 
     .email-container button {
         font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 550px),
+(orientation: landscape) {
+    .folders svg.bottom-icon {
+        width: 30px;
+        height: 30px;
     }
 }
