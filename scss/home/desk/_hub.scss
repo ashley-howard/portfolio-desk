@@ -238,14 +238,14 @@
 
 .hub--calendar {
     .calendar-item {
-        padding: 2px 0;
+        padding: 6px 0;
 
         &-date {
             font-size: 7px;
         }
 
         &-task {
-            font-size: 10px;
+            font-size: 8px;
         }
     }
 }
@@ -265,11 +265,11 @@
     display: flex;
     align-items: center;
     font-size: 9px;
-    padding: 1px 0;
+    padding: 3px 0;
 
     .album {
         img {
-            width: 26px;
+            width: 20px;
         }
     }
 
@@ -279,7 +279,7 @@
     }
 
     .track {
-        font-size: 8px;
+        font-size: 6px;
         padding-left: 2px;
     }
 }
