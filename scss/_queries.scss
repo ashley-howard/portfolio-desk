@@ -1,13 +1,7 @@
 @media only screen and (max-width: 991px),
 (orientation: portrait) {
 
-    .hub,
-    .coffee-cup,
-    .note,
-    .poster,
-    .desk,
-    .pc--stand-top,
-    .pc--stand-bottom {
+    .hide-mob {
         display: none;
     }
 

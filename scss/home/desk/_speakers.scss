@@ -1,0 +1,38 @@
+.speakers {
+    position: absolute;
+    bottom: 23%;
+    left: 21%;
+}
+
+.speaker-left {
+    position: absolute;
+    background: #e0e0e0;
+    width: 99px;
+    height: 130px;
+    border-radius: 15px;
+    box-shadow: inset 16px 3px white;
+}
+
+.speaker-left::before {
+    content: "";
+    position: absolute;
+    background: #282828;
+    right: 9px;
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    bottom: 10px;
+    border-radius: 50%;
+}
+
+.speaker-left::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(45deg, black, #787878);
+    height: 121px;
+    width: 60px;
+    right: 5px;
+    border-radius: 15px;
+    transform: skewX(-5deg) rotate(-3deg);
+    top: 5px;
+}

@@ -8,7 +8,7 @@
     width: 170px;
     height: 108px;
     top: calc(100vh - 170px);
-    left: 140px;
+    left: calc(20vw - 120px);
     border-radius: 10px;
     // box-shadow: 4px -3px 14px 0px #202020;
     box-shadow: 17px -13px 20px 0px #00000073, inset 0 0px 0px 10px #3a3a3a;
@@ -48,9 +48,9 @@
 
     &--screen {
         position: absolute;
-        width: 150px;
+        width: 152px;
         height: 89px;
-        left: 10px;
+        left: 9px;
         top: 10px;
         border-radius: 2px;
         // border: 1px solid #979797;

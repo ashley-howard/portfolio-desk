@@ -1,12 +1,11 @@
 .poster {
     position: absolute;
-    background-image: url('../img/waves.jpg');
+    background-image: url(../img/waves.jpg);
     width: 370px;
     height: 230px;
     background-size: cover;
-    left: 100px;
-    top: 30px;
-    border: 1.5px solid white;
-    // box-shadow: inset -9px -9px 20px 0px #7a7a7a, -3px -4px 20px 0px #0000009e;
-    border-radius: 3px;
+    left: 10%;
+    top: calc(100vh - 660px);
+    border-radius: 2px;
+    box-shadow: -5px 5px 9px #333333;
 }

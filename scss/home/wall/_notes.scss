@@ -3,7 +3,8 @@
     background: #dfba35;
     width: 50px;
     height: 43px;
-    right: 37%;
+    // right: 37%;
+    left: calc(35vw + 500px);
     top: calc(100vh - 270px);
     border-radius: 1px;
     box-shadow: 8px 3px 8px #766c38;
