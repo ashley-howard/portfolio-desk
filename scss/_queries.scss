@@ -114,6 +114,28 @@
     .pc--button {
         display: none;
     }
+
+    .about-social {
+        text-align: center;
+    }
+
+    .about-container {
+        margin: 10px;
+        font-size: 24px;
+
+        & ul {
+            font-size: 23px;
+            font-style: italic;
+            padding: 30px 0;
+            line-height: 33px;
+            list-style: square inside url(sqpurple.gif);
+
+            li {
+                padding-bottom: 5px;
+            }
+        }
+    }
+
 }
 
 @media only screen and (max-width: 567px) {

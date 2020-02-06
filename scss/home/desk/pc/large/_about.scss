@@ -19,9 +19,10 @@
     }
 
     img {
-        position: fixed;
+        position: absolute;
         height: calc(88vh - 77px);
         width: 20%;
+        left: 0;
     }
 }
 
@@ -43,11 +44,11 @@
 }
 
 .about-social {
-    text-align: right;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    padding: 4px 25px;
+    // text-align: right;
+    // position: fixed;
+    // bottom: 0;
+    // right: 0;
+    // padding: 4px 25px;
 
     &--links {
         opacity: 0.2;

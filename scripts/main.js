@@ -41,12 +41,19 @@ function light(action) {
     localStorage.setItem('firstTime', 'false');
 }
 
-// We listen to the resize event
 window.addEventListener('resize', () => {
-    // We execute the same script as before
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
+
+// window.addEventListener('resize', () => {
+//     if (window.matchMedia("(max-width: 992px)").matches) {
+//         document.getElementById('desk').style.perspective = 'initial';
+//     }
+//     else {
+//         document.getElementById('desk').style.perspective = '100px';
+//     }
+// });
 
 
 // slideshow
@@ -62,7 +69,7 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) { slideIndex = 1 }
     slides[slideIndex - 1].style.display = "flex";
-    setTimeout(showSlides, 5000);
+    setTimeout(showSlides, 8000);
 }
 
 

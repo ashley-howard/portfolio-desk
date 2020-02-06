@@ -102,3 +102,16 @@ noscript {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.construction {
+  position: absolute;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  z-index: 99;
+  background: #1c1c1c;
+  color: white;
+}
