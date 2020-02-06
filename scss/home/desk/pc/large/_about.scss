@@ -18,11 +18,15 @@
         padding: 20px 0;
     }
 
-    img {
+    .man {
         position: absolute;
         height: calc(88vh - 77px);
         width: 20%;
         left: 0;
+    }
+
+    img {
+        width: 65px;
     }
 }
 

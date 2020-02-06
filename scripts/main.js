@@ -151,3 +151,8 @@ function httpRequestAsync(url, callback) {
     httpRequest.open("GET", url, true);
     httpRequest.send();
 }
+
+function bigBrother(){
+    document.getElementById('poster').classList.add('fade')
+    document.getElementById('poster').style.backgroundImage = "url(../img/big-brother.svg)";
+}
