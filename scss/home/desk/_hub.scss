@@ -6,8 +6,8 @@
     top: calc(100vh - 170px);
     left: calc(20vw - 120px);
     border-radius: 10px;
-    box-shadow: -20px -8px 20px 0px #141414, inset 0 0px 0px 10px #3a3a3a;
-    box-shadow: -20px -8px 20px 0px #00000073, inset 0 0px 0px 10px #3a3a3a;
+    box-shadow: -20px -8px 20px 0px #0c0c0c, inset 0 0px 0px 10px #2d2d2d;
+    box-shadow: -20px -8px 20px 0px #00000054, inset 0 0px 0px 10px #2d2d2d;
     z-index: 1;
 
     &--speakers {
@@ -218,6 +218,7 @@
         opacity: 1
     }
 }
+
 // //DEV ONLY
 // #weather-slide {
 //     display: flex !important;

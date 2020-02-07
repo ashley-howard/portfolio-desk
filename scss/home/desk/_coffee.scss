@@ -7,6 +7,7 @@
     &::before {
         content: "";
         position: absolute;
+        background: #0c0c0c;
         background: #00000087;
         width: 79px;
         height: 11px;
@@ -14,7 +15,7 @@
         bottom: -1px;
         left: -25px;
         z-index: -1;
-        -webkit-box-shadow: 0 0px 20px 14px #000000c7;
+        box-shadow: 0 0px 20px 14px #0a0a0a;
         box-shadow: 0 0px 20px 14px #000000a8;
     }
 
