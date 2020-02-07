@@ -15,37 +15,12 @@
 .desk {
     position: fixed;
     bottom: 0;
-    // width: 92vw;
     width: 100vw;
     height: 100px;
-    // height: 130px;
-    // clip-path: polygon(90% 0, 100% 100%, 0 100%, 0 0);
-    // transform: skewX(50deg);
-    // left: -123px;
-    // box-shadow: inset -20px -2px 20px 15px #0000002e;
-    // box-shadow: inset 2px 10px 20px 0px #262626;
-    // background: rgb(34, 31, 31);
-    // background: -moz-linear-gradient(90deg, #131313 0%, #2a2a2a 100%);
-    // background: -webkit-linear-gradient(90deg, #131313 0%, #2a2a2a 100%);
-    // background: linear-gradient(90deg, #131313 0%, #2a2a2a 100%);
-    // filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#131313", endColorstr="#2a2a2a", GradientType=1);
-    // background-image: url("../img/wood.png");
-    // background: linear-gradient(0deg, rgb(25, 25, 25) 65%, rgba(77, 77, 77, 0.93) 100%);
     background: #121212f2;
     transform-style: preserve-3d;
     transform: rotateX(14deg);
-    // z-index: 1;
     box-shadow: -3px -3px 20px 13px #0c111b;
-
-    // &::after {
-    //     @extend %pseudo;
-    //     width: 0;
-    //     height: 0;
-    //     border-style: solid;
-    //     border-width: 139px 10vw 0 10vw;
-    //     border-color: transparent transparent transparent #2a2a2a;
-    //     right: -20vw;
-    // }
 
     &--bottom {
         @extend %pseudo;

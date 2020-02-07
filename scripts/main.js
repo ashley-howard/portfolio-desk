@@ -2,11 +2,6 @@ function drinkCoffee() {
     document.getElementById("coffee-note").classList.add("strike");
 }
 
-const introScreen = document.getElementById('intro-screen');
-const lightSwitch = document.getElementById('light-switch')
-
-var firstTime = localStorage.getItem('firstTime');
-
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -27,7 +22,6 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "flex";
     setTimeout(showSlides, 8000);
 }
-
 
 // weather
 const appKey = "6a42348f3f2db5f744296408f0807ef2";
@@ -103,11 +97,6 @@ function httpRequestAsync(url, callback) {
     }
     httpRequest.open("GET", url, true);
     httpRequest.send();
-}
-
-function bigBrother() {
-    document.getElementById('poster').classList.add('fade')
-    document.getElementById('poster').style.backgroundImage = "url(../img/big-brother.svg)";
 }
 
 // date
@@ -196,9 +185,6 @@ function openScreen(screen) {
     else {
         typedString = `https://ashley.how/${screen}`;
 
-        // prependTyped.innerHTML = ``;
-
-        // if screen width lower than 991px, delay is 0
         if (window.matchMedia("(max-width: 991px)").matches) {
             typedStartDelay = 0;
         } else {
@@ -229,7 +215,6 @@ function openScreen(screen) {
             prependTyped.innerHTML = `https://ashley.how/${screen}`;
             screenCache = document.getElementById(`screen-${screen}`);
             backButton.style.display = "flex";
-            // backButton.setAttribute("onclick", "openScreen('main')")
         }
     }, timeout);
 }
@@ -259,10 +244,6 @@ function extend() {
         for (i = 0; i < extendables.length; i++) {
             extendables[i].classList.add("extended");
         }
-    }
-
-    else {
-        console.log("don't extend")
     }
 }
 

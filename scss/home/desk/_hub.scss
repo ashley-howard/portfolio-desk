@@ -98,6 +98,7 @@
         top: 4px;
         left: 5px;
         color: white;
+        font-size: 0.8em;
     }
 
     &--weather-temp {
@@ -108,15 +109,6 @@
         font-size: 3em;
     }
 }
-
-#weather-temp {
-    font-size: 3em;
-}
-
-#weather-cond {
-    font-size: 0.8em;
-}
-
 
 .slideshow-container {
     img {
