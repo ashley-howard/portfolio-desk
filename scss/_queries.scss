@@ -87,7 +87,7 @@
         border-right: 1px solid #c7c7c7;
     }
 
-    #screen-about img {
+    .man {
         display: none;
     }
 
@@ -210,6 +210,10 @@
 
     #screen-skills img {
         height: 60%;
+    }
+
+    .about-social {
+        padding: 5px;
     }
 }
 
