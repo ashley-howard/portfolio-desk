@@ -1,25 +1,9 @@
-@import 'calendar';
-@import 'headphones';
-@import 'magnet';
 @import 'notes';
-@import 'photos';
 @import 'poster';
-@import 'switch';
-@import 'shelf';
 
-// BG NIGHT
-// background: rgb(255,203,149);
-// background: -moz-radial-gradient(circle, rgba(255,203,149,1) 0%, rgba(0,0,0,1) 100%);
-// background: -webkit-radial-gradient(circle, rgba(255,203,149,1) 0%, rgba(0,0,0,1) 100%);
-// background: radial-gradient(circle, rgba(255,203,149,1) 0%, rgba(0,0,0,1) 100%);
-// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffcb95",endColorstr="#000000",GradientType=1);
-
-// back wall 
 .bg {
     position: absolute;
     width: 100vw;
     height: 100vh;
-    // background: linear-gradient(90deg, #9ba3ea 0%, #005bff5e 50%, #9ba3ea 100%);
-    background: -webkit-radial-gradient(circle, rgb(83, 109, 161) 0%, rgba(0,0,0,1) 100%);
-    // background: linear-gradient(90deg, #0c0c29d4 0%, #232f46 50%, #63688d 100%);
+    background: -webkit-radial-gradient(circle, rgb(83, 109, 161) 0%, rgba(0, 0, 0, 1) 100%);
 }

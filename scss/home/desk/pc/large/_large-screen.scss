@@ -1,15 +1,7 @@
-@import 'large-grid';
 @import 'projects';
 @import 'about';
 @import 'skills';
 @import 'contact';
-
-// large-screen div
-// -- screen-home
-// -- screen-projects 
-// -- screen-about 
-// -- screen-skills
-// -- screen-contact
 
 .large-screen-wrapper {
     display: flex;
@@ -54,26 +46,13 @@
     font-size: 0.5em;
 }
 
-// #time {
-//     position: absolute;
-//     right: 10px;
-//     top: 7px;
-//     font-weight: 500;
-//     font-size: 2em;
-//     color: #303030;
-// }
-
-
-
 .hide-screen-icon {
     position: absolute;
-    // background: #268BCF;
     color: white;
     width: 22px;
     height: 22px;
     right: 38px;
     font-size: 1em;
-    // color: white;
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
@@ -95,7 +74,6 @@
     height: 22px;
     right: 10px;
     font-size: 1em;
-    // color: white;
     font-weight: 500;
     border-radius: 5px;
     cursor: pointer;
@@ -137,38 +115,10 @@
     margin-right: 5px;
 }
 
-// .folders-large {
-//     padding: 15px;
-// }
-
-// .folder-large {
-//     position: absolute;
-//     height: 20vh;
-//     width: 24vw;
-//     border-top-right-radius: 2px;
-//     cursor: pointer;
-//     box-shadow: inset -8px -6px 12px #9b9b9b;
-//     animation: folder-enlarge 5s forwards;
-// }
-
-// @keyframes folder-enlarge {
-//     0% {
-//         display: none;
-//         opacity: 0;
-//     }
-
-//     100% {
-//         display: inherit;
-//         opacity: 1;
-//     }
-// }
-
 #back-button {
     position: absolute;
     width: 3%;
     height: 30px;
-    // margin: 0px 10px;
-    // padding: 0px 8px;
     cursor: pointer;
     left: 0;
     justify-content: center;
@@ -194,17 +144,34 @@
     top: 0;
     left: 0;
     width: inherit;
+    color: white;
+}
+
+#screen-projects,
+#screen-about,
+#screen-skills,
+#screen-contact {
+    overflow-y: auto;
+    position: relative;
+    height: calc(88vh - 70px);
+    flex-direction: column;
+    align-items: center;
+    background: rgb(255, 255, 255);
+    background: -moz-linear-gradient(0deg, rgba(255, 255, 255, 0.59) 0%, rgba(0, 80, 158, 0.68) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(255, 255, 255, 0.59) 0%, rgba(0, 80, 158, 0.68) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.59) 0%, rgba(0, 80, 158, 0.68) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffffff", endColorstr="#00509e", GradientType=1);
 }
 
 #project-tiles,
 #about-tiles,
 #skills-tiles,
 #contact-tiles {
-    display: flex; // was none
+    display: flex;
 }
 
 .large-grid-container {
-    display: flex; //change back to none, transforms into grid using animation
+    display: flex;
     align-items: center;
     background: rgba(114, 186, 94, 0.05);
     animation: projects-enlarge 5s forwards;

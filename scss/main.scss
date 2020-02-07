@@ -1,10 +1,7 @@
 @import 'reset';
-@import 'intro';
 @import 'home/home';
 @import 'queries';
 @import 'animations';
-@import 'shadows';
-@import 'fingers';
 @import 'dev';
 
 body {
@@ -13,14 +10,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   overflow: hidden;
-
-  // // ----BUGGY---- //
-  // perspective: 100px; // need to disable when screen is large = unset
-  // // ----BUGGY---- //
-
-  // &.extended {
-  //   perspective: unset;
-  // }
 }
 
 a {
@@ -45,7 +34,6 @@ b {
   font-size: 0.8em;
   text-align: center;
   width: 100%;
-  // color: #82aeff;
 }
 
 .d-none {
@@ -74,25 +62,10 @@ noscript {
   font-size: 0.9em;
 }
 
-// .black-screen {
-//     position: absolute;
-//     width: 100vw;
-//     height: 100vh;
-//     background: black;
-//     top: 0;
-//     left: 0;
-//     z-index: 1;
-// }
-
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
-
-/* Track */
-// ::-webkit-scrollbar-track {
-//   background: #f1f1f1; 
-// }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {

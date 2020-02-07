@@ -2,59 +2,15 @@ function drinkCoffee() {
     document.getElementById("coffee-note").classList.add("strike");
 }
 
-// var typed = new Typed('#intro-typed', {
-//     stringsElement: '#intro-typed-strings',
-//     typeSpeed: 75,
-//     showCursor: false
-// });
-
 const introScreen = document.getElementById('intro-screen');
 const lightSwitch = document.getElementById('light-switch')
 
 var firstTime = localStorage.getItem('firstTime');
 
-// load splash
-if (!firstTime) {
-    console.log("load splash")
-    localStorage.setItem('firstTime', 'true');
-    firstTime = localStorage.getItem('firstTime');
-}
-// dont load splash
-else {
-    console.log("don't load splash")
-    // introScreen.style.display = 'none' 
-    localStorage.setItem('firstTime', 'false');
-    firstTime = localStorage.getItem('firstTime');
-}
-
-function light(action) {
-    if (action === 'on') {
-        introScreen.style.display = 'flex';
-        lightSwitch.attributes.onclick.value = "light('off')"
-        lightSwitch.style.boxShadow = 'rgb(50, 50, 50) -1px -4px 2px inset, rgb(69, 69, 69) 1px 2px 5px 0px'
-    } else {
-        introScreen.style.display = 'none';
-        lightSwitch.attributes.onclick.value = "light('on')"
-        lightSwitch.style.boxShadow = 'rgb(50, 50, 50) -1px 4px 2px inset, rgb(69, 69, 69) 1px 2px 5px 0px'
-    }
-
-    localStorage.setItem('firstTime', 'false');
-}
-
 window.addEventListener('resize', () => {
     let vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
-
-// window.addEventListener('resize', () => {
-//     if (window.matchMedia("(max-width: 992px)").matches) {
-//         document.getElementById('desk').style.perspective = 'initial';
-//     }
-//     else {
-//         document.getElementById('desk').style.perspective = '100px';
-//     }
-// });
-
 
 // slideshow
 var slideIndex = 0;
@@ -137,9 +93,6 @@ function theResponse(response) {
     else {
         console.log("Error");
     }
-
-    // console.log(jsonObject.weather[0].id)
-    // console.log(jsonObject.weather[0].main)
 }
 
 function httpRequestAsync(url, callback) {
@@ -152,7 +105,170 @@ function httpRequestAsync(url, callback) {
     httpRequest.send();
 }
 
-function bigBrother(){
+function bigBrother() {
     document.getElementById('poster').classList.add('fade')
     document.getElementById('poster').style.backgroundImage = "url(../img/big-brother.svg)";
+}
+
+// date
+const date = new Date;
+const day = date.getDate();
+const hubBg = document.getElementById('hub-bg')
+var hour = date.getHours();
+var welcomeText = document.getElementById('welcome-text');
+
+document.getElementById('day').innerHTML = day;
+
+if (hour >= 5 && hour <= 11) {
+    welcomeText.innerHTML = "Good morning";
+}
+else if (hour >= 12 && hour <= 17) {
+    welcomeText.innerHTML = "Good afternoon";
+}
+else if (hour >= 18 && hour <= 20) {
+    welcomeText.innerHTML = "Good evening";
+}
+else {
+    welcomeText.innerHTML = "Good night";
+}
+
+if (hour >= 5 && hour <= 17) {
+    hubBg.src = './img/hub-day.png'
+}
+
+else {
+    hubBg.src = './img/hub-night.png'
+}
+
+// large screen
+const largeScreen = document.getElementById('large-screen');
+const prependTyped = document.getElementById('prepend-typed');
+const backButton = document.getElementById('back-button');
+const extendables = document.getElementsByClassName('extendable');
+
+var screenCache, typed, typedString, typedStartDelay, timeout;
+
+if (window.matchMedia("(max-width: 991px)").matches || window.matchMedia("(orientation: portrait)").matches) {
+    prependTyped.innerHTML = `https://ashley.how`;
+}
+
+function openScreen(screen) {
+    extend()
+    document.getElementById('folders').style.display = "none";
+
+    if (screen === 'projects') {
+        timeout = 3900;
+    }
+
+    else if (screen === 'main') {
+        timeout = 0;
+    }
+
+    else if (screen === 'about') {
+        timeout = 3700;
+    }
+
+    else if (screen === 'skills') {
+        timeout = 3800;
+    }
+
+    else if (screen === 'contact') {
+        timeout = 3900;
+    }
+
+    if (screen === 'main') {
+        prependTyped.innerHTML = `https://ashley.how`;
+    }
+
+    else if (screenCache === 'main' && screen !== 'main' || ((window.matchMedia("(max-width: 991px)").matches || window.matchMedia("(orientation: portrait)").matches))) {
+        timeout = timeout - 3100;
+        typedString = `/${screen}`
+        typedStartDelay = 0
+
+        var typed = new Typed('#typed', {
+            strings: [typedString],
+            typeSpeed: 50,
+            showCursor: false,
+            startDelay: typedStartDelay
+        });
+    }
+
+    else {
+        typedString = `https://ashley.how/${screen}`;
+
+        // prependTyped.innerHTML = ``;
+
+        // if screen width lower than 991px, delay is 0
+        if (window.matchMedia("(max-width: 991px)").matches) {
+            typedStartDelay = 0;
+        } else {
+            typedStartDelay = 2000
+        }
+
+        var typed = new Typed('#typed', {
+            strings: [typedString],
+            typeSpeed: 50,
+            showCursor: false,
+            startDelay: typedStartDelay
+        });
+    }
+
+    setTimeout(function () {
+        if (screen === 'main') {
+            screenCache.style.display = "none";
+            document.getElementById('folders').style.display = "flex";
+            prependTyped.innerHTML = 'https://ashley.how';
+            backButton.style.display = "none";
+            screenCache = 'main';
+        }
+
+        else {
+            typed.destroy()
+            document.getElementById('folders').style.display = "none";
+            document.getElementById(`screen-${screen}`).style.display = "block";
+            prependTyped.innerHTML = `https://ashley.how/${screen}`;
+            screenCache = document.getElementById(`screen-${screen}`);
+            backButton.style.display = "flex";
+            // backButton.setAttribute("onclick", "openScreen('main')")
+        }
+    }, timeout);
+}
+
+function minimise() {
+    shrink()
+    document.getElementById('minimised').style.display = "flex";
+    document.getElementById(screenCache.id).style.display = "none";
+}
+
+function maximise() {
+    extend()
+    document.getElementById('minimised').style.display = "none";
+    document.getElementById(screenCache.id).style.display = "block";
+}
+
+function closeScreen() {
+    shrink()
+    document.getElementById(screenCache.id).style.display = "none";
+    document.getElementById('folders').style.display = "flex";
+    prependTyped.innerHTML = '';
+}
+
+function extend() {
+    if (!window.matchMedia("(max-width: 992px)").matches && window.matchMedia("(orientation: landscape)").matches) {
+        var i;
+        for (i = 0; i < extendables.length; i++) {
+            extendables[i].classList.add("extended");
+        }
+    }
+
+    else {
+        console.log("don't extend")
+    }
+}
+
+function shrink() {
+    var i;
+    for (i = 0; i < extendables.length; i++) {
+        extendables[i].classList.remove("extended");
+    }
 }

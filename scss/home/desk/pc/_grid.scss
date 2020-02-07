@@ -7,10 +7,6 @@ $scw: (100 - ($m * ($mc - 1))) / $mc; // single column width
   width: ($scw * $cs) + ($m * ($cs - 1)); // column width
 }
 
-/*------------------------------*\
-    Grid System
-\*------------------------------*/
-
 .row,
 .column {
   box-sizing: border-box;
@@ -29,7 +25,6 @@ $scw: (100 - ($m * ($mc - 1))) / $mc; // single column width
 .column {
   position: relative;
   float: left;
-  // display: block;
 }
 
 .column+.column {
@@ -57,15 +52,7 @@ $scw: (100 - ($m * ($mc - 1))) / $mc; // single column width
   }
 }
 
-/*------------------------------*\
-    Styling
-\*------------------------------*/
-
 .column {
-  //   background: #eee;
-  //   border: 1px solid #ccc;
-  //   border-radius: 4px;
-  //   color: #777;
   display: flex;
   justify-content: center;
   padding: 5px;
@@ -82,8 +69,6 @@ $scw: (100 - ($m * ($mc - 1))) / $mc; // single column width
 }
 
 .row {
-  // margin-bottom: 10px;
-
   &.row-top {
     margin-top: 12%;
 
@@ -102,12 +87,6 @@ $scw: (100 - ($m * ($mc - 1))) / $mc; // single column width
 .row:last-child {
   margin-bottom: 0;
 }
-
-// .column .column {
-//   color: #eee;
-//   background: #333;
-//   border-color: #000;
-// }
 
 @media only screen and (max-width: 550px) {
   .row {

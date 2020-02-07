@@ -1,18 +1,12 @@
-// @import '../../animations';
-
-//------ HUB----- //
 .hub {
     position: absolute;
-    // background: #4b4b4b;
     background: #151515;
     width: 170px;
     height: 108px;
     top: calc(100vh - 170px);
     left: calc(20vw - 120px);
     border-radius: 10px;
-    // box-shadow: 4px -3px 14px 0px #202020;
     box-shadow: -20px -8px 20px 0px #00000073, inset 0 0px 0px 10px #3a3a3a;
-    // z-index: 0;
     z-index: 1;
 
     &--speakers {
@@ -53,18 +47,6 @@
         left: 9px;
         top: 10px;
         border-radius: 2px;
-        // border: 1px solid #979797;
-        /* border-radius: 5px; */
-        // border: 1px solid #2c2c2c;
-        // padding: 5px;
-        // opacity: 0;
-
-        // animation: fade-in 2s;
-        // animation-timing-function: ease-in-out;
-        // animation-delay: 3s;
-        // animation-iteration-count: 1;
-        // animation-direction: alternate;
-        // animation-fill-mode: both;
     }
 
     &::after {
@@ -109,46 +91,6 @@
         height: inherit;
         background-size: contain;
         position: absolute;
-
-        // &.slide-1 {
-        //     background-image: url('/img/hub-day.png');
-        // }
-
-        // &.slide-2 {
-        //     opacity: 0;
-        //     background-image: radial-gradient(farthest-corner at 153px 13px, #fff 0%, #338fee 100%);
-
-        //     animation: hub-screen 40s;
-        //     animation-timing-function: ease-in-out;
-        //     animation-iteration-count: 5;
-        //     animation-delay: 10s;
-        //     animation-direction: alternate;
-        //     animation-fill-mode: both;
-        // }
-
-        // &.slide-3 {
-        //     opacity: 0;
-        //     background: lightgrey;
-
-        //     animation: hub-screen 40s;
-        //     animation-timing-function: ease-in-out;
-        //     animation-iteration-count: 5;
-        //     animation-delay: 18s;
-        //     animation-direction: alternate;
-        //     animation-fill-mode: both;
-        // }
-
-        // &.slide-4 {
-        //     opacity: 0;
-        //     background: lightgrey;
-
-        //     animation: hub-screen 40s;
-        //     animation-timing-function: ease-in-out;
-        //     animation-iteration-count: 5;
-        //     animation-delay: 26s;
-        //     animation-direction: alternate;
-        //     animation-fill-mode: both;
-        // }
     }
 
     &--weather-cond {
@@ -167,11 +109,6 @@
     }
 }
 
-.fa-sun {
-    color: #fad318;
-    font-size: 2.5em;
-}
-
 #weather-temp {
     font-size: 3em;
 }
@@ -181,14 +118,7 @@
 }
 
 
-
-
-
-
-
 .slideshow-container {
-    // max-width: 100%;
-
     img {
         width: 100%;
     }
@@ -207,8 +137,6 @@
             font-size: 10px;
             color: #eaeaea;
         }
-
-        // background-image: radial-gradient(farthest-corner at 153px 13px, #fff 0%, #338fee 100%);
     }
 
     &:nth-child(3) {
@@ -232,7 +160,6 @@
         font-size: 7px;
         color: #3f3f3f;
         align-items: center;
-        // padding: 3px;
     }
 }
 
@@ -284,20 +211,6 @@
     }
 }
 
-// .text {
-//     color: #f2f2f2;
-//     font-size: 15px;
-//     padding: 8px 12px;
-//     position: absolute;
-//     bottom: 8px;
-//     width: 100%;
-//     text-align: center;
-// }
-
-// .active {
-//     background-color: red;
-// }
-
 .fade {
     animation-name: fade;
     animation-duration: 3s;
@@ -312,7 +225,6 @@
         opacity: 1
     }
 }
-
 // //DEV ONLY
 // #weather-slide {
 //     display: flex !important;
