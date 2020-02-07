@@ -17,10 +17,11 @@
     bottom: 0;
     width: 100vw;
     height: 100px;
-    background: #121212f2;
+    background: #181818;
     transform-style: preserve-3d;
     transform: rotateX(14deg);
     box-shadow: -3px -3px 20px 13px #0c111b;
+    
 
     &--bottom {
         @extend %pseudo;
