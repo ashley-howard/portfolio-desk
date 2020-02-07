@@ -11,14 +11,43 @@
     transform: rotate(90deg);
     color: black;
     // box-shadow: -19px 0px 0px 0px #dfdfdf, -2px -8px 10px 0px #090909, inset 8px 5px 12px 0px #383838;
-    border: 2px solid black;
+    border-radius: 2px;
+    text-align: center;
+    
+    .title {
+        font-size: 11px;
+        // margin-top: 1px;
+    }
 
+    .author {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    
     &.nineteen {
+        border: 2px solid black;
         background: black;
         border-left: 3px solid #861b1b;
         border-right: 3px solid #861b1b;
-        border-radius: 2px;
         cursor: pointer;
+
+        .title {
+            font-family: 'Gochi Hand', cursive;
+        }
+
+        .author {
+            color: #861b1b;
+        }
+    }
+
+    &.js {
+        background: #4caf93;
+        border-left: 3px solid black;
+        border-right: 3px solid black;
+        left: 40px;
+        bottom: -32px;
+        color: white;
     }
 }
 
@@ -32,15 +61,3 @@
     justify-content: space-evenly;
 }
 
-.author {
-    font-size: 10px;
-    text-transform: uppercase;
-    color: #861b1b;
-    font-weight: 500;
-}
-
-.title {
-    font-size: 11px;
-    font-family: 'Gochi Hand', cursive;
-    margin-top: 1px;
-}

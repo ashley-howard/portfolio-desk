@@ -23,6 +23,18 @@
     // box-shadow: -17px 12px 4px 0px #00000017;
     // box-shadow: 0 0 20px 20px #0072ff40;
     border-radius: 4px;
+    box-shadow: -20px -13px 20px #000000b3;
+
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: -114px;
+    //     background: #18181a;
+    //     width: 384px;
+    //     height: 70px;
+    //     border-radius: 50%;
+    //     left: -28px;
+    // }
 
     &.extended {
         display: flex;
@@ -132,7 +144,7 @@
         bottom: -105px;
         left: 133px;
         border-radius: 100%;
-        box-shadow: 0px 5px #0f0f0f;
+        box-shadow: 0px 5px #0f0f0f, -20px 2px 13px #000000;
     }
 
     // .taskbar {
